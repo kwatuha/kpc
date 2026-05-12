@@ -58,6 +58,19 @@ Thumbs.db
 .DS_Store
 .directory
 
+# LibreOffice / Office lock files (cwd-local, any depth)
+.~lock.*#
+
+# Local scratch & one-off legacy import files left behind from the source
+# codebase. They're never needed at runtime; keep them out of the repo.
+tmp_*.txt
+users_remote.xlsx
+
+# KEMRI design documents and reference data drops — used locally for
+# requirements / seeding only, not needed at runtime and may contain
+# pre-release or licensed material. Keep out of the public repo.
+api/adp/
+
 # Database
 *.sql
 *.db
