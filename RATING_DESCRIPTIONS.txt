@@ -1,0 +1,206 @@
+================================================================
+5-POINT LIKERT SCALE RATING SYSTEM - DESCRIPTION REFERENCE
+================================================================
+
+This document shows exactly what citizens see for each rating level.
+
+================================================================
+RATING #1: Overall Satisfaction/Support for the Project
+================================================================
+
+Rating 1 (🔴 Red - Strongly Oppose)
+  "The project should not proceed in its current form"
+
+Rating 2 (🟠 Orange - Oppose)
+  "I have significant concerns or reservations about the project"
+
+Rating 3 (🟡 Yellow - Neutral)
+  "I have mixed feelings or no strong opinion on the project"
+
+Rating 4 (🟢 Light Green - Support)
+  "I generally agree with the project and its goals"
+
+Rating 5 (💚 Green - Strongly Support)
+  "The project is excellent and I fully agree with it"
+
+================================================================
+RATING #2: Perceived Impact on Personal/Community Quality of Life
+================================================================
+
+Rating 1 (🔴 Red - Highly Negative)
+  "Will significantly worsen quality of life"
+
+Rating 2 (🟠 Orange - Moderately Negative)
+  "Will cause some inconvenience or harm"
+
+Rating 3 (🟡 Yellow - No Change)
+  "The project will have little to no impact"
+
+Rating 4 (🟢 Light Green - Moderately Positive)
+  "Will lead to noticeable improvements"
+
+Rating 5 (💚 Green - Highly Positive)
+  "Will significantly improve quality of life"
+
+================================================================
+RATING #3: Alignment with Community Needs and Priorities
+================================================================
+
+Rating 1 (🔴 Red - Not Aligned)
+  "This project is unnecessary or misplaced"
+
+Rating 2 (🟠 Orange - Poorly Aligned)
+  "This is not a priority for the community"
+
+Rating 3 (🟡 Yellow - Somewhat Aligned)
+  "This is a secondary need, but acceptable"
+
+Rating 4 (🟢 Light Green - Well Aligned)
+  "This addresses an important community need"
+
+Rating 5 (💚 Green - Perfectly Aligned)
+  "This is a top priority need for the community"
+
+================================================================
+RATING #4: Implementation/Supervision
+================================================================
+
+Rating 1 (🔴 Red - Very Poor)
+  "Implementation teams were unprofessional and unresponsive"
+
+Rating 2 (🟠 Orange - Poor)
+  "Implementation teams showed poor management and communication"
+
+Rating 3 (🟡 Yellow - Adequate)
+  "Implementation teams were acceptable but had some issues"
+
+Rating 4 (🟢 Light Green - Good)
+  "Implementation teams managed the process well with minor issues"
+
+Rating 5 (💚 Green - Excellent)
+  "Implementation teams were highly professional and effective"
+
+================================================================
+RATING #5: Confidence in Project Timeline and Budget (Feasibility)
+================================================================
+
+Rating 1 (🔴 Red - Very Low)
+  "Do not believe the project can be completed successfully"
+
+Rating 2 (🟠 Orange - Low)
+  "Significant concerns about delays and costs"
+
+Rating 3 (🟡 Yellow - Moderate)
+  "Expect delays or minor budget overruns"
+
+Rating 4 (🟢 Light Green - High)
+  "Mostly confident, with only minor doubts"
+
+Rating 5 (💚 Green - Very High)
+  "Trust the project will be delivered as promised"
+
+================================================================
+VISUAL REPRESENTATION
+================================================================
+
+Each rating is displayed as an interactive card:
+
+┌─────────────────────────────────────────────────────────────┐
+│                                                               │
+│  QUESTION: Overall Satisfaction/Support for the Project      │
+│                                                               │
+│  ┌─────┐  ┌─────┐  ┌─────┐  ┌─────┐  ┌─────┐              │
+│  │  😞 │  │  🙁  │  │  😐  │  │  🙂  │  │  😄 │              │
+│  │  1  │  │  2  │  │  3  │  │  4  │  │  5  │              │
+│  └─────┘  └─────┘  └─────┘  └─────┘  └─────┘              │
+│   Red     Orange   Yellow   Lt.Grn   Green                  │
+│                                                               │
+│  Selected: "The project is excellent and I fully agree"      │
+│                                                               │
+└─────────────────────────────────────────────────────────────┘
+
+Features:
+- Hover over any card to see full description in tooltip
+- Click to select (card highlights with colored border)
+- Selected rating description appears below
+- All ratings are optional
+
+================================================================
+DATA STRUCTURE
+================================================================
+
+When submitted, ratings are stored as:
+
+{
+  "name": "John Doe",
+  "email": "john@example.com",
+  "message": "Great project!",
+  "projectId": 77,
+  
+  // Rating values (1-5 or null)
+  "ratingOverallSupport": 5,
+  "ratingQualityOfLifeImpact": 4,
+  "ratingCommunityAlignment": 5,
+  "ratingTransparency": 3,
+  "ratingFeasibilityConfidence": 4
+}
+
+Database columns:
+- rating_overall_support (TINYINT 1-5)
+- rating_quality_of_life_impact (TINYINT 1-5)
+- rating_community_alignment (TINYINT 1-5)
+- rating_transparency (TINYINT 1-5)
+- rating_feasibility_confidence (TINYINT 1-5)
+
+================================================================
+USAGE EXAMPLES
+================================================================
+
+Example 1: Citizen loves a water project
+  Rating 1 (Overall Support): 5 - Strongly Support
+  Rating 2 (Quality of Life): 5 - Highly Positive Impact
+  Rating 3 (Alignment): 5 - Perfectly Aligned
+  Rating 4 (Transparency): 4 - Good Transparency
+  Rating 5 (Feasibility): 4 - High Confidence
+
+Example 2: Citizen has concerns about a road project
+  Rating 1 (Overall Support): 2 - Oppose
+  Rating 2 (Quality of Life): 2 - Moderately Negative
+  Rating 3 (Alignment): 3 - Somewhat Aligned
+  Rating 4 (Transparency): 2 - Poor Transparency
+  Rating 5 (Feasibility): 1 - Very Low Confidence
+
+Example 3: Citizen is neutral
+  Rating 1 (Overall Support): 3 - Neutral
+  Rating 2 (Quality of Life): 3 - No Significant Change
+  Rating 3 (Alignment): 3 - Somewhat Aligned
+  Rating 4 (Transparency): 3 - Adequate
+  Rating 5 (Feasibility): 3 - Moderate Confidence
+
+================================================================
+ANALYTICS EXAMPLES
+================================================================
+
+Average Project Rating:
+  Overall Support: 4.2/5 (Good)
+  Quality of Life: 3.8/5 (Good)
+  Alignment: 4.5/5 (Excellent)
+  Transparency: 2.9/5 (Needs Improvement)
+  Feasibility: 3.5/5 (Moderate)
+
+Interpretation:
+  ✅ Project is well-supported and aligned with needs
+  ⚠️ Transparency communication needs improvement
+  ⚠️ Some concerns about feasibility
+
+Action Items:
+  1. Improve communication about project
+  2. Address timeline/budget concerns
+  3. Continue current approach for alignment
+
+================================================================
+
+END OF RATING DESCRIPTIONS REFERENCE
+
+
+

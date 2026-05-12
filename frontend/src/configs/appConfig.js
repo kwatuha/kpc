@@ -1,0 +1,186 @@
+/**
+ * @file Configuration settings for the application.
+ * This file centralizes default map coordinates, resource types, and all application routes,
+ * making them easy to modify for different deployments.
+ */
+
+// Default map center coordinates for initial load (e.g., Nairobi, Kenya)
+export const INITIAL_MAP_POSITION = [-1.286389, 36.817223];
+
+// Default county configuration for hierarchical filtering
+export const DEFAULT_COUNTY = {
+    countyId: null, // Will be resolved by name if not set - defaults to Kisumu
+    name: 'Kisumu',
+    code: 'KSM'
+};
+
+// Default sub-county configuration for initial chart loading
+export const DEFAULT_SUBCOUNTY = {
+    subcountyId: 1, // Default sub-county ID (e.g., Kitui Central)
+    name: 'Kitui Central',
+    code: 'KIT_CENTRAL'
+};
+
+// Define the available resource types for the dropdowns
+export const RESOURCE_TYPES = [
+    { value: 'projects', label: 'Projects' },
+    { value: 'participants', label: 'Participants' },
+    { value: 'poles', label: 'Poles' },
+    // Add other resource types here specific to a county or client
+];
+
+// NEW: Project types with default icon URLs.
+// You can replace these with custom icon URLs for a better visual representation.
+export const PROJECT_TYPES = [
+    { value: 'all', label: 'All Projects', icon: 'http://maps.google.com/mapfiles/ms/icons/blue-dot.png' },
+    { value: 'hospitals', label: 'Hospitals', icon: 'http://maps.google.com/mapfiles/ms/icons/red-dot.png' },
+    { value: 'water_projects', label: 'Water Projects', icon: 'http://maps.google.com/mapfiles/ms/icons/green-dot.png' },
+    { value: 'classrooms', label: 'Classrooms', icon: 'http://maps.google.com/mapfiles/ms/icons/yellow-dot.png' },
+    { value: 'offices', label: 'Offices', icon: 'http://maps.google.com/mapfiles/ms/icons/purple-dot.png' },
+    { value: 'roads', label: 'Roads', icon: 'http://maps.google.com/mapfiles/ms/icons/orange-dot.png' },
+    { value: 'schools', label: 'Schools', icon: 'http://maps.google.com/mapfiles/ms/icons/pink-dot.png' },
+];
+
+// --- Define application routes in a centralized object ---
+export const ROUTES = {
+    // Top-level routes
+    LOGIN: '/login',
+    FORCE_PASSWORD_CHANGE: '/force-password-change',
+    HELP_SUPPORT: '/help-support',
+    DASHBOARD: '/',
+    
+    // NEW: Contractor-specific route
+    CONTRACTOR_DASHBOARD: '/contractor-dashboard',
+    
+    // NEW: Administrative route for managing contractors
+    CONTRACTOR_MANAGEMENT: '/contractor-management',
+    CONTRACTOR_TYPES: '/contractor-types',
+    
+    // NEW: Admin dashboard route
+    ADMIN: '/admin',
+
+    // Main layout routes
+    RAW_DATA: '/raw-data',
+    PROJECTS: '/projects',
+    /** Cross-project registry: documents grouped by project (sidebar under Projects). */
+    PROJECT_DOCUMENTS_BY_PROJECT: '/projects/documents-by-project',
+    /** Project team members by project (sidebar under Projects). */
+    PROJECT_TEAMS: '/projects/teams',
+    /** Project-wide status/progress updates screen. */
+    PROJECT_STATUS: '/projects/status',
+    /** Monitoring hub linking to status, documents, evaluation, and feedback (sidebar under Monitoring). */
+    PROJECT_UPDATES: '/projects/updates',
+    PROJECT_PARTNERS: '/partners',
+    PROCUREMENT: '/procurement',
+    /** Completed procurements (handed off to contractor; audit trail on project). */
+    PROCUREMENT_PROCURED_PROJECTS: '/procurement/procured-projects',
+    /** Catalog of workflow stages for procurement (sidebar under Procurement). */
+    PROCUREMENT_STAGES: '/procurement-stages',
+    /** Link registry planning activities to projects (Projects sidebar). */
+    PROJECT_PLANNING_ACTIVITY_LINKS: '/projects/planning-activity-links',
+    /** Link registry planning risks to projects (Projects sidebar). */
+    PROJECT_PLANNING_RISK_LINKS: '/projects/planning-risk-links',
+    /** Project evaluation grid → M&E CSV export (data_compete). */
+    PROJECT_EVALUATION: '/projects/evaluation',
+    /** Public feedback linked to projects, grouped by project (optional direct URL; not in main ribbon). */
+    PROJECT_FEEDBACK_BY_PROJECT: '/projects/feedback-by-project',
+    /** Public certificate verification (no login); same path when opened from the Projects menu while signed in. */
+    VERIFY_CERTIFICATE: '/verify-certificate',
+    REPORTS: '/reports',
+    REPORT_LIBRARY: '/report-library',
+    PENDING_BILLS_REPORT: '/pending-bills-report',
+    BUDGET_JUSTIFICATION_REPORT: '/budget-justification-report',
+    PROJECT_FINANCE_OVERVIEW_REPORT: '/project-finance-overview',
+    SCHEDULED_REPORTS: '/scheduled-reports',
+    /** Inspection / monitoring checklist templates and standalone visits. */
+    DATA_COLLECTION_TOOLS: '/data-collection-tools',
+    GIS_MAPPING: '/maps',
+    GIS_DASHBOARD: '/gis-dashboard',
+    REPORTING_OVERVIEW: '/view-reports',
+    REGIONAL_REPORTING: '/regional-reports',
+    REGIONAL_DASHBOARD: '/regional-dashboard',
+    USER_MANAGEMENT: '/user-management',
+    /** Admin-only security and operations event log (sidebar under Admin). */
+    AUDIT_TRAIL: '/audit-trail',
+    STRATEGIC_PLANNING: '/strategic-planning',
+    PLANNING_INDICATORS: '/planning/indicators',
+    /** Measurable activity catalog (linked to KPIs / indicators) for projects & M&E. */
+    PLANNING_PROJECT_ACTIVITIES: '/planning/project-activities',
+    /** Standard risk register entries for projects (code, name, description). */
+    PLANNING_PROJECT_RISKS: '/planning/project-risks',
+    /** Indicator / milestone reporting cadence (CIMES-aligned catalog). */
+    PLANNING_REPORTING_FREQUENCY: '/planning/reporting-frequency',
+    METADATA_MANAGEMENT: '/metadata-management',
+    HR: '/hr-module',
+    /** HR ribbon deep-links (query `view` synced in HrModulePage). */
+    HR_EMPLOYEES: '/hr-module?view=employees',
+    HR_PERSONNEL: '/hr-module?view=personnel',
+    HR_JOB_GROUPS: '/hr-module?view=jobGroups',
+    HR_LEAVE_TYPES: '/hr-module?view=leaveTypes',
+    HR_PUBLIC_HOLIDAYS: '/hr-module?view=publicHolidays',
+    WORKFLOW_MANAGEMENT: '/workflow-management',
+    APPROVAL_LEVELS_MANAGEMENT: '/approval-levels-management', // ✨ NEW: Add the approval levels management route
+    FEEDBACK_MANAGEMENT: '/feedback-management', // ✨ NEW: Public feedback management route
+    ABSORPTION_REPORT: '/absorption-report', // ✨ NEW: Absorption report route
+    PERFORMANCE_MANAGEMENT_REPORT: '/performance-management-report', // ✨ NEW: Performance Management report route
+    CAPR_REPORT: '/capr-report', // ✨ NEW: CAPR report route
+    QUARTERLY_IMPLEMENTATION_REPORT: '/quarterly-implementation-report', // ✨ NEW: Quarterly Implementation report route
+    COUNTY_PROPOSED_PROJECTS: '/county-proposed-projects', // ✨ NEW: Proposed Projects management route
+    PROJECT_ANNOUNCEMENTS: '/project-announcements', // ✨ NEW: Project Announcements management route
+    PUBLIC_APPROVAL: '/public-approval', // ✨ NEW: Public Content Approval management route
+    /** Citizen feedback review queue & analytics (sidebar under Public). */
+    PUBLIC_FEEDBACK_MODERATION: '/public-feedback-moderation',
+    BUDGET_MANAGEMENT: '/budget-management', // ✨ NEW: Budget Management route
+    PROJECT_TYPES: '/project-types', // ✨ NEW: Project Types management route
+    JOB_CATEGORIES: '/job-categories', // ✨ NEW: Job Categories management route
+    SECTORS: '/sectors', // ✨ NEW: Sectors management route
+    KENYA_WARDS: '/kenya-wards', // ✨ NEW: Kenya Wards management route
+    AGENCIES: '/agencies', // ✨ NEW: Agencies management route
+    MINISTRIES_MANAGEMENT: '/ministries-management',
+
+    // Sub-routes with dynamic parameters
+    PROJECT_DETAILS: '/projects/:projectId',
+    PROJECT_GANTT_CHART: '/projects/:projectId/gantt-chart',
+    PROJECT_IMPORT: '/projects/import-data',
+    KDSP_PROJECT_DETAILS: '/projects/:projectId/kdsp-details',
+    MAP_DATA_IMPORT: '/maps/import-data',
+    STRATEGIC_PLAN_DETAILS: '/strategic-planning/:planId',
+    STRATEGIC_DATA_IMPORT: '/strategic-planning/import',
+    CENTRAL_IMPORT: '/data-import', // ✨ NEW: Central Import route
+    NEW_DASHBOARD: '/projects-dashboard/view',
+    PROJECT_ANALYTICS: '/project-analytics', // ✨ NEW: Project Analytics route
+    PROJECTS_BY_ORGANIZATION: '/projects-by-organization', // ✨ NEW: Projects by organization dashboard
+    SYSTEM_DASHBOARD: '/summary-statistics', // ✨ NEW: Summary Statistics route
+    OPERATIONS_DASHBOARD: '/operations-dashboard', // ✨ NEW: Operations Dashboard route
+    JOBS_DASHBOARD: '/jobs-dashboard', // ✨ NEW: Jobs & Impact Dashboard route
+    FINANCE_DASHBOARD: '/finance-dashboard', // ✨ NEW: Finance Dashboard route
+    FINANCE_PAYMENT_CERTIFICATES: '/finance/payment-certificates',
+    PROJECT_BY_STATUS_DASHBOARD: '/project-by-status-dashboard', // ✨ NEW: Project By Status Dashboard route
+    PROJECT_BY_SECTOR_DASHBOARD: '/project-by-sector-dashboard',
+    PROJECTS_UPLOAD_LOG: '/data-upload-log',
+    REPORTING_DASHBOARD: '/reporting-dashboard', // ✨ NEW: Reporting Dashboard route
+
+    // ============================================================
+    // KEMRI / KIMES routes (Integrated Monitoring & Evaluation System)
+    // See api/adp/KEMRI_Concept.pdf for the 15-step workflow.
+    // ============================================================
+    KEMRI_HOME:               '/',                       // KIMES landing replaces Machakos HomePage
+    KEMRI_STUDIES:            '/kemri/studies',          // Research studies registry
+    KEMRI_STUDY_NEW:          '/kemri/studies/new',      // Register a new research study
+    KEMRI_STUDY_DETAILS:      '/kemri/studies/:id',
+    KEMRI_PI_DASHBOARD:       '/kemri/dashboard/pi',
+    KEMRI_REVIEW_QUEUE:       '/kemri/review-queue',     // Centre Director peer-review queue
+    KEMRI_OUTPUT_REGISTRY:    '/kemri/outputs',          // Post-Study Output Registry
+    KEMRI_ESCALATIONS:        '/kemri/escalations',      // L1\u2013L4 non-conformity inbox
+    KEMRI_NOTIFICATIONS:      '/kemri/notifications',    // PI/CD/MEL/DG inbox
+    KEMRI_STUDY_FORM_EXPORT:  '/kemri/studies/:id/form-export', // printable / .docx KEMRI v05 form
+    // KIMES v5 additions (see api/adp/KEMRI_KIMES_v5_Final_Complete.pdf)
+    KEMRI_BOARD_SCORECARD:    '/kemri/board-scorecard',  // DG/Board Quarterly Scorecard (v5 §8.3)
+    KEMRI_AI_REPORTS:         '/kemri/ai-reports',       // AI Reporting Engine catalog (v5 §10.2)
+    KEMRI_REPORTING_CALENDAR: '/kemri/reporting-calendar', // Concurrent Reporting Calendar (v5 §5)
+    KEMRI_DONOR_PORTAL:       '/kemri/donor-portal',     // Donor-facing read-only portal stub (v5 §5.1 Tier 1)
+    /** KEMRI Strategic Plan 2023-2027 alignment & key achievements. */
+    KEMRI_STRATEGIC_PLAN:     '/kemri/strategic-plan',
+    KEMRI_STRATEGIC_OBJECTIVE: '/kemri/strategic-plan/objective/:id',
+    KEMRI_KEY_ACHIEVEMENTS:   '/kemri/strategic-achievements',
+};

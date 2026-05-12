@@ -1,0 +1,318 @@
+@import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:400,200);
+@import url(https://fonts.googleapis.com/css?family=Merriweather+Sans:400,300);
+html, body{
+	padding:0px;
+	margin:0px;
+	background-color:#F2FDF3;
+	font-size:13px;
+	font-family:Tahoma, Geneva, sans-serif;
+	color:#007382;
+	height:100%;
+	text-shadow:0px 1px 0px #D9DFD9;
+	min-width:1024px;
+}
+
+a{
+	text-decoration:none;
+}
+
+#header-band{
+	clear:both;
+	height:30px;
+	background:top url(../images/header.jpg) repeat-x;
+	box-shadow:0px 1px 3px #007382;
+}
+
+#header{
+	padding:9px;
+	border-bottom:1px solid #D3E6D0;
+	box-shadow:0px 0px 4px #D3E6D0;
+	background:bottom repeat-x url(../images/header-shade.png);
+}
+
+#logo-text{
+	font-size:30px;
+	margin:17px 25px 0px 15px;
+	float:left;
+}
+
+#logo{
+	float:left;
+	margin-left:10px;
+	position:relative;
+	z-index:2;
+}
+
+#menu{
+	float:right;
+	padding:10px 0px 0px 0px;
+	position:relative;
+	z-index:3;
+	margin:10px 10px 0px 10px;
+}
+
+.menu-item{
+	padding:8px 10px;
+	font-size:15px;
+	margin:3px;
+	float:left;
+	color:#575757;
+}
+
+.menu-item img{
+	margin-top:-2px;
+	opacity:0.3;
+	margin-right:2px;
+	margin-left:-2px;
+}
+
+.menu-item:hover img, .menu-item.selected img{
+	opacity:0.7;
+}
+
+.menu-item:hover, .menu-item.selected{
+	cursor:pointer;
+	border:1px solid #D3DECF;
+	padding:7px 9px;
+	color:rgb(125, 157, 172);
+	box-shadow:0px 0px 10px #D9E2D6 inset;
+	border-radius:3px;
+	background-color:#F8FAF5;
+}
+
+.clearfix:after { 
+   content: " ";
+   display: block; 
+   height: 0; 
+   clear: both;
+}
+
+#body{
+	padding:30px 10px 10px 10px;
+}
+
+.hidden{
+	display:none;
+}
+
+#body-content{
+	margin:auto;
+	position:relative;
+}
+
+.body-content{
+	padding:0px 0px 25px 0px;
+	box-shadow:0px 3px 5px #ddd;
+	border-radius:3px;
+	border:1px solid #BFD8BC;
+	border-top:none;
+	width:100%;
+	overflow:hidden;
+	margin:0px auto;
+	background-color:#FCFEFC;
+	color:#00acc2;
+}
+
+.body-content-title{
+	background-color:#F2FDF3;
+	padding:20px 35px;
+	font-weight:800;
+	box-shadow:0px 1px 3px #B9C9A0;
+	text-shadow:0px 0px 1px #ADC7B1;
+	font-size:18px;
+	clear:both;
+	background-image: -webkit-gradient(linear, left top, left bottom, from( #F2FDF3), to( #EAF4E8 )); 
+	background-image: -webkit-linear-gradient( #F2FDF3, #EAF4E8);
+	background-image:    -moz-linear-gradient( #F2FDF3, #EAF4E8);
+	background-image:     -ms-linear-gradient( #F2FDF3, #EAF4E8);
+	background-image:      -o-linear-gradient( #F2FDF3, #EAF4E8);
+	background-image: linear-gradient( #F2FDF3, #EAF4E8);
+}
+
+.body-content-body{
+	padding:25px 20px;
+	clear:both;
+}
+
+.custom-title{
+	clear:both;
+	box-shadow:0px 3px 2px #E3E7E2;
+	border-radius:20%;
+}
+
+.custom-title-text{
+	background-color:#FCFEFC;
+	padding:15px 20px 8px 20px;
+	font-size:23px;
+	font-family: 'Yanone Kaffeesatz', Tahoma;
+	font-weight:350;
+	border-bottom:1px solid #D8E1D7;
+	text-shadow:0px -1px 0px #477D3E;
+	color:#50A446;
+}
+
+.custom-title-text.orange{
+	text-shadow:0px -1px 0px #C94201;
+	color:#FA5F14;	
+}
+
+iframe{
+	margin:auto;
+	border:1px solid #D6E0CF;
+	box-shadow:0px 0px 10px #9AA497;
+}
+
+.app-container:first-child{
+	margin-left:20px;
+}
+
+.app-container{
+	width:150px;
+	padding:10px;
+	float:left;
+	height:230px;
+	margin:25px 5px 0px 5px;
+	font-family:'Merriweather Sans';
+
+	border:1px solid #D8E2D3;
+	border-radius:3px;
+	box-shadow:0px 0px 3px #E8E6C6;
+}
+
+.app-container img{
+	width:150px;
+	border:1px solid #EBE9E9;
+	height:150px;
+}
+
+.app-container .title{
+	font-size:16px;
+	padding-bottom:4px;
+	white-space:nowrap;
+	color:#5E6B5A;
+	font-weight:600;
+	text-shadow:none;
+	clear:both;
+	text-align:left;
+}
+
+.app-container .description{
+	height:60px;
+	width:150px;
+	overflow:hidden;
+	position:relative;
+	color:#78837A;
+	font-size:11px;
+	font-weight:100;
+	text-shadow:none;
+}
+
+.description-mask{
+	position:absolute;
+	bottom:0px;
+	left:0px;
+	height:40px;
+	right:0px;
+	background-image: -webkit-gradient(linear, left top, left bottom, from( rgba(255,255,255,0.1)), to( rgba(0,0,0,0.1) )); 
+	background-image: -webkit-linear-gradient( rgba(255,255,255,0.1), rgba(255,255,255,1));
+	background-image:    -moz-linear-gradient( rgba(255,255,255,0.1), rgba(255,255,255,1));
+	background-image:     -ms-linear-gradient( rgba(255,255,255,0.1), rgba(255,255,255,1));
+	background-image:      -o-linear-gradient( rgba(255,255,255,0.1), rgba(255,255,255,1));
+	background-image: linear-gradient( rgba(255,255,255,0.1), rgba(255,255,255,1));
+}
+
+.app-container:hover{
+	cursor:pointer;
+	border:1px solid #DCD6BE;
+	box-shadow:0px 0px 5px #F0D686;
+}
+
+.h5{
+	color:#00acc2;
+	font-size:15px;
+	font-weight:700;
+	text-align:left;
+	margin-left:5px;
+	clear:both;
+}
+
+.input{
+	padding:7px 10px;
+	font-size:15px;
+	color:#00acc2;
+}
+
+.popup{
+	border:1px solid #00acc2;
+	box-shadow:0px 3px 5px #ACAAA2;
+	overflow:hidden;
+	border-radius:5px 5px 2px 2px;
+	max-width:400px;
+	width:250px;
+	margin:auto;
+}
+
+.popup-title{
+	background-image: -webkit-gradient(linear, left top, left bottom, from( #00e2ff), to( #00acc2 )); 
+	background-image: -webkit-linear-gradient( #00e2ff, #00acc2 );
+	background-image:    -moz-linear-gradient( #00e2ff, #00acc2 );
+	background-image:     -ms-linear-gradient( #00e2ff, #00acc2 );
+	background-image:      -o-linear-gradient( #00e2ff, #00acc2 );
+	background-image: linear-gradient( #00e2ff, #00acc2); 
+	padding:15px 25px;
+	color:#EFF7EA;
+	font-size:16px;
+}
+
+.popup-body{
+	padding:10px;
+	font-weight:100;
+	
+}
+
+iframe{
+	outline:0px !important;
+	border:0px !important;
+}
+
+.social{
+	float:right;
+	margin-right:10px;
+	margin-top:5px;
+}
+
+.social *{
+	box-shadow:none !important;
+}
+
+#forum_embed{
+	border:1px solid #00acc2 !important;
+	border-top:10px solid #00acc2 !important;
+}
+
+.mylinks-styled{
+	color:#00acc2;
+	font-weight:700;
+	font-size:13px;
+}
+
+.mylinks-styled:hover{
+	color:#D94600;
+}
+
+#view-gadget-only{
+	text-decoration:none;
+	clear:both;
+	float:right;
+	font-size:15px;
+	padding-bottom:2px;
+	margin:7px 5px;
+	color:#CE2F00;
+	border-bottom:1px dashed #0093a7;
+}
+
+#view-gadget-only:hover{
+	cursor:pointer;
+	color:#00acc2;
+	border-bottom:2px dashed #00acc2;
+}

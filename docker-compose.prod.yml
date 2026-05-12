@@ -1,0 +1,92 @@
+# version: '3.8'  # Removed - obsolete in newer docker compose
+
+# Production Docker Compose Configuration
+# This uses optimized production builds
+
+services:
+  nginx_proxy:
+    image: nginx:alpine
+    container_name: kemri_nginx_proxy
+    network_mode: host
+    volumes:
+      - ./nginx/nginx-production.conf:/etc/nginx/nginx.conf
+      - nginx_cache:/var/cache/nginx
+    depends_on:
+      - frontend
+    restart: unless-stopped
+    # Note: Using host network to access API on localhost:3001, but need to connect to frontend via its IP
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile.production
+    container_name: kemri_react_frontend
+    expose:
+      - "80"
+    volumes:
+      - ./frontend/nginx-frontend.conf:/etc/nginx/conf.d/default.conf:ro
+    restart: unless-stopped
+    # Note: Using bridge network, nginx proxy will connect via service name
+
+  api:
+    build:
+      context: ./api
+      dockerfile: Dockerfile
+    container_name: kemri_node_api
+    network_mode: host
+    volumes:
+      - ./api:/app
+      - /app/node_modules
+      - ./uploads:/app/uploads
+    environment:
+      NODE_ENV: production
+      PORT: 3102
+      # PostgreSQL connection (primary) - override via .env in production
+      # Note: App connects to localhost PostgreSQL, not Docker container
+      DB_TYPE: postgresql
+      DB_HOST: ${DB_HOST:-127.0.0.1}
+      DB_USER: ${DB_USER:-postgres}
+      DB_PASSWORD: ${DB_PASSWORD:-postgres}
+      DB_NAME: ${DB_NAME:-government_projects}
+      DB_PORT: ${DB_PORT:-5432}
+    command: npm run dev
+    restart: unless-stopped
+
+  public-dashboard:
+    build:
+      context: ./public-dashboard
+      dockerfile: Dockerfile.production
+    container_name: kemri_public_dashboard
+    restart: unless-stopped
+    expose:
+      - "80"
+    ports:
+      - "5279:80"
+
+  # PostgreSQL database (primary)
+  # NOTE: Database is now running on the host (localhost), not in Docker
+  # The app connects to localhost PostgreSQL via network_mode: host
+  # This service is commented out to prevent deploying a Docker database container
+  # postgres_db:
+  #   image: postgres:16-alpine
+  #   container_name: machakosme_postgres
+  #   restart: always
+  #   environment:
+  #     POSTGRES_USER: ${POSTGRES_USER:-${DB_USER:-postgres}}
+  #     POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-${DB_PASSWORD:-postgres}}
+  #     POSTGRES_DB: ${POSTGRES_DB:-${DB_NAME:-government_projects}}
+  #   volumes:
+  #     - machakosme_postgres_data:/var/lib/postgresql/data
+  #     - ./scripts/migration/init-postgres.sql:/docker-entrypoint-initdb.d/init-postgres.sql
+  #   ports:
+  #     - "5434:5432"
+  #   healthcheck:
+  #     test: ["CMD-SHELL", "pg_isready -U postgres"]
+  #     interval: 10s
+  #     timeout: 5s
+  #     retries: 5
+  #     start_period: 10s
+
+volumes:
+  # machakosme_postgres_data:  # No longer needed - using host PostgreSQL
+  nginx_cache:

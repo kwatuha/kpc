@@ -1,0 +1,14 @@
+docker exec -it db bash
+
+
+docker exec -it node_api bash
+docker exec -it react_frontend bash
+
+MuiBox-root css-1w1cxda
+
+
+curl -fsSL https://ollama.com/install.sh | sh
+
+ollama --version
+
+ollama pull codellama

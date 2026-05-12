@@ -1,0 +1,25 @@
+# Edit the URLs before use; never commit real credentials.
+LOAD DATABASE
+    FROM mysql://impesUser:CHANGEME_MYSQL@localhost:3308/gov_imbesdb
+    INTO pgsql://postgres:CHANGEME_POSTGRES@localhost:5433/government_projects
+
+WITH
+    include drop, create tables, create indexes, reset sequences,
+    workers = 8, concurrency = 1,
+    multiple readers per thread, rows per range = 50000
+
+SET
+    maintenance_work_mem to '512MB',
+    work_mem to '512MB',
+    search_path to 'public'
+
+CAST
+    type datetime to timestamp,
+    type date to date,
+    type tinyint to boolean using tinyint-to-boolean,
+    type year to integer,
+    type enum to varchar using empty-string-to-null
+
+BEFORE LOAD DO
+    $$ CREATE SCHEMA IF NOT EXISTS public; $$,
+    $$ SET search_path TO public; $$;

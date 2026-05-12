@@ -1,0 +1,5 @@
+
+sudo systemctl stop docker
+Warning: Stopping docker.service, but it can still be activated by:
+  docker.socket
+dev@pop-os:~/dev/remote/cimes$ sudo systemctl restart docker

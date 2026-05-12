@@ -1,0 +1,36 @@
+{
+  "name": "kemri-express-api",
+  "version": "1.0.0",
+  "description": "Express.js CRUD API for KEMRI tables",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js",
+    "seed:analytics": "node seeds/seedAnalyticsData.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^3.0.2",
+    "cors": "^2.8.5",
+    "csv-parser": "^3.2.0",
+    "dotenv": "^17.2.0",
+    "exceljs": "^4.4.0",
+    "express": "^4.18.2",
+    "html-to-pdfmake": "^2.5.30",
+    "jsonwebtoken": "^9.0.2",
+    "multer": "^2.0.2",
+    "mysql2": "^3.14.2",
+    "nodemailer": "^8.0.7",
+    "pdfkit": "^0.17.1",
+    "pg": "^8.19.0",
+    "puppeteer": "^24.12.1",
+    "socket.io": "^4.8.1",
+    "socket.io-client": "^4.8.1",
+    "xlsx": "^0.18.5"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.3"
+  }
+}

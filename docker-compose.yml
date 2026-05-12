@@ -1,0 +1,73 @@
+services:
+  nginx_proxy:
+    image: nginx:alpine
+    container_name: kemri_nginx_proxy
+    restart: always
+    network_mode: host  # Proxies to localhost API / Vite ports for KEMRI stack
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf
+    # Access main app via http://localhost:8184 (see nginx listen)
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: kemri_react_frontend
+    restart: always
+    dns:
+      - 8.8.8.8
+      - 1.1.1.1
+    ports:
+      - "5278:5173"
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+    depends_on:
+      - api
+    command: sh -c "cd /app && npm run dev"
+    environment:
+      - VITE_DEV_PUBLIC_URL=http://localhost:8184
+      - VITE_PROXY_TARGET=http://host.docker.internal:3102
+      # Google Maps key (read from repo-root .env or shell). Empty default lets
+      # the dev server start without it; pages will show the "for development
+      # purposes only" watermark until the key is supplied.
+      - VITE_MAPS_API_KEY=${VITE_MAPS_API_KEY:-}
+
+  public-dashboard:
+    build:
+      context: ./public-dashboard
+      dockerfile: Dockerfile
+    container_name: kemri_public_dashboard
+    restart: always
+    ports:
+      - "5279:5173"
+    volumes:
+      - ./public-dashboard:/app
+      - /app/node_modules
+    depends_on:
+      - api
+    command: npm run dev
+    environment:
+      - VITE_API_URL=/api
+      - VITE_BASE_PATH=/citizen/
+      - VITE_DEV_PUBLIC_URL=http://localhost:8184/citizen
+      - VITE_MAPS_API_KEY=${VITE_MAPS_API_KEY:-}
+
+  api:
+    build:
+      context: ./api
+      dockerfile: Dockerfile
+    container_name: kemri_node_api
+    restart: always
+    network_mode: host
+    volumes:
+      - ./api:/app
+      - /app/node_modules
+    environment:
+      NODE_ENV: development
+      PORT: 3102
+    command: npm run dev
+
+  # PostgreSQL: same as Machakos — use host Postgres; DB name kemridb (see api/.env).

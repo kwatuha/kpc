@@ -1,0 +1,63 @@
+{
+  "county": {
+    "code": "KSM",
+    "name": "Kisumu",
+    "displayName": "Kisumu County Government"
+  },
+  "database": {
+    "name": "kisumu_db",
+    "seedFile": "api/init.sql"
+  },
+  "docker": {
+    "ports": {
+      "nginx": 8080,
+      "frontend": 5175,
+      "publicDashboard": 5174,
+      "api": 3000,
+      "mysql": 3307
+    },
+    "containers": {
+      "nginx": "kisumu_nginx_proxy",
+      "frontend": "kisumu_react_frontend",
+      "publicDashboard": "kisumu_public_dashboard",
+      "api": "kisumu_node_api",
+      "mysql": "kisumu_db"
+    },
+    "volumes": {
+      "mysql": "kisumu_db_data"
+    }
+  },
+  "organization": {
+    "name": "Kisumu County Government",
+    "contact": {
+      "email": "info@kisumu.go.ke",
+      "phone": "+254-057-2020000",
+      "address": "Kisumu County Headquarters, Kisumu",
+      "website": "https://www.kisumu.go.ke"
+    }
+  },
+  "labels": {
+    "department": "Department",
+    "section": "Section",
+    "directorate": "Directorate",
+    "project": "Project",
+    "subcounty": "Sub-County",
+    "ward": "Ward",
+    "program": "Program",
+    "subprogram": "Sub-Program"
+  },
+  "features": {
+    "departments": true,
+    "sections": true,
+    "directorates": true,
+    "projects": true,
+    "subcounties": true,
+    "wards": true,
+    "programs": true,
+    "subprograms": true
+  }
+}
+
+
+
+

@@ -1,0 +1,63 @@
+{
+  "county": {
+    "code": "DEFAULT",
+    "name": "Machakos",
+    "displayName": "County Government of Machakos"
+  },
+  "database": {
+    "name": "imbesdb",
+    "seedFile": "api/init.sql"
+  },
+  "docker": {
+    "ports": {
+      "nginx": 8080,
+      "frontend": 5175,
+      "publicDashboard": 5174,
+      "api": 3000,
+      "mysql": 3307
+    },
+    "containers": {
+      "nginx": "nginx_proxy",
+      "frontend": "react_frontend",
+      "publicDashboard": "public_dashboard",
+      "api": "node_api",
+      "mysql": "db"
+    },
+    "volumes": {
+      "mysql": "db_data"
+    }
+  },
+  "organization": {
+    "name": "County Government of Machakos",
+    "contact": {
+      "email": "info@machos.go.ke",
+      "phone": "+254-700-123-456",
+      "address": "County Headquarters, Machos",
+      "website": "https://www.machos.go.ke"
+    }
+  },
+  "labels": {
+    "department": "Department",
+    "section": "Section",
+    "directorate": "Directorate",
+    "project": "Project",
+    "subcounty": "Sub-County",
+    "ward": "Ward",
+    "program": "Program",
+    "subprogram": "Sub-Program"
+  },
+  "features": {
+    "departments": true,
+    "sections": true,
+    "directorates": true,
+    "projects": true,
+    "subcounties": true,
+    "wards": true,
+    "programs": true,
+    "subprograms": true
+  }
+}
+
+
+
+

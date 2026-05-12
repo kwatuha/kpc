@@ -1,0 +1,319 @@
+{
+  "_doc": "Menu order is intentional. Visible categories first (work → insights → outputs → bulk ops → settings), hidden legacy/county categories last. Labels were chosen to be self-explanatory; the parent category provides context (e.g. inside Dashboards we say 'Finance', not 'Finance Dashboard'). Any submenu marked hidden:true is filtered out by getFilteredMenuCategories.",
+
+  "menuCategories": [
+    {
+      "id": "kimes",
+      "label": "Research",
+      "labelTree": "KIMES — Research & M&E",
+      "icon": "ScienceIcon",
+      "submenus": [
+        {
+          "title": "KIMES Home",
+          "icon": "GridViewIcon",
+          "route": "KEMRI_HOME"
+        },
+        {
+          "title": "All Studies",
+          "icon": "FolderOpenIcon",
+          "route": "KEMRI_STUDIES"
+        },
+        {
+          "title": "New Study",
+          "icon": "AddIcon",
+          "route": "KEMRI_STUDY_NEW"
+        },
+        {
+          "title": "PI Dashboard",
+          "icon": "DashboardIcon",
+          "route": "KEMRI_PI_DASHBOARD"
+        },
+        {
+          "title": "Review Queue",
+          "icon": "FactCheckIcon",
+          "route": "KEMRI_REVIEW_QUEUE"
+        },
+        {
+          "title": "Escalations",
+          "icon": "GavelIcon",
+          "route": "KEMRI_ESCALATIONS"
+        },
+        {
+          "title": "Strategic Plan 2023-2027",
+          "icon": "AccountTreeIcon",
+          "route": "KEMRI_STRATEGIC_PLAN"
+        },
+        {
+          "title": "Board Scorecard",
+          "icon": "PolicyIcon",
+          "route": "KEMRI_BOARD_SCORECARD"
+        },
+        {
+          "title": "Reporting Calendar",
+          "icon": "CalendarMonthIcon",
+          "route": "KEMRI_REPORTING_CALENDAR"
+        },
+        {
+          "title": "AI Reports Engine",
+          "icon": "AutoAwesomeIcon",
+          "route": "KEMRI_AI_REPORTS"
+        },
+        {
+          "title": "Donor Portal",
+          "icon": "AccountBalanceIcon",
+          "route": "KEMRI_DONOR_PORTAL"
+        },
+        {
+          "title": "Outputs Registry",
+          "icon": "MenuBookIcon",
+          "route": "KEMRI_OUTPUT_REGISTRY"
+        },
+        {
+          "title": "Field Forms & Checklists",
+          "icon": "ChecklistIcon",
+          "route": "DATA_COLLECTION_TOOLS"
+        },
+        {
+          "title": "National GIS Map",
+          "icon": "MapIcon",
+          "route": "GIS_DASHBOARD"
+        }
+      ]
+    },
+    {
+      "id": "dashboard",
+      "label": "Dashboards",
+      "labelTree": "Executive & Operations",
+      "icon": "GridViewIcon",
+      "submenus": [
+        {
+          "title": "Executive",
+          "icon": "ScienceIcon",
+          "route": "SYSTEM_DASHBOARD"
+        },
+        {
+          "title": "Operations",
+          "icon": "FactCheckIcon",
+          "route": "OPERATIONS_DASHBOARD"
+        },
+        {
+          "title": "Finance",
+          "icon": "AttachMoneyIcon",
+          "route": "FINANCE_DASHBOARD"
+        },
+        {
+          "title": "National GIS Map",
+          "icon": "MapIcon",
+          "route": "GIS_DASHBOARD"
+        },
+        { "title": "Personal Dashboard",      "icon": "DashboardIcon",  "route": "DASHBOARD",                     "hidden": true },
+        { "title": "Project By Status",       "icon": "AssessmentIcon", "route": "PROJECT_BY_STATUS_DASHBOARD",   "hidden": true },
+        { "title": "Project By Sector",       "icon": "CategoryIcon",   "route": "PROJECT_BY_SECTOR_DASHBOARD",   "hidden": true },
+        { "title": "Jobs & Impact",           "icon": "WorkIcon",       "route": "JOBS_DASHBOARD",                "hidden": true },
+        { "title": "Regional Breakdown",      "icon": "PublicIcon",     "route": "REGIONAL_REPORTING",            "hidden": true },
+        { "title": "Reporting Dashboard",     "icon": "AssessmentIcon", "route": "REPORTING_DASHBOARD",           "hidden": true },
+        { "title": "Personal Dashboard (legacy)","icon": "PaidIcon",    "route": "CONTRACTOR_DASHBOARD",          "hidden": true },
+        { "title": "Analytics",               "icon": "AnalyticsIcon",  "route": "PROJECT_ANALYTICS",             "hidden": true },
+        { "title": "Projects by Organization","icon": "ApartmentIcon",  "route": "PROJECTS_BY_ORGANIZATION",      "hidden": true, "permission": "organization.scope_bypass", "roles": ["admin", "super_admin", "super admin", "administrator"] }
+      ]
+    },
+    {
+      "id": "reports",
+      "label": "Reports",
+      "labelTree": "Reports & MEL",
+      "icon": "AssessmentIcon",
+      "_note": "Trimmed for KEMRI: kept Report Library (donor-ready bulletins, MEL outputs) and Scheduled Reports (recurring quarterly/annual reporting cycle). Absorption, Pending Bills, Budget Justification and Finance Overview are county-finance reports — replaced by Dashboards → Finance.",
+      "submenus": [
+        {
+          "title": "Report Library",
+          "icon": "MenuBookIcon",
+          "route": "REPORT_LIBRARY"
+        },
+        {
+          "title": "Scheduled Reports",
+          "icon": "ScheduleIcon",
+          "route": "SCHEDULED_REPORTS",
+          "permissionsAny": ["project.read_all", "project.update"]
+        },
+        { "title": "Absorption Report",        "icon": "AssessmentIcon",  "route": "ABSORPTION_REPORT",              "hidden": true, "permissionsAny": ["project.read_all", "project.update", "document.read_all"] },
+        { "title": "Budget Justification",     "icon": "DescriptionIcon", "route": "BUDGET_JUSTIFICATION_REPORT",    "hidden": true, "permissionsAny": ["project.read_all", "project.update", "document.read_all"] },
+        { "title": "Pending Bills Report",     "icon": "DescriptionIcon", "route": "PENDING_BILLS_REPORT",           "hidden": true, "permissionsAny": ["project.read_all", "document.read_all", "project.update"] },
+        { "title": "Project Finance Overview", "icon": "AttachMoneyIcon", "route": "PROJECT_FINANCE_OVERVIEW_REPORT","hidden": true, "permissionsAny": ["project.read_all", "project.update", "document.read_all"] },
+        { "title": "Checklists & visits",      "icon": "ChecklistIcon",   "route": "DATA_COLLECTION_TOOLS",          "hidden": true, "permissionsAny": ["project.read_all", "project.update"] },
+        { "title": "Reports Analytics",        "icon": "AssessmentIcon",  "route": "REPORTS",                        "hidden": true }
+      ]
+    },
+    {
+      "id": "data",
+      "label": "Data",
+      "labelTree": "Bulk Imports",
+      "icon": "CloudUploadIcon",
+      "submenus": [
+        {
+          "title": "Import Data",
+          "icon": "CloudUploadIcon",
+          "route": "CENTRAL_IMPORT",
+          "permission": "project.create"
+        },
+        {
+          "title": "Import Logs",
+          "icon": "AssessmentIcon",
+          "route": "PROJECTS_UPLOAD_LOG",
+          "roles": ["mda_ict_admin", "super_admin"]
+        }
+      ]
+    },
+    {
+      "id": "admin",
+      "label": "Admin",
+      "labelTree": "Settings",
+      "icon": "GroupIcon",
+      "adminOnly": true,
+      "submenus": [
+        {
+          "title": "Users & Roles",
+          "icon": "PeopleIcon",
+          "route": "USER_MANAGEMENT"
+        },
+        {
+          "title": "Approval Levels",
+          "icon": "ApprovalIcon",
+          "route": "APPROVAL_LEVELS_MANAGEMENT",
+          "permission": "approval_levels.read",
+          "roles": ["admin"]
+        },
+        {
+          "title": "Reference Data",
+          "icon": "StorageIcon",
+          "route": "METADATA_MANAGEMENT"
+        },
+        {
+          "title": "Audit Trail",
+          "icon": "HistoryIcon",
+          "route": "AUDIT_TRAIL"
+        },
+        { "title": "Admin",            "icon": "AdminPanelSettingsIcon", "route": "ADMIN",                       "hidden": true },
+        { "title": "Workflow mgmt",    "icon": "AccountTreeIcon",        "route": "WORKFLOW_MANAGEMENT",         "hidden": true, "permission": "project_workflow.read", "roles": ["admin"] },
+        { "title": "Contractor mgmt",  "icon": "BusinessIcon",           "route": "CONTRACTOR_MANAGEMENT",       "hidden": true },
+        { "title": "Job Categories",   "icon": "WorkIcon",               "route": "JOB_CATEGORIES",              "hidden": true, "roles": ["admin"] },
+        { "title": "Sectors",          "icon": "CategoryIcon",           "route": "SECTORS",                     "hidden": true, "roles": ["admin"] },
+        { "title": "Wards",            "icon": "LocationOnIcon",         "route": "KENYA_WARDS",                 "hidden": true, "roles": ["admin"] },
+        { "title": "Agencies",         "icon": "BusinessIcon",           "route": "AGENCIES",                    "hidden": true, "roles": ["admin"] },
+        { "title": "Ministries",       "icon": "ApartmentIcon",          "route": "MINISTRIES_MANAGEMENT",       "hidden": true, "roles": ["admin"] }
+      ]
+    },
+
+    {
+      "id": "finance",
+      "label": "Finance",
+      "labelTree": "Financial Tracking",
+      "icon": "AttachMoneyIcon",
+      "hidden": true,
+      "_note": "Hidden for KEMRI: payment certificates / certificate verification are county-government contractor workflows. KEMRI grant finance lives under Dashboards → Finance and inside each study (§7 Budget lines).",
+      "submenus": [
+        { "title": "Payment Certificates", "icon": "DescriptionIcon",   "route": "FINANCE_PAYMENT_CERTIFICATES", "hidden": true, "permission": "document.read_all" },
+        { "title": "Verify Certificate",   "icon": "VerifiedUserIcon",  "route": "VERIFY_CERTIFICATE",           "hidden": true }
+      ]
+    },
+    {
+      "id": "reporting",
+      "label": "Projects",
+      "icon": "AssessmentIcon",
+      "hidden": true,
+      "_note": "Hidden for KEMRI: this is the legacy county-projects module. Research studies, teams, partners, evaluations and types are all handled inside KIMES (Research → All Studies, study profile tabs, Outputs Registry).",
+      "submenus": [
+        { "title": "Projects Registry",   "icon": "FolderOpenIcon",    "route": "PROJECTS",                          "hidden": true },
+        { "title": "Project Documents",   "icon": "DescriptionIcon",   "route": "PROJECT_DOCUMENTS_BY_PROJECT",      "hidden": true, "permissionsAny": ["document.read_all", "document.create"] },
+        { "title": "Project Status",      "icon": "UpdateIcon",        "route": "PROJECT_STATUS",                    "hidden": true, "permissionsAny": ["project.read_all", "project.update"] },
+        { "title": "Project Teams",       "icon": "GroupsIcon",        "route": "PROJECT_TEAMS",                     "hidden": true, "permissionsAny": ["project.read_all", "project.update"] },
+        { "title": "Project Partners",    "icon": "HandshakeIcon",     "route": "PROJECT_PARTNERS",                  "hidden": true, "permissionsAny": ["project.read_all", "project.update"] },
+        { "title": "Project evaluation",  "icon": "FactCheckIcon",     "route": "PROJECT_EVALUATION",                "hidden": true, "permissionsAny": ["project.read_all", "project.update"] },
+        { "title": "Reports",             "icon": "AssessmentIcon",    "route": "REPORTS",                           "hidden": true },
+        { "title": "Project Dashboards",  "icon": "AssessmentIcon",    "route": "REPORTING_OVERVIEW",                "hidden": true },
+        { "title": "Regional Rpts",       "icon": "AssessmentIcon",    "route": "REGIONAL_DASHBOARD",                "hidden": true },
+        { "title": "Regional Dashboards", "icon": "AssessmentIcon",    "route": "REGIONAL_REPORTING",                "hidden": true },
+        { "title": "Absorption Report",   "icon": "AssessmentIcon",    "route": "ABSORPTION_REPORT",                 "hidden": true },
+        { "title": "Performance Mgmt",    "icon": "AssessmentIcon",    "route": "PERFORMANCE_MANAGEMENT_REPORT",     "hidden": true },
+        { "title": "CAPR Report",         "icon": "AssessmentIcon",    "route": "CAPR_REPORT",                       "hidden": true },
+        { "title": "Quarterly Impl.",     "icon": "AssessmentIcon",    "route": "QUARTERLY_IMPLEMENTATION_REPORT",   "hidden": true },
+        { "title": "Project Types",       "icon": "CategoryIcon",      "route": "PROJECT_TYPES",                     "hidden": true }
+      ]
+    },
+    {
+      "id": "management",
+      "label": "Planning",
+      "icon": "SettingsIcon",
+      "hidden": true,
+      "_note": "Hidden for KEMRI: County CIDP / ADP / activity & risk libraries are county-government planning artefacts. KEMRI strategic plan & KRAs are captured inside the study form (§4) and Approval Levels lives under Admin.",
+      "submenus": [
+        { "title": "CIDP",                  "icon": "AccountTreeIcon",   "route": "STRATEGIC_PLANNING",            "hidden": true },
+        { "title": "Measurement types",     "icon": "StraightenIcon",    "to": "/planning/indicators?section=measurement-types", "hidden": true },
+        { "title": "Indicators & KPIs",     "icon": "ShowChartIcon",     "route": "PLANNING_INDICATORS",           "hidden": true },
+        { "title": "Project Activities",    "icon": "TaskAltIcon",       "route": "PLANNING_PROJECT_ACTIVITIES",   "hidden": true },
+        { "title": "Project Risks",         "icon": "ReportProblemIcon", "route": "PLANNING_PROJECT_RISKS",        "hidden": true },
+        { "title": "Reporting frequency",   "icon": "RepeatIcon",        "route": "PLANNING_REPORTING_FREQUENCY",  "hidden": true },
+        { "title": "Project Activity Links","icon": "TaskAltIcon",       "route": "PROJECT_PLANNING_ACTIVITY_LINKS","hidden": true, "permissionsAny": ["project.read_all", "strategic_plan.read_all"] },
+        { "title": "Project Risk Links",    "icon": "ReportProblemIcon", "route": "PROJECT_PLANNING_RISK_LINKS",   "hidden": true, "permissionsAny": ["project.read_all", "strategic_plan.read_all"] },
+        { "title": "ADP-Budget",            "icon": "AttachMoneyIcon",   "route": "BUDGET_MANAGEMENT",             "hidden": true },
+        { "title": "Approvals & workflows", "icon": "ApprovalIcon",      "route": "APPROVAL_LEVELS_MANAGEMENT",    "hidden": true, "permission": "approval_levels.read", "roles": ["admin"] }
+      ]
+    },
+    {
+      "id": "procurement",
+      "label": "Procurement",
+      "icon": "AssessmentIcon",
+      "hidden": true,
+      "_note": "Hidden for KEMRI: county-construction procurement workflow is not used. Lab equipment, reagents and study budget lines are tracked inside each research study (Form §6 Equipment, §7 Budget).",
+      "submenus": [
+        { "title": "Project Procurement", "icon": "AssessmentIcon", "route": "PROCUREMENT",                     "hidden": true, "permissionsAny": ["project.read_all", "project.update"] },
+        { "title": "Procured Projects",   "icon": "HistoryIcon",    "route": "PROCUREMENT_PROCURED_PROJECTS",   "hidden": true, "permissionsAny": ["project.read_all", "project.update"] },
+        { "title": "Procurement stages",  "icon": "AssignmentIcon", "route": "PROCUREMENT_STAGES",              "hidden": true, "permissionsAny": ["project.read_all", "project.update"] },
+        { "title": "Contractor Registry", "icon": "BusinessIcon",   "route": "CONTRACTOR_MANAGEMENT",           "hidden": true, "permissionsAny": ["contractors.read", "admin.access"] },
+        { "title": "Contractor Types",    "icon": "CategoryIcon",   "route": "CONTRACTOR_TYPES",                "hidden": true, "permissionsAny": ["contractors.read", "admin.access"] }
+      ]
+    },
+    {
+      "id": "monitoring",
+      "label": "Monitoring",
+      "icon": "SpeedIcon",
+      "hidden": true,
+      "_note": "Hidden for KEMRI: per-study monitoring (status, milestones, DQA, RAG, escalations, lab analyses, operations feedback, SWOT) is now done inside each Research Study. Use Research → All Studies → study profile.",
+      "submenus": [
+        { "title": "Project Documents",    "icon": "DescriptionIcon", "route": "PROJECT_DOCUMENTS_BY_PROJECT",  "hidden": true, "permissionsAny": ["document.read_all", "document.create"] },
+        { "title": "Project Status",       "icon": "UpdateIcon",      "route": "PROJECT_STATUS",                "hidden": true, "permissionsAny": ["project.read_all", "project.update"] },
+        { "title": "Project Updates",      "icon": "ArticleIcon",     "route": "PROJECT_UPDATES",               "hidden": true, "permissionsAny": ["project.read_all", "project.update"] },
+        { "title": "Project evaluation",   "icon": "FactCheckIcon",   "route": "PROJECT_EVALUATION",            "hidden": true, "permissionsAny": ["project.read_all", "project.update"] },
+        { "title": "Stakeholder feedback", "icon": "FeedbackIcon",    "route": "PROJECT_FEEDBACK_BY_PROJECT",   "hidden": true },
+        { "title": "Checklists & visits",  "icon": "ChecklistIcon",   "route": "DATA_COLLECTION_TOOLS",         "hidden": true, "permissionsAny": ["project.read_all", "project.update"] }
+      ]
+    },
+    {
+      "id": "hr",
+      "label": "HR",
+      "icon": "PeopleIcon",
+      "hidden": true,
+      "_note": "Hidden for KEMRI: institutional HR (employees, personnel actions, leave, public holidays) is owned by the corporate HRIS and is out of scope for KIMES. Per-study research staff & capacity-building are captured inside each study (Form §5).",
+      "submenus": [
+        { "title": "Employees",         "icon": "PeopleIcon",      "route": "HR_EMPLOYEES",       "hidden": true, "permission": "hr.access", "roles": ["admin"] },
+        { "title": "Personnel actions", "icon": "WorkHistoryIcon", "route": "HR_PERSONNEL",       "hidden": true, "permission": "hr.access", "roles": ["admin"] },
+        { "title": "Job groups",        "icon": "GroupsIcon",      "route": "HR_JOB_GROUPS",      "hidden": true, "permission": "hr.access", "roles": ["admin"] },
+        { "title": "Leave types",       "icon": "EventNoteIcon",   "route": "HR_LEAVE_TYPES",     "hidden": true, "permission": "hr.access", "roles": ["admin"] },
+        { "title": "Public holidays",   "icon": "CelebrationIcon", "route": "HR_PUBLIC_HOLIDAYS", "hidden": true, "permission": "hr.access", "roles": ["admin"] }
+      ]
+    },
+    {
+      "id": "public",
+      "label": "Public",
+      "icon": "PublicIcon",
+      "adminOnly": true,
+      "hidden": true,
+      "submenus": [
+        { "title": "Public Approval",  "icon": "ApprovalIcon",    "route": "PUBLIC_APPROVAL",            "permission": "public_content.approve",        "roles": ["admin"] },
+        { "title": "Feedback Review",  "icon": "GavelIcon",       "route": "PUBLIC_FEEDBACK_MODERATION", "permission": "public_content.approve",        "roles": ["admin"] },
+        { "title": "Citizen feedback", "icon": "FeedbackIcon",    "route": "FEEDBACK_MANAGEMENT",        "permission": "feedback.respond",              "roles": ["admin"] },
+        { "title": "County Projects",  "icon": "AssignmentIcon",  "route": "COUNTY_PROPOSED_PROJECTS",   "permission": "county_proposed_projects.read", "roles": ["admin"], "hidden": true },
+        { "title": "Announcements",    "icon": "AnnouncementIcon","route": "PROJECT_ANNOUNCEMENTS",      "permission": "project_announcements.read",    "roles": ["admin"], "hidden": true }
+      ]
+    }
+  ]
+}

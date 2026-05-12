@@ -1,0 +1,232 @@
+import React, { useRef, useEffect, useState, useCallback } from 'react';
+import { GoogleMap, useJsApiLoader, StandaloneSearchBox } from '@react-google-maps/api';
+import { CircularProgress, Alert, Box } from '@mui/material';
+
+// Define the Google Maps libraries you'll use.
+// `visualization` exposes HeatmapLayer used by the GIS dashboard.
+const libraries = ['places', 'visualization'];
+
+/** Bias place search toward Kenya (does not restrict results). */
+const KENYA_SEARCH_BOUNDS = {
+  north: 5.0,
+  south: -4.7,
+  east: 41.9,
+  west: 33.9,
+};
+
+/** Search box: `overlay` (default, centered on map) or `above` (toolbar row, map stays unobstructed). */
+function GoogleMapComponent({
+  children,
+  center,
+  zoom,
+  style,
+  onCreated,
+  onSearchPlaceChanged,
+  onClick,
+  mapTypeId,
+  searchPlacement = 'overlay',
+}) {
+  const mapRef = useRef(null);
+  const searchBoxRef = useRef(null);
+  const [mapLoaded, setMapLoaded] = useState(false);
+  
+  const apiKey = import.meta.env.VITE_MAPS_API_KEY;
+
+  const { isLoaded, loadError } = useJsApiLoader({
+    googleMapsApiKey: apiKey,
+    libraries,
+  });
+
+  const onLoad = useCallback(map => {
+    mapRef.current = map;
+    setMapLoaded(true);
+    
+    // Ensure zoom controls are visible and properly positioned
+    if (window.google && window.google.maps) {
+      // Set map type if provided
+      if (mapTypeId) {
+        map.setMapTypeId(mapTypeId);
+      }
+      
+      // Set zoom control position explicitly - do this after a small delay to ensure it takes effect
+      setTimeout(() => {
+        map.setOptions({
+          zoomControl: true,
+          zoomControlOptions: {
+            position: window.google.maps.ControlPosition.RIGHT_CENTER,
+          },
+        });
+      }, 100);
+    }
+    
+    if (onCreated) {
+      onCreated(map);
+    }
+  }, [onCreated, mapTypeId]);
+
+  useEffect(() => {
+    if (!mapRef.current || !mapLoaded || !window.google?.maps) return;
+    const id = mapTypeId || 'roadmap';
+    mapRef.current.setMapTypeId(id);
+  }, [mapTypeId, mapLoaded]);
+
+  const onUnmount = useCallback(() => {
+    mapRef.current = null;
+    setMapLoaded(false);
+  }, []);
+
+  // Update map center and zoom when props change
+  useEffect(() => {
+    if (mapRef.current && mapLoaded && center && typeof center === 'object' && 
+        center.lat !== undefined && center.lng !== undefined && 
+        !isNaN(center.lat) && !isNaN(center.lng) && zoom) {
+      mapRef.current.setCenter(center);
+      mapRef.current.setZoom(zoom);
+    }
+  }, [center, zoom, mapLoaded]);
+
+  const onPlacesChanged = useCallback(() => {
+    if (searchBoxRef.current) {
+      const places = searchBoxRef.current.getPlaces();
+      if (places && places.length > 0) {
+        const place = places[0];
+        if (mapRef.current) {
+          mapRef.current.panTo(place.geometry.location);
+          mapRef.current.setZoom(15);
+        }
+        if (onSearchPlaceChanged) {
+          onSearchPlaceChanged(place);
+        }
+      }
+    }
+  }, [onSearchPlaceChanged]);
+
+
+  if (loadError) {
+    return <Alert severity="error">Error loading Google Maps: {loadError.message}</Alert>;
+  }
+
+  if (!isLoaded) {
+    return (
+      <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: style.height || '500px' }}>
+        <CircularProgress />
+        <Box sx={{ ml: 2 }}>Loading map...</Box>
+      </Box>
+    );
+  }
+
+  const mapOptions = {
+    fullscreenControl: false,
+    mapTypeControl: false,
+    streetViewControl: false,
+    zoomControl: true,
+    zoomControlOptions: {
+      position: window.google?.maps?.ControlPosition?.RIGHT_CENTER || 10,
+    },
+    disableDefaultUI: false,
+    mapTypeId: mapTypeId || 'roadmap',
+  };
+
+  // StandaloneSearchBox uses querySelector('input') on mount — must be a real <input>, not MUI TextField
+  // (otherwise Places can fail silently and Google shows "This page can't load Google Maps correctly" while typing).
+  const searchInputStyle =
+    searchPlacement === 'above'
+      ? {
+          boxSizing: 'border-box',
+          width: '100%',
+          maxWidth: 440,
+          height: 40,
+          padding: '0 14px',
+          borderRadius: 8,
+          border: '1px solid rgba(0, 0, 0, 0.23)',
+          fontSize: 14,
+          fontFamily: 'inherit',
+          outline: 'none',
+          backgroundColor: '#fff',
+        }
+      : {
+          boxSizing: 'border-box',
+          border: '1px solid transparent',
+          width: 240,
+          height: 40,
+          padding: '0 12px',
+          borderRadius: '3px',
+          boxShadow: '0 2px 6px rgba(0, 0, 0, 0.3)',
+          fontSize: 14,
+          outline: 'none',
+          textOverflow: 'ellipsis',
+          position: 'absolute',
+          left: '50%',
+          marginLeft: '-120px',
+          top: 10,
+          zIndex: 10,
+          backgroundColor: 'white',
+        };
+
+  const searchField = (
+    <StandaloneSearchBox
+      bounds={KENYA_SEARCH_BOUNDS}
+      onLoad={(ref) => {
+        searchBoxRef.current = ref;
+      }}
+      onPlacesChanged={onPlacesChanged}
+    >
+      <input
+        type="text"
+        autoComplete="off"
+        placeholder="Search for a place or address…"
+        aria-label="Search map"
+        style={searchInputStyle}
+      />
+    </StandaloneSearchBox>
+  );
+
+  if (searchPlacement === 'above') {
+    return (
+      <Box
+        sx={{
+          position: 'relative',
+          display: 'flex',
+          flexDirection: 'column',
+          width: style?.width || '100%',
+          height: style?.height || '500px',
+          minHeight: 0,
+        }}
+      >
+        <Box sx={{ flexShrink: 0, px: 0.5, pt: 0.5, pb: 0.75 }}>{searchField}</Box>
+        <Box sx={{ flex: 1, minHeight: 0, width: '100%', position: 'relative' }}>
+          <GoogleMap
+            mapContainerStyle={{ width: '100%', height: '100%' }}
+            center={center}
+            zoom={zoom}
+            onLoad={onLoad}
+            onUnmount={onUnmount}
+            onClick={onClick}
+            options={mapOptions}
+          >
+            {children}
+          </GoogleMap>
+        </Box>
+      </Box>
+    );
+  }
+
+  return (
+    <Box sx={{ position: 'relative', ...style }}>
+      {searchField}
+      <GoogleMap
+        mapContainerStyle={style}
+        center={center}
+        zoom={zoom}
+        onLoad={onLoad}
+        onUnmount={onUnmount}
+        onClick={onClick}
+        options={mapOptions}
+      >
+        {children}
+      </GoogleMap>
+    </Box>
+  );
+}
+
+export default GoogleMapComponent;

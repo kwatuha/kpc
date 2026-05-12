@@ -1,0 +1,150 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+.modal-window{
+	position:absolute;
+	padding:2px 2px 10px 2px;
+	font-family:Tahoma;
+	min-width:300px;
+	max-width:80%;
+	max-height:90%;
+	background-color:#FDFDFD;
+	border-radius:3px;
+	color:#999;
+	border:1px solid #ccc;
+	box-shadow:0px 0px 8px #d5d5d5;
+	font-size:14px;
+	text-align:left;
+	z-index:500;
+	display:none;
+	left:50%;
+	top:50%;
+}
+
+.modal-window ul{
+	list-style:none;
+	text-indent:0px;
+	margin:0px -12px;
+	padding:0px;
+}
+
+.modal-window ul > li{
+	list-style:none;
+	font-size:14px;
+	
+	padding:7px 10px;
+	color:#565654;
+}
+
+.modal-window ul > li > ul{
+	margin:2px;
+	display:none;
+	font-size:12px;
+}
+
+.modal-window ul > li > ul > li:hover{
+	background-color:#C9D6C9;
+	
+}
+
+.modal-window ul > li:hover > ul{
+	font-weight:300;
+}
+
+.modal-window ul > li:hover{
+	background-color:#E2F3E0;
+	font-weight:800;
+	padding:7px 10px;
+	cursor:pointer;
+	box-shadow:0px 0px 2px #597856
+}
+
+.modal-window .options, select option{
+	font-size:16px;
+	padding:10px 15px;
+	text-align:left;
+	cursor:pointer;
+	clear:both;
+}
+
+.modal-window .options:hover, select option:hover{
+	background-color:#E0E0E0;
+	color:#292929;
+}
+
+.modal-window input, .inputC{
+	border:none;
+	border-bottom:1px solid #68B3EA;
+	padding: 6px 15px;
+	margin:15px;
+	box-shadow:inset 0px -3px 3px #B9DCF9;
+	outline:none;
+	color:#877676;
+}
+
+.modal-window input:focus, .modal-window input:hover, .inputC:hover{
+	box-shadow:inset 0px -3px 3px #E1CAC8;
+	border-bottom:1px solid #EE9F7D;
+	outline:none;
+	
+}
+
+.modal-window-title{
+	font-size:20px;
+	padding:7px 30px 4px 10px;
+	border-bottom:1px solid #d4d4d4;
+	cursor:pointer;
+	color:#55B12E;
+	font-family:Arial;
+	text-shadow:none;
+	clear:both;
+	white-space:nowrap;
+}
+
+.modal-window-body{
+	padding:5px 10px;
+	position:relative;
+}
+
+.modal-window-body .full-button{
+	padding:7px 20px;
+	clear:both;
+	text-align:center;
+	margin:7px -12px -8px -12px;
+	font-size:16px;
+	color:#373737;
+}
+
+.modal-window-body .full-button:hover{
+	background-color:#f2f2f2;
+	box-shadow:0px 0px 6px #d9d9d9;
+	color:#A81A00;
+	cursor:pointer;
+	font-weight:600;
+	box-shadow:0px 0px 3px #eee;
+}
+
+.modal-window-close{
+	position:absolute;
+	right:5px;
+	top:6px;
+	z-index:501;
+	font-family:"Palatino Linotype", "Book Antiqua", Palatino, serif;
+	font-size:14px;
+	border-radius:50%;
+	color:#777;
+	font-weight:800;
+	padding:0px 5px 10px 5px;
+	height:10px;
+	width:10px;
+	text-align:center;
+}
+
+.modal-window-close:hover{
+	background-color:#eee;
+	cursor:pointer;
+	color:#444;
+	border:1px solid #ccc;
+	box-shadow:0px 0px 2px #ccc inset;	
+}

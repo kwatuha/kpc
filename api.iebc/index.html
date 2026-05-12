@@ -1,0 +1,177 @@
+<!doctype html>
+<html>
+<meta http-equiv="content-type" content="text/html;charset=utf-8"/>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <!-- build:css -->
+    <link rel="stylesheet" type="text/css" href="css/vendor/ui/jquery-ui.css">
+    <link rel="stylesheet" type="text/css" href="css/vendor/hint.css">
+    <link rel="stylesheet" type="text/css" href="css/modalwindow.css">
+    <link rel="stylesheet" type="text/css" href="css/gadget.css">
+    <link href="/web/css/font-awesome.min.css" rel="stylesheet">
+    <!-- endbuild -->
+
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript"
+            src="https://maps.google.com/maps/api/js?libraries=geometry,places,drawing&amp;sensor=false&amp;key=AIzaSyC6Cwm9F0V_AmaSJLN5yclUrJ5Sj4oYJzw"></script>
+
+    <!-- build:js -->
+    <script src="lib/jquery-1.9.1.js"></script>
+    <script src="lib/jquery-ui-1.10.3.custom.js"></script>
+    <script src="lib/infobox.js"></script>
+    <script src="lib/easing.js"></script>
+    <script src="lib/cycle.js"></script>
+
+    <script src="/settings.js"></script>
+
+    <script src="js/modalwindow.js"></script>
+    <script src="js/gadgetconfigs.js"></script>
+    <script src="js/directions.js"></script>
+    <script src="js/PolyMan-3.0.js"></script>
+    <script src="js/findmyps.js"></script>
+    <script src="js/registered.js"></script>
+    <script src="js/confirm.js"></script>
+    <script src="js/candidates.js"></script>
+    <script src="js/results.js"></script>
+    
+   
+    <!-- endbuild -->
+
+    <title>CIMES | GIS Plugin</title>
+</head>
+<body>
+<div id="gadget">
+    <div id="gadget-mask"><img src="images/splash.gif"/></div>
+    <!-- <div class="control-bar">
+        <img src="images/tiles.png" id="select-gadget"/>
+        <img src="images/logo.png" id="iebc-logo"/>
+        <div class="control-bar-option hint&#45;&#45;right hint&#45;&#45;success" id="election-selection"
+            data-hint="Change to another election">Select Election
+        </div>
+        <div id="gadget-menu">
+            <div class="control-bar-option" id="gadget-registered">Voters Registration Per Location</div>
+            <div class="control-bar-option" id="gadget-candidates">Candidates Per Location</div>
+            <div class="control-bar-option" id="gadget-results">Provisional Results</div>
+        </div>
+    </div> -->
+    <div id="gadget-right">
+        <!-- <div class="control-bar">
+            <img src="images/tiles.png" id="iebc-logo" />
+            <div class="control-bar-option hint&#45;&#45;right hint&#45;&#45;success"
+                data-hint="Change location/ financial year"> Menu Options
+            </div>
+        </div> -->
+        <div class="div" id="select-post">
+            <div class="title">Select Financial Year
+                <div class="arrow">&or;</div>
+                
+            </div>
+            <div class="body">
+                <select disabled="disabled" id="select-post-dropdown" class="select">
+                    <option value="0"></option>
+                </select>
+            </div>
+        </div>
+        <div class="div" id="select-location">
+            <div class="title">Select Location
+                <div class="arrow">&and;</div>
+            </div>
+            <div class="body">
+                <select id="county-dropdown" class="select">
+                    <option value="false">Select County</option>
+                </select>
+                <select id="constituency-dropdown" class="select">
+                    <option value="false">Select Sub-county</option>
+                </select>
+                <select id="ward-dropdown" class="select">
+                    <option value="false">Select Ward</option>
+                </select>
+                <select id="pollingstation-dropdown" class="select">
+                    <option value="false">Select Polling Station</option>
+                </select>
+            </div>
+        </div>
+        <div class="div" id="candidates-list-view">
+            <div class="title">Candidates
+                <div class="arrow">&and;</div>
+            </div>
+            <div class="body">
+
+            </div>
+        </div>
+        <div class="div" id="registered-list-view">
+            <div class="title"><span id="totalReg"></span>
+                <div class="arrow">&and;</div>
+            </div>
+            <div class="body">
+            </div>
+        </div>
+        <div class="div" id="results-list-view">
+            <div class="title">Results
+                <div class="arrow">&and;</div>
+            </div>
+            <div class="body">
+            </div>
+        </div>
+        <div class="div" id="confirm-list-view">
+            <div class="title">Confirm Registration
+                <div class="arrow">&and;</div>
+            </div>
+            <div class="body">
+                <input type="search" id="confirm-id-number" class="textField"
+                       value="Enter your ID/Passport Number Here...">
+                <div class="myButton" id="get-voter-information">Get Info</div>
+                <div class="clearfix"></div>
+                <div class="div clearfix">
+                    <div class="title">My Details
+                        <div class="arrow">&or;</div>
+                    </div>
+                    <div class="body" style="display:none" id="voter-information-content">
+                        <dl>
+                            <dt>Name:</dt>
+                            <dd id="voter-name"></dd>
+                            <dt>County:</dt>
+                            <dd id="voter-county"></dd>
+                            <dt>Sub-county:</dt>
+                            <dd id="voter-constituency"></dd>
+                            <dt>Ward:</dt>
+                            <dd id="voter-ward"></dd>
+                            <dt>Polling Station:</dt>
+                            <dd id="voter-pollingstation"></dd>
+                        </dl>
+                    </div>
+                    <div class="body hint--error" style="display:none" id="voter-information-content-wrong">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="div" id="findmyps-list-view">
+            <div class="title">Where Do You Live?
+                <div class="arrow">&and;</div>
+            </div>
+            <div class="body">
+                <input type="text" id="where_I_live" class="text-field">
+                <div class="div clearfix">
+                    <div class="title">Polling Stations Close to you
+                        <div class="arrow">&or;</div>
+                    </div>
+                    <div class="body" id="polling-stations-near" style="display:none">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="gadget-left">
+        <div id="backBtn">
+            <div id="backArrow" class="hint--bottom hint--info" data-hint="Highest Level Available">
+                <strong>&#9632;</strong></div>
+            <div id="backText">
+                <div class="backText">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+            </div>
+        </div>
+        <div id="map"></div>
+    </div>
+</div>
+</body>
+</html>

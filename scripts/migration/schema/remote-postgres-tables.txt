@@ -1,0 +1,30 @@
+                  List of relations
+ Schema |          Name           | Type  |  Owner   
+--------+-------------------------+-------+----------
+ public | admin_sessions          | table | postgres
+ public | admins                  | table | postgres
+ public | conversation_memory     | table | postgres
+ public | digital_hubs            | table | postgres
+ public | feedback                | table | postgres
+ public | permissions             | table | postgres
+ public | project_counties        | table | postgres
+ public | project_rag_index       | table | postgres
+ public | project_rag_index0      | table | postgres
+ public | project_rag_index1      | table | postgres
+ public | project_rag_index_model | table | postgres
+ public | project_sites           | table | postgres
+ public | projects                | table | postgres
+ public | public_wifi             | table | postgres
+ public | role_permissions        | table | postgres
+ public | roles                   | table | postgres
+ public | staging_accomodation    | table | postgres
+ public | staging_ahp             | table | postgres
+ public | staging_digital_hubs    | table | postgres
+ public | staging_esp             | table | postgres
+(20 rows)
+
+ table_count 
+-------------
+          24
+(1 row)
+

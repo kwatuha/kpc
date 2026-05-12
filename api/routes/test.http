@@ -1,0 +1,97 @@
+# POST http://165.22.227.234:5000/api/register HTTP/1.1
+# content-type: application/json
+
+# {
+#     "username": "testuser",
+#     "email": "test@example.com",
+#     "password": "Password123!",
+#     "first_name": "Test",
+#     "last_name": "User",
+#     "department": "IT",   
+#     "title": "Developer"  
+# }
+
+# app.use('/api', usersRoutes); // <--- NEW: Mount your users routes at /api
+# POST http://165.22.227.234:3000/api/login HTTP/1.1
+# content-type: application/json
+
+# {
+    
+#      "username": "test@example.com",
+#     "password": "Password123!"
+# }
+
+# http://165.22.227.234:6000/api/auth/login
+# POST  http://192.168.100.12:3000/api/auth/test-reach
+
+# POST http://165.22.227.234:5000/api/register HTTP/1.1
+# content-type: application/json
+
+# {
+#     "username": "akwatuha",
+#     "email": "kwatuha@gmail.com",
+#     "password": "reset123",
+#     "first_name": "Alfayo",
+#     "last_name": "Kwatuha",
+#     "department": "IT",   
+#     "title": "Developer"  
+# }
+
+
+# POST http://165.22.227.234:5000/api/login HTTP/1.1
+# content-type: application/json
+
+# {
+    
+#      "username": "akwatuha",
+#     "password": "reset123"
+# }
+
+# http://165.22.227.234:5000/api/user
+# /http://165.22.227.234:6000/api/login
+
+# POST  http://165.22.227.234:3000/api/auth/login HTTP/1.1
+# content-type: application/json
+
+# {
+    
+#      "username": "akwatuha",
+#     "password": "reset123"
+# }
+
+
+ GET http://165.22.227.234:3000/api/strategy/strategic_plans/1 HTTP/1.1
+content-type: application/json
+x-auth-token:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoyLCJ1c2VybmFtZSI6ImFrd2F0dWhhIiwiZW1haWwiOiJrd2F0dWhhQGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsInByaXZpbGVnZXMiOlsidXNlci5yZWFkX2FsbCIsInVzZXIuY3JlYXRlIiwidXNlci51cGRhdGUiLCJ1c2VyLmRlbGV0ZSIsInByb2plY3QucmVhZF9hbGwiLCJwcm9qZWN0LmNyZWF0ZSIsInByb2plY3QudXBkYXRlIiwicHJvamVjdC5kZWxldGUiLCJ0YXNrLnJlYWRfYWxsIiwidGFzay5jcmVhdGUiLCJ0YXNrLnVwZGF0ZSIsInRhc2suZGVsZXRlIiwidGFzay5tYW5hZ2VfYXNzaWduZWVzIiwidGFzay5tYW5hZ2VfZGVwZW5kZW5jaWVzIiwibWlsZXN0b25lLnJlYWRfYWxsIiwibWlsZXN0b25lLmNyZWF0ZSIsIm1pbGVzdG9uZS51cGRhdGUiLCJtaWxlc3RvbmUuZGVsZXRlIiwicmF3X2RhdGEudmlldyIsInJhd19kYXRhLmV4cG9ydCIsInJhd19kYXRhLmNyZWF0ZSIsInJhd19kYXRhLnVwZGF0ZSIsInJhd19kYXRhLmRlbGV0ZSIsImRhc2hib2FyZC52aWV3IiwicmVwb3J0cy52aWV3X2FsbCIsInVzZXIucmVhZF9hbGwiLCJ1c2VyLmNyZWF0ZSIsInVzZXIudXBkYXRlIiwidXNlci5kZWxldGUiLCJwcm9qZWN0LnJlYWRfYWxsIiwicHJvamVjdC5jcmVhdGUiLCJwcm9qZWN0LnVwZGF0ZSIsInByb2plY3QuZGVsZXRlIiwicHJvamVjdC5tYW5hZ2Vfb3duIiwidGFzay5yZWFkX2FsbCIsInRhc2suY3JlYXRlIiwidGFzay51cGRhdGUiLCJ0YXNrLmRlbGV0ZSIsInRhc2subWFuYWdlX2Fzc2lnbmVlcyIsInRhc2subWFuYWdlX2RlcGVuZGVuY2llcyIsIm1pbGVzdG9uZS5yZWFkX2FsbCIsIm1pbGVzdG9uZS5jcmVhdGUiLCJtaWxlc3RvbmUudXBkYXRlIiwibWlsZXN0b25lLmRlbGV0ZSIsInJhd19kYXRhLnZpZXciLCJyYXdfZGF0YS5leHBvcnQiLCJyYXdfZGF0YS5jcmVhdGUiLCJyYXdfZGF0YS51cGRhdGUiLCJyYXdfZGF0YS5kZWxldGUiLCJkYXNoYm9hcmQudmlldyIsInJlcG9ydHMudmlld19hbGwiLCJyb2xlLnJlYWRfYWxsIiwicm9sZS5jcmVhdGUiLCJyb2xlLnVwZGF0ZSIsInJvbGUuZGVsZXRlIiwicHJpdmlsZWdlLnJlYWRfYWxsIiwicHJpdmlsZWdlLmNyZWF0ZSIsInByaXZpbGVnZS51cGRhdGUiLCJwcml2aWxlZ2UuZGVsZXRlIiwicHJvamVjdC5yZWFkX2dhbnR0X2NoYXJ0Il19LCJpYXQiOjE3NTM5MTI5NDAsImV4cCI6MTc1MzkxNjU0MH0.TqIkFdFSOP8nKR1Qp1OQYRlkymoRqy7LZNVSEgRrGWo
+# Get http://165.22.227.234:3000/api/strategy/strategic_plans/X
+
+ 
+# GET http://165.22.227.234:5000/api/staff HTTP/1.1
+# content-type: application/json
+# x-auth-token:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoyLCJ1c2VybmFtZSI6ImFrd2F0dWhhIiwiZW1haWwiOiJrd2F0dWhhQGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsInByaXZpbGVnZXMiOlsidXNlci5yZWFkX2FsbCIsInVzZXIuY3JlYXRlIiwidXNlci51cGRhdGUiLCJ1c2VyLmRlbGV0ZSIsInByb2plY3QucmVhZF9hbGwiLCJwcm9qZWN0LmNyZWF0ZSIsInByb2plY3QudXBkYXRlIiwicHJvamVjdC5kZWxldGUiLCJ0YXNrLnJlYWRfYWxsIiwidGFzay5jcmVhdGUiLCJ0YXNrLnVwZGF0ZSIsInRhc2suZGVsZXRlIiwidGFzay5tYW5hZ2VfYXNzaWduZWVzIiwidGFzay5tYW5hZ2VfZGVwZW5kZW5jaWVzIiwibWlsZXN0b25lLnJlYWRfYWxsIiwibWlsZXN0b25lLmNyZWF0ZSIsIm1pbGVzdG9uZS51cGRhdGUiLCJtaWxlc3RvbmUuZGVsZXRlIiwicmF3X2RhdGEudmlldyIsInJhd19kYXRhLmV4cG9ydCIsInJhd19kYXRhLmNyZWF0ZSIsInJhd19kYXRhLnVwZGF0ZSIsInJhd19kYXRhLmRlbGV0ZSIsImRhc2hib2FyZC52aWV3IiwicmVwb3J0cy52aWV3X2FsbCIsInVzZXIucmVhZF9hbGwiLCJ1c2VyLmNyZWF0ZSIsInVzZXIudXBkYXRlIiwidXNlci5kZWxldGUiLCJwcm9qZWN0LnJlYWRfYWxsIiwicHJvamVjdC5jcmVhdGUiLCJwcm9qZWN0LnVwZGF0ZSIsInByb2plY3QuZGVsZXRlIiwicHJvamVjdC5tYW5hZ2Vfb3duIiwidGFzay5yZWFkX2FsbCIsInRhc2suY3JlYXRlIiwidGFzay51cGRhdGUiLCJ0YXNrLmRlbGV0ZSIsInRhc2subWFuYWdlX2Fzc2lnbmVlcyIsInRhc2subWFuYWdlX2RlcGVuZGVuY2llcyIsIm1pbGVzdG9uZS5yZWFkX2FsbCIsIm1pbGVzdG9uZS5jcmVhdGUiLCJtaWxlc3RvbmUudXBkYXRlIiwibWlsZXN0b25lLmRlbGV0ZSIsInJhd19kYXRhLnZpZXciLCJyYXdfZGF0YS5leHBvcnQiLCJyYXdfZGF0YS5jcmVhdGUiLCJyYXdfZGF0YS51cGRhdGUiLCJyYXdfZGF0YS5kZWxldGUiLCJkYXNoYm9hcmQudmlldyIsInJlcG9ydHMudmlld19hbGwiLCJyb2xlLnJlYWRfYWxsIiwicm9sZS5jcmVhdGUiLCJyb2xlLnVwZGF0ZSIsInJvbGUuZGVsZXRlIiwicHJpdmlsZWdlLnJlYWRfYWxsIiwicHJpdmlsZWdlLmNyZWF0ZSIsInByaXZpbGVnZS51cGRhdGUiLCJwcml2aWxlZ2UuZGVsZXRlIiwicHJvamVjdC5yZWFkX2dhbnR0X2NoYXJ0Il19LCJpYXQiOjE3NTM5MTI5NDAsImV4cCI6MTc1MzkxNjU0MH0.TqIkFdFSOP8nKR1Qp1OQYRlkymoRqy7LZNVSEgRrGWo
+
+
+#post http://165.22.227.234:5000/api/projects HTTP/1.1
+# content-type: application/json
+#  x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoyLCJ1c2VybmFtZSI6ImFrd2F0dWhhIiwiZW1haWwiOiJrd2F0dWhhQGdtYWlsLmNvbSIsInJvbGUiOiJiYXNpY191c2VyIn0sImlhdCI6MTc1MjYwNTEzNSwiZXhwIjoxNzUyNjA4NzM1fQ.iE8KI6_G5o72kedO7IG-MuyfuL3cJQpESUM6yrcw-xE
+# {
+#     "project_name": "KEMRI Dengue Fever Study 2025",
+#     "project_description": "Investigating prevalence and vector control strategies for Dengue Fever in Coastal region.",
+#     "start_date": "2025-08-01",
+#     "end_date": "2026-07-31",
+#     "directorate": "Virology",
+#     "location_counties": "Mombasa, Kilifi",
+#     "cost_of_project": "750000.00",
+#     "objective": "Reduce Dengue incidence by 20% in study areas.",
+#     "expected_output": "Report on vector control effectiveness.",
+#     "principal_investigator": "Dr. Ben Mwangi",
+#     "status": "Not Started"
+    
+# }
+
+# GET http://165.22.227.234:3030/api/projects/status-counts
+
+# GET http://165.22.227.234:3000/api/projects/status-counts
+
+
+# GET http://165.22.227.234:5000/api/projects/directorate-counts

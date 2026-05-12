@@ -1,0 +1,49 @@
+services:
+  nginx_proxy:
+    image: nginx:alpine
+    container_name: kemri_nginx_proxy
+    restart: always
+    network_mode: host
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile.production
+      args:
+        VITE_MAPS_API_KEY: ${VITE_MAPS_API_KEY:-}
+    container_name: kemri_react_frontend
+    restart: always
+    ports:
+      - "5278:80"
+
+  public-dashboard:
+    build:
+      context: ./public-dashboard
+      dockerfile: Dockerfile.production
+      args:
+        VITE_BASE_PATH: ${MACHAKOS_CITIZEN_BASE_PATH:-/citizen/}
+        VITE_MAPS_API_KEY: ${VITE_MAPS_API_KEY:-}
+    container_name: kemri_public_dashboard
+    restart: always
+    ports:
+      - "5279:80"
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+
+  api:
+    build:
+      context: ./api
+      dockerfile: Dockerfile
+    container_name: kemri_node_api
+    restart: always
+    network_mode: host
+    command: npm start
+    environment:
+      NODE_ENV: production
+      PORT: 3102
+    volumes:
+      - ./api/.env:/app/.env:ro
+      - ./api/uploads:/app/uploads
+      - ./uploads:/uploads

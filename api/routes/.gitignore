@@ -1,0 +1,24 @@
+# Node.js dependencies and environment files
+node_modules/
+package-lock.json
+.env
+
+# Sensitive data and user uploads
+uploads/
+dump/
+
+# Generated files and temporary data
+data_testing/
+.DS_Store # macOS system files
+*.log
+npm-debug.log*
+
+# Visual Studio Code settings
+.vscode/
+
+# Ignore all files in the config folder that are not templates
+# If you have a config.example.js, you would commit that, but not the filled-in version.
+# For example, ignore all .js and .json files in the config directory.
+# You can comment this out if your config files do not contain sensitive data.
+# config/*.js
+# config/*.json

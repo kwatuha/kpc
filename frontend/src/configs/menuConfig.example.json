@@ -1,0 +1,208 @@
+{
+  "menuCategories": [
+    {
+      "id": "dashboard",
+      "label": "Dashboard",
+      "icon": "DashboardIcon",
+      "submenus": [
+        {
+          "title": "Dashboard",
+          "icon": "DashboardIcon",
+          "route": "DASHBOARD"
+        },
+        {
+          "title": "Raw Data",
+          "icon": "AssessmentIcon",
+          "route": "RAW_DATA"
+        },
+        {
+          "title": "Projects Registry (All Projects)",
+          "icon": "PaidIcon",
+          "route": "PROJECTS"
+        },
+        {
+          "title": "Contractor Dashboard",
+          "icon": "PaidIcon",
+          "route": "CONTRACTOR_DASHBOARD"
+        }
+      ]
+    },
+    {
+      "id": "reporting",
+      "label": "Reporting",
+      "icon": "AssessmentIcon",
+      "submenus": [
+        {
+          "title": "Reports",
+          "icon": "AssessmentIcon",
+          "route": "REPORTS"
+        },
+        {
+          "title": "Project Dashboards",
+          "icon": "AssessmentIcon",
+          "route": "REPORTING_OVERVIEW"
+        },
+        {
+          "title": "Regional Rpts",
+          "icon": "AssessmentIcon",
+          "route": "REGIONAL_DASHBOARD"
+        },
+        {
+          "title": "Regional Dashboards",
+          "icon": "AssessmentIcon",
+          "route": "REGIONAL_REPORTING"
+        },
+        {
+          "title": "Absorption Report",
+          "icon": "AssessmentIcon",
+          "route": "ABSORPTION_REPORT"
+        },
+        {
+          "title": "Project Finance Overview",
+          "icon": "AttachMoneyIcon",
+          "route": "PROJECT_FINANCE_OVERVIEW_REPORT"
+        },
+        {
+          "title": "Performance Mgmt",
+          "icon": "AssessmentIcon",
+          "route": "PERFORMANCE_MANAGEMENT_REPORT"
+        },
+        {
+          "title": "CAPR Report",
+          "icon": "AssessmentIcon",
+          "route": "CAPR_REPORT"
+        },
+        {
+          "title": "Quarterly Impl.",
+          "icon": "AssessmentIcon",
+          "route": "QUARTERLY_IMPLEMENTATION_REPORT"
+        },
+        {
+          "title": "Custom Analytics",
+          "icon": "AssessmentIcon",
+          "route": "CUSTOM_ANALYTICS",
+          "permission": "analytics.view"
+        }
+      ]
+    },
+    {
+      "id": "management",
+      "label": "Management",
+      "icon": "SettingsIcon",
+      "submenus": [
+        {
+          "title": "GIS Mapping",
+          "icon": "MapIcon",
+          "route": "GIS_MAPPING"
+        },
+        {
+          "title": "Map Import",
+          "icon": "CloudUploadIcon",
+          "route": "MAP_DATA_IMPORT"
+        },
+        {
+          "title": "Strategic Planning",
+          "icon": "SettingsIcon",
+          "route": "STRATEGIC_PLANNING"
+        },
+        {
+          "title": "Import Strategic Data",
+          "icon": "CloudUploadIcon",
+          "route": "STRATEGIC_DATA_IMPORT"
+        },
+        {
+          "title": "HR Module",
+          "icon": "GroupIcon",
+          "route": "HR",
+          "permission": "hr.access",
+          "roles": ["admin"]
+        },
+        {
+          "title": "Project Templates",
+          "icon": "SettingsIcon",
+          "route": "PROJECT_TEMPLATES",
+          "permission": "templates.manage"
+        }
+      ]
+    },
+    {
+      "id": "data",
+      "label": "Data",
+      "icon": "CloudUploadIcon",
+      "submenus": [
+        {
+          "title": "Import Data",
+          "icon": "CloudUploadIcon",
+          "route": "CENTRAL_IMPORT"
+        },
+        {
+          "title": "Data Import Logs",
+          "icon": "AssessmentIcon",
+          "route": "PROJECTS_UPLOAD_LOG"
+        }
+      ]
+    },
+    {
+      "id": "admin",
+      "label": "Admin",
+      "icon": "GroupIcon",
+      "adminOnly": true,
+      "submenus": [
+        {
+          "title": "Admin",
+          "icon": "AdminPanelSettingsIcon",
+          "route": "ADMIN"
+        },
+        {
+          "title": "User management",
+          "icon": "PeopleIcon",
+          "route": "USER_MANAGEMENT"
+        },
+        {
+          "title": "Workflow mgmt",
+          "icon": "AccountTreeIcon",
+          "route": "WORKFLOW_MANAGEMENT",
+          "permission": "project_workflow.read",
+          "roles": ["admin"]
+        },
+        {
+          "title": "Approval levels",
+          "icon": "ApprovalIcon",
+          "route": "APPROVAL_LEVELS_MANAGEMENT",
+          "permission": "approval_levels.read",
+          "roles": ["admin"]
+        },
+        {
+          "title": "Citizen feedback",
+          "icon": "FeedbackIcon",
+          "route": "FEEDBACK_MANAGEMENT",
+          "permission": "feedback.respond",
+          "roles": ["admin"]
+        },
+        {
+          "title": "Metadata mgmt",
+          "icon": "StorageIcon",
+          "route": "METADATA_MANAGEMENT"
+        },
+        {
+          "title": "Contractor mgmt",
+          "icon": "BusinessIcon",
+          "route": "CONTRACTOR_MANAGEMENT"
+        },
+        {
+          "title": "Contractor types",
+          "icon": "CategoryIcon",
+          "route": "CONTRACTOR_TYPES"
+        },
+        {
+          "title": "System Settings",
+          "icon": "SettingsIcon",
+          "route": "SYSTEM_SETTINGS",
+          "permission": "system.settings",
+          "roles": ["admin"]
+        }
+      ]
+    }
+  ]
+}
+

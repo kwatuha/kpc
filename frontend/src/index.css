@@ -1,0 +1,187 @@
+/* Global font */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+
+html,
+body,
+#root,
+.app,
+.content {
+  height: 100%;
+  width: 100%;
+  font-family: "Montserrat", "Roboto", "Helvetica", "Arial", sans-serif;
+}
+
+.app {
+  display: flex;
+  position: relative;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #e0e0e0;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Ensure consistent color rendering across browsers */
+* {
+  -webkit-color-adjust: exact;
+  color-adjust: exact;
+}
+
+/* Force hardware acceleration for better color rendering */
+.status-chip, .status-badge, .project-status {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  isolation: isolate;
+}
+
+/* Enhanced color rendering for charts and visual elements */
+.recharts-wrapper,
+.recharts-surface,
+.recharts-pie,
+.recharts-bar,
+.recharts-cell {
+  -webkit-color-adjust: exact !important;
+  color-adjust: exact !important;
+  image-rendering: crisp-edges;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+/* Ensure tooltips appear above charts */
+.recharts-tooltip-wrapper {
+  z-index: 10000 !important;
+  position: relative !important;
+}
+
+.recharts-tooltip-content {
+  z-index: 10001 !important;
+  position: relative !important;
+}
+
+/* Improve color sharpness for chart elements */
+.recharts-pie-sector,
+.recharts-bar-rectangle {
+  filter: saturate(1.1) contrast(1.05);
+  -webkit-color-adjust: exact;
+  color-adjust: exact;
+}
+
+/* Enhanced color rendering for all elements */
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ───────────────────────────── PRINT / PDF SCOPING ─────────────────────────
+ * The KIMES app uses an opt-in convention so window.print() and "Save as PDF"
+ * never leak the app chrome (tree sidebar, AppBar, ribbon, floating chat,
+ * etc.) into printed documents:
+ *
+ *   1. The page wraps its printable region in `<div className="kimes-print-page">`.
+ *   2. Any toolbar, action button or non-print element inside that region
+ *      adds `className="kimes-noprint"`.
+ *   3. (Optional) Sub-groups can use `print-portrait` / `print-landscape` to
+ *      switch the page geometry on Chromium-based browsers.
+ *
+ * Everything outside `.kimes-print-page` is hidden via the visibility trick,
+ * which is markup-agnostic — it works regardless of whether the sidebar is
+ * an <aside>, a <nav>, a <div>, an MUI <Drawer>, a pro-sidebar, or anything
+ * else added in the future.
+ */
+@media print {
+  html,
+  body {
+    background: white !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  body * {
+    visibility: hidden !important;
+  }
+
+  .kimes-print-page,
+  .kimes-print-page * {
+    visibility: visible !important;
+  }
+
+  .kimes-print-page {
+    position: absolute !important;
+    left: 0;
+    top: 0;
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    box-shadow: none !important;
+    background: white !important;
+  }
+
+  .kimes-noprint,
+  .kimes-print-page .kimes-noprint {
+    display: none !important;
+  }
+
+  table {
+    page-break-inside: auto;
+  }
+  tr {
+    page-break-inside: avoid;
+    page-break-after: auto;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    page-break-after: avoid;
+  }
+
+  /* Named-page rules for mixed-orientation documents (e.g. the form export). */
+  @page {
+    size: A4 portrait;
+    margin: 12mm;
+  }
+  @page portrait {
+    size: A4 portrait;
+    margin: 12mm;
+  }
+  @page landscape {
+    size: A4 landscape;
+    margin: 12mm;
+  }
+
+  .print-portrait {
+    page: portrait;
+  }
+  .print-landscape {
+    page: landscape;
+  }
+  /* Force a fresh page on orientation switch — Chromium needs the break
+     to actually apply the new page geometry. */
+  .print-portrait,
+  .print-landscape {
+    page-break-before: always;
+  }
+  .print-portrait:first-of-type {
+    page-break-before: avoid;
+  }
+  .print-landscape table {
+    width: 100% !important;
+    font-size: 11px;
+  }
+}

@@ -1,0 +1,46 @@
+# ===================================
+# Stage 1: Build the React application
+# ===================================
+FROM node:22-alpine AS builder
+
+WORKDIR /app
+
+# Copy package files
+COPY package*.json ./
+
+# Install dependencies (including dev dependencies for build)
+# Use npm install if package-lock.json doesn't exist, otherwise use npm ci
+RUN if [ -f package-lock.json ]; then npm ci; else npm install; fi
+
+# Copy source code
+COPY . .
+
+# Increase Node heap during Vite production build (helps avoid OOM on constrained servers).
+ENV NODE_OPTIONS=--max-old-space-size=4096
+
+# Vite inlines public env at build time (must match runtime domain in Google Cloud key restrictions).
+ARG VITE_MAPS_API_KEY=
+ENV VITE_MAPS_API_KEY=$VITE_MAPS_API_KEY
+
+# Build the application for production
+# This creates optimized, minified bundles in /app/dist
+RUN npm run build
+
+# ===================================
+# Stage 2: Serve with nginx
+# ===================================
+FROM nginx:alpine
+
+# Copy the built files from the builder stage
+COPY --from=builder /app/dist /usr/share/nginx/html
+
+# Copy custom nginx configuration for SPA routing
+COPY nginx-frontend.conf /etc/nginx/conf.d/default.conf
+
+# Expose port 80
+EXPOSE 80
+
+# Start nginx
+CMD ["nginx", "-g", "daemon off;"]
+
+

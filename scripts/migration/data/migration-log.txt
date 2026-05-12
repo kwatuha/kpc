@@ -1,0 +1,1872 @@
+[2026-02-28T14:46:03.746Z] Starting data migration from MySQL to PostgreSQL...
+[2026-02-28T14:46:03.749Z] MySQL: gov_db:3306/gov_imbesdb
+[2026-02-28T14:46:03.749Z] PostgreSQL: gov_postgres:5432/government_projects
+[2026-02-28T14:46:03.749Z] Connecting to MySQL...
+[2026-02-28T14:46:03.871Z] ✗ Fatal error: getaddrinfo ENOTFOUND gov_db
+[2026-02-28T14:46:25.872Z] Starting data migration from MySQL to PostgreSQL...
+[2026-02-28T14:46:25.876Z] MySQL: localhost:3308/gov_imbesdb
+[2026-02-28T14:46:25.876Z] PostgreSQL: localhost:5433/government_projects
+[2026-02-28T14:46:25.876Z] Connecting to MySQL...
+[2026-02-28T14:46:25.938Z] ✓ Connected to MySQL
+[2026-02-28T14:46:25.944Z] Connecting to PostgreSQL...
+[2026-02-28T14:46:25.994Z] ✓ Connected to PostgreSQL
+[2026-02-28T14:46:25.995Z] Getting table list...
+[2026-02-28T14:46:26.010Z] Found 117 tables to migrate
+[2026-02-28T14:46:26.010Z] Migrating table: activities
+[2026-02-28T14:46:26.022Z]   Found 81 rows to migrate
+[2026-02-28T14:46:26.043Z]   ⚠ Table activities does not exist in PostgreSQL, skipping
+[2026-02-28T14:46:26.044Z] Migrating table: annual_workplans
+[2026-02-28T14:46:26.058Z]   Found 31 rows to migrate
+[2026-02-28T14:46:26.067Z]   ⚠ Table annual_workplans does not exist in PostgreSQL, skipping
+[2026-02-28T14:46:26.067Z] Migrating table: approved_public_feedback
+[2026-02-28T14:46:26.070Z]   Table approved_public_feedback is empty, skipping data migration
+[2026-02-28T14:46:26.070Z] Migrating table: assigned_assets
+[2026-02-28T14:46:26.080Z]   Found 2 rows to migrate
+[2026-02-28T14:46:26.082Z]   ⚠ Table assigned_assets does not exist in PostgreSQL, skipping
+[2026-02-28T14:46:26.083Z] Migrating table: attachments
+[2026-02-28T14:46:26.093Z]   Table attachments is empty, skipping data migration
+[2026-02-28T14:46:26.093Z] Migrating table: attachmenttypes
+[2026-02-28T14:46:26.096Z]   Found 15 rows to migrate
+[2026-02-28T14:46:26.104Z]   ⚠ Table attachmenttypes does not exist in PostgreSQL, skipping
+[2026-02-28T14:46:26.104Z] Migrating table: attendance
+[2026-02-28T14:46:26.108Z]   Found 7 rows to migrate
+[2026-02-28T14:46:26.116Z]   ⚠ Table attendance does not exist in PostgreSQL, skipping
+[2026-02-28T14:46:26.117Z] Migrating table: budget_changes
+[2026-02-28T14:46:26.120Z]   Table budget_changes is empty, skipping data migration
+[2026-02-28T14:46:26.120Z] Migrating table: budget_combinations
+[2026-02-28T14:46:26.130Z]   Table budget_combinations is empty, skipping data migration
+[2026-02-28T14:46:26.130Z] Migrating table: budget_items
+[2026-02-28T14:46:26.133Z]   Table budget_items is empty, skipping data migration
+[2026-02-28T14:46:26.133Z] Migrating table: budgets
+[2026-02-28T14:46:26.143Z]   Table budgets is empty, skipping data migration
+[2026-02-28T14:46:26.144Z] Migrating table: categories
+[2026-02-28T14:46:26.153Z]   Found 9 rows to migrate
+[2026-02-28T14:46:26.157Z]   ⚠ Table categories does not exist in PostgreSQL, skipping
+[2026-02-28T14:46:26.158Z] Migrating table: category_milestones
+[2026-02-28T14:46:26.169Z]   Found 36 rows to migrate
+[2026-02-28T14:46:26.179Z]   ⚠ Table category_milestones does not exist in PostgreSQL, skipping
+[2026-02-28T14:46:26.179Z] Migrating table: chat_message_reactions
+[2026-02-28T14:46:26.190Z]   Table chat_message_reactions is empty, skipping data migration
+[2026-02-28T14:46:26.191Z] Migrating table: chat_messages
+[2026-02-28T14:46:26.201Z]   Table chat_messages is empty, skipping data migration
+[2026-02-28T14:46:26.201Z] Migrating table: chat_room_participants
+[2026-02-28T14:46:26.207Z]   Table chat_room_participants is empty, skipping data migration
+[2026-02-28T14:46:26.207Z] Migrating table: chat_rooms
+[2026-02-28T14:46:26.218Z]   Table chat_rooms is empty, skipping data migration
+[2026-02-28T14:46:26.218Z] Migrating table: citizen_proposals
+[2026-02-28T14:46:26.231Z]   Table citizen_proposals is empty, skipping data migration
+[2026-02-28T14:46:26.231Z] Migrating table: component_data_access_rules
+[2026-02-28T14:46:26.242Z]   Table component_data_access_rules is empty, skipping data migration
+[2026-02-28T14:46:26.242Z] Migrating table: contractor_users
+[2026-02-28T14:46:26.252Z]   Found 12 rows to migrate
+[2026-02-28T14:46:26.255Z]   ⚠ Table contractor_users does not exist in PostgreSQL, skipping
+[2026-02-28T14:46:26.256Z] Migrating table: contractors
+[2026-02-28T14:46:26.266Z]   Found 21 rows to migrate
+[2026-02-28T14:46:26.275Z]   ⚠ Table contractors does not exist in PostgreSQL, skipping
+[2026-02-28T14:46:26.276Z] Migrating table: counties
+[2026-02-28T14:46:26.280Z]   Found 6 rows to migrate
+[2026-02-28T14:46:26.289Z]   ⚠ Table counties does not exist in PostgreSQL, skipping
+[2026-02-28T14:46:26.289Z] Migrating table: county_proposed_project_milestones
+[2026-02-28T14:46:26.300Z]   Table county_proposed_project_milestones is empty, skipping data migration
+[2026-02-28T14:46:26.300Z] Migrating table: county_proposed_projects
+[2026-02-28T14:46:26.304Z]   Table county_proposed_projects is empty, skipping data migration
+[2026-02-28T14:46:26.304Z] Migrating table: dashboard_components
+[2026-02-28T14:46:26.314Z]   Table dashboard_components is empty, skipping data migration
+[2026-02-28T14:46:26.314Z] Migrating table: dashboard_permissions
+[2026-02-28T14:46:26.317Z]   Table dashboard_permissions is empty, skipping data migration
+[2026-02-28T14:46:26.323Z] Migrating table: dashboard_tabs
+[2026-02-28T14:46:26.328Z]   Table dashboard_tabs is empty, skipping data migration
+[2026-02-28T14:46:26.328Z] Migrating table: departments
+[2026-02-28T14:46:26.340Z]   Found 15 rows to migrate
+[2026-02-28T14:46:26.349Z]   ⚠ Table departments does not exist in PostgreSQL, skipping
+[2026-02-28T14:46:26.349Z] Migrating table: employee_bank_details
+[2026-02-28T14:46:26.352Z]   Found 6 rows to migrate
+[2026-02-28T14:46:26.361Z]   ⚠ Table employee_bank_details does not exist in PostgreSQL, skipping
+[2026-02-28T14:46:26.362Z] Migrating table: employee_benefits
+[2026-02-28T14:46:26.374Z]   Table employee_benefits is empty, skipping data migration
+[2026-02-28T14:46:26.376Z] Migrating table: employee_compensation
+[2026-02-28T14:46:26.386Z]   Found 9 rows to migrate
+[2026-02-28T14:47:12.229Z] Starting data migration from MySQL to PostgreSQL...
+[2026-02-28T14:47:12.239Z] MySQL: localhost:3308/gov_imbesdb
+[2026-02-28T14:47:12.239Z] PostgreSQL: localhost:5433/government_projects
+[2026-02-28T14:47:12.240Z] Connecting to MySQL...
+[2026-02-28T14:47:12.326Z] ✓ Connected to MySQL
+[2026-02-28T14:47:12.326Z] Connecting to PostgreSQL...
+[2026-02-28T14:47:12.401Z] ✓ Connected to PostgreSQL
+[2026-02-28T14:47:12.401Z] Getting table list...
+[2026-02-28T14:47:12.425Z] Found 117 tables to migrate
+[2026-02-28T14:47:12.425Z] Migrating table: activities
+[2026-02-28T14:47:12.440Z]   Found 81 rows to migrate
+[2026-02-28T14:47:12.475Z]   ⚠ Table activities does not exist in PostgreSQL, skipping
+[2026-02-28T14:47:12.475Z] Migrating table: annual_workplans
+[2026-02-28T14:47:12.489Z]   Found 31 rows to migrate
+[2026-02-28T14:47:12.499Z]   ⚠ Table annual_workplans does not exist in PostgreSQL, skipping
+[2026-02-28T14:47:12.499Z] Migrating table: approved_public_feedback
+[2026-02-28T14:47:12.510Z]   Table approved_public_feedback is empty, skipping data migration
+[2026-02-28T14:47:12.510Z] Migrating table: assigned_assets
+[2026-02-28T14:47:12.522Z]   Found 2 rows to migrate
+[2026-02-28T14:47:12.525Z]   ⚠ Table assigned_assets does not exist in PostgreSQL, skipping
+[2026-02-28T14:47:12.525Z] Migrating table: attachments
+[2026-02-28T14:47:12.536Z]   Table attachments is empty, skipping data migration
+[2026-02-28T14:47:12.537Z] Migrating table: attachmenttypes
+[2026-02-28T14:47:12.549Z]   Found 15 rows to migrate
+[2026-02-28T14:47:12.696Z]   Progress: 15/15 rows processed
+[2026-02-28T14:47:12.696Z]   ✓ Migrated 15 rows from attachmenttypes (0 errors)
+[2026-02-28T14:47:12.696Z] Migrating table: attendance
+[2026-02-28T14:47:12.707Z]   Found 7 rows to migrate
+[2026-02-28T14:47:12.718Z]   ⚠ Table attendance does not exist in PostgreSQL, skipping
+[2026-02-28T14:47:12.718Z] Migrating table: budget_changes
+[2026-02-28T14:47:12.733Z]   Table budget_changes is empty, skipping data migration
+[2026-02-28T14:47:12.733Z] Migrating table: budget_combinations
+[2026-02-28T14:47:12.754Z]   Table budget_combinations is empty, skipping data migration
+[2026-02-28T14:47:12.754Z] Migrating table: budget_items
+[2026-02-28T14:47:12.759Z]   Table budget_items is empty, skipping data migration
+[2026-02-28T14:47:12.765Z] Migrating table: budgets
+[2026-02-28T14:47:12.778Z]   Table budgets is empty, skipping data migration
+[2026-02-28T14:47:12.778Z] Migrating table: categories
+[2026-02-28T14:47:12.793Z]   Found 9 rows to migrate
+[2026-02-28T14:47:12.869Z]   Progress: 9/9 rows processed
+[2026-02-28T14:47:12.869Z]   ✓ Migrated 9 rows from categories (0 errors)
+[2026-02-28T14:47:12.869Z] Migrating table: category_milestones
+[2026-02-28T14:47:12.887Z]   Found 36 rows to migrate
+[2026-02-28T14:47:12.891Z]   ⚠ Table category_milestones does not exist in PostgreSQL, skipping
+[2026-02-28T14:47:12.892Z] Migrating table: chat_message_reactions
+[2026-02-28T14:47:12.904Z]   Table chat_message_reactions is empty, skipping data migration
+[2026-02-28T14:47:12.904Z] Migrating table: chat_messages
+[2026-02-28T14:47:12.917Z]   Table chat_messages is empty, skipping data migration
+[2026-02-28T14:47:12.917Z] Migrating table: chat_room_participants
+[2026-02-28T14:47:12.937Z]   Table chat_room_participants is empty, skipping data migration
+[2026-02-28T14:47:12.938Z] Migrating table: chat_rooms
+[2026-02-28T14:47:12.949Z]   Table chat_rooms is empty, skipping data migration
+[2026-02-28T14:47:12.949Z] Migrating table: citizen_proposals
+[2026-02-28T14:47:12.963Z]   Table citizen_proposals is empty, skipping data migration
+[2026-02-28T14:47:12.963Z] Migrating table: component_data_access_rules
+[2026-02-28T14:47:12.976Z]   Table component_data_access_rules is empty, skipping data migration
+[2026-02-28T14:47:12.976Z] Migrating table: contractor_users
+[2026-02-28T14:47:12.988Z]   Found 12 rows to migrate
+[2026-02-28T14:47:12.991Z]   ⚠ Table contractor_users does not exist in PostgreSQL, skipping
+[2026-02-28T14:47:12.991Z] Migrating table: contractors
+[2026-02-28T14:47:13.002Z]   Found 21 rows to migrate
+[2026-02-28T14:47:13.186Z]   Progress: 21/21 rows processed
+[2026-02-28T14:47:13.186Z]   ✓ Migrated 21 rows from contractors (0 errors)
+[2026-02-28T14:47:13.186Z] Migrating table: counties
+[2026-02-28T14:47:13.198Z]   Found 6 rows to migrate
+[2026-02-28T14:47:13.208Z]   ⚠ Table counties does not exist in PostgreSQL, skipping
+[2026-02-28T14:47:13.208Z] Migrating table: county_proposed_project_milestones
+[2026-02-28T14:47:13.219Z]   Table county_proposed_project_milestones is empty, skipping data migration
+[2026-02-28T14:47:13.219Z] Migrating table: county_proposed_projects
+[2026-02-28T14:47:13.230Z]   Table county_proposed_projects is empty, skipping data migration
+[2026-02-28T14:47:13.231Z] Migrating table: dashboard_components
+[2026-02-28T14:47:13.234Z]   Table dashboard_components is empty, skipping data migration
+[2026-02-28T14:47:13.234Z] Migrating table: dashboard_permissions
+[2026-02-28T14:47:13.243Z]   Table dashboard_permissions is empty, skipping data migration
+[2026-02-28T14:47:13.244Z] Migrating table: dashboard_tabs
+[2026-02-28T14:47:13.247Z]   Table dashboard_tabs is empty, skipping data migration
+[2026-02-28T14:47:13.247Z] Migrating table: departments
+[2026-02-28T14:47:13.257Z]   Found 15 rows to migrate
+[2026-02-28T14:47:13.259Z]   ⚠ Table departments does not exist in PostgreSQL, skipping
+[2026-02-28T14:47:13.259Z] Migrating table: employee_bank_details
+[2026-02-28T14:47:13.268Z]   Found 6 rows to migrate
+[2026-02-28T14:47:13.270Z]   ⚠ Table employee_bank_details does not exist in PostgreSQL, skipping
+[2026-02-28T14:47:13.270Z] Migrating table: employee_benefits
+[2026-02-28T14:47:13.281Z]   Table employee_benefits is empty, skipping data migration
+[2026-02-28T14:47:13.281Z] Migrating table: employee_compensation
+[2026-02-28T14:47:13.284Z]   Found 9 rows to migrate
+[2026-02-28T14:47:13.293Z]   ⚠ Table employee_compensation does not exist in PostgreSQL, skipping
+[2026-02-28T14:47:13.293Z] Migrating table: employee_contracts
+[2026-02-28T14:47:13.297Z]   Found 14 rows to migrate
+[2026-02-28T14:47:13.306Z]   ⚠ Table employee_contracts does not exist in PostgreSQL, skipping
+[2026-02-28T14:47:13.306Z] Migrating table: employee_dependants
+[2026-02-28T14:47:13.318Z]   Found 13 rows to migrate
+[2026-02-28T14:47:13.320Z]   ⚠ Table employee_dependants does not exist in PostgreSQL, skipping
+[2026-02-28T14:47:13.320Z] Migrating table: employee_disciplinary
+[2026-02-28T14:47:13.332Z]   Found 3 rows to migrate
+[2026-02-28T14:47:13.342Z]   ⚠ Table employee_disciplinary does not exist in PostgreSQL, skipping
+[2026-02-28T14:47:13.342Z] Migrating table: employee_leave_entitlements
+[2026-02-28T14:47:13.346Z]   Found 6 rows to migrate
+[2026-02-28T14:47:13.355Z]   ⚠ Table employee_leave_entitlements does not exist in PostgreSQL, skipping
+[2026-02-28T14:47:13.355Z] Migrating table: employee_loans
+[2026-02-28T14:47:13.365Z]   Found 2 rows to migrate
+[2026-02-28T14:47:13.367Z]   ⚠ Table employee_loans does not exist in PostgreSQL, skipping
+[2026-02-28T14:47:13.367Z] Migrating table: employee_memberships
+[2026-02-28T14:47:13.370Z]   Table employee_memberships is empty, skipping data migration
+[2026-02-28T14:47:13.370Z] Migrating table: employee_performance
+[2026-02-28T14:47:13.380Z]   Found 9 rows to migrate
+[2026-02-28T14:47:13.382Z]   ⚠ Table employee_performance does not exist in PostgreSQL, skipping
+[2026-02-28T14:47:13.382Z] Migrating table: employee_project_assignments
+[2026-02-28T14:47:13.393Z]   Found 2 rows to migrate
+[2026-02-28T14:47:13.395Z]   ⚠ Table employee_project_assignments does not exist in PostgreSQL, skipping
+[2026-02-28T14:47:13.395Z] Migrating table: employee_promotions
+[2026-02-28T14:47:13.404Z]   Found 5 rows to migrate
+[2026-02-28T14:47:13.406Z]   ⚠ Table employee_promotions does not exist in PostgreSQL, skipping
+[2026-02-28T14:47:13.407Z] Migrating table: employee_retirements
+[2026-02-28T14:47:13.416Z]   Table employee_retirements is empty, skipping data migration
+[2026-02-28T14:47:13.416Z] Migrating table: employee_terminations
+[2026-02-28T14:47:13.419Z]   Table employee_terminations is empty, skipping data migration
+[2026-02-28T14:47:13.419Z] Migrating table: employee_training
+[2026-02-28T14:47:13.429Z]   Found 7 rows to migrate
+[2026-02-28T14:47:13.431Z]   ⚠ Table employee_training does not exist in PostgreSQL, skipping
+[2026-02-28T14:47:13.431Z] Migrating table: feedback_moderation
+[2026-02-28T14:47:13.443Z]   Table feedback_moderation is empty, skipping data migration
+[2026-02-28T14:47:13.443Z] Migrating table: feedback_moderation_settings
+[2026-02-28T14:47:13.453Z]   Table feedback_moderation_settings is empty, skipping data migration
+[2026-02-28T14:47:13.453Z] Migrating table: financialyears
+[2026-02-28T14:47:13.463Z]   Found 4 rows to migrate
+[2026-02-28T14:47:13.465Z]   ⚠ Table financialyears does not exist in PostgreSQL, skipping
+[2026-02-28T14:47:13.465Z] Migrating table: inspection_teams
+[2026-02-28T14:47:13.468Z]   Table inspection_teams is empty, skipping data migration
+[2026-02-28T14:47:13.469Z] Migrating table: job_groups
+[2026-02-28T14:47:13.480Z]   Found 3 rows to migrate
+[2026-02-28T14:47:13.525Z]   Progress: 3/3 rows processed
+[2026-02-28T14:47:13.525Z]   ✓ Migrated 3 rows from job_groups (0 errors)
+[2026-02-28T14:47:13.525Z] Migrating table: leave_applications
+[2026-02-28T14:47:13.536Z]   Found 31 rows to migrate
+[2026-02-28T14:47:13.540Z]   ⚠ Table leave_applications does not exist in PostgreSQL, skipping
+[2026-02-28T14:47:13.540Z] Migrating table: leave_types
+[2026-02-28T14:47:13.550Z]   Found 3 rows to migrate
+[2026-02-28T14:47:13.578Z]   Progress: 3/3 rows processed
+[2026-02-28T14:47:13.578Z]   ✓ Migrated 3 rows from leave_types (0 errors)
+[2026-02-28T14:47:13.578Z] Migrating table: milestone_activities
+[2026-02-28T14:47:13.587Z]   Found 42 rows to migrate
+[2026-02-28T14:47:13.589Z]   ⚠ Table milestone_activities does not exist in PostgreSQL, skipping
+[2026-02-28T14:47:13.589Z] Migrating table: milestone_attachments
+[2026-02-28T14:47:13.599Z]   Found 6 rows to migrate
+[2026-02-28T14:47:13.601Z]   ⚠ Table milestone_attachments does not exist in PostgreSQL, skipping
+[2026-02-28T14:47:13.601Z] Migrating table: moderation_queue
+[2026-02-28T14:47:13.612Z]   Table moderation_queue is empty, skipping data migration
+[2026-02-28T14:47:13.612Z] Migrating table: monthly_payroll
+[2026-02-28T14:47:13.622Z]   Found 3 rows to migrate
+[2026-02-28T14:47:13.625Z]   ⚠ Table monthly_payroll does not exist in PostgreSQL, skipping
+[2026-02-28T14:47:13.625Z] Migrating table: participants
+[2026-02-28T14:47:13.635Z]   Table participants is empty, skipping data migration
+[2026-02-28T14:47:13.636Z] Migrating table: payment_approval_history
+[2026-02-28T14:47:13.647Z]   Found 10 rows to migrate
+[2026-02-28T14:47:13.649Z]   ⚠ Table payment_approval_history does not exist in PostgreSQL, skipping
+[2026-02-28T14:47:13.650Z] Migrating table: payment_approval_levels
+[2026-02-28T14:47:13.652Z]   Found 5 rows to migrate
+[2026-02-28T14:47:13.661Z]   ⚠ Table payment_approval_levels does not exist in PostgreSQL, skipping
+[2026-02-28T14:47:13.662Z] Migrating table: payment_details
+[2026-02-28T14:47:13.673Z]   Found 1 rows to migrate
+[2026-02-28T14:47:13.675Z]   ⚠ Table payment_details does not exist in PostgreSQL, skipping
+[2026-02-28T14:47:13.675Z] Migrating table: payment_request_approvals
+[2026-02-28T14:47:13.685Z]   Table payment_request_approvals is empty, skipping data migration
+[2026-02-28T14:47:13.685Z] Migrating table: payment_request_documents
+[2026-02-28T14:47:13.689Z]   Found 13 rows to migrate
+[2026-02-28T14:47:13.697Z]   ⚠ Table payment_request_documents does not exist in PostgreSQL, skipping
+[2026-02-28T14:47:13.697Z] Migrating table: payment_request_milestones
+[2026-02-28T14:47:13.700Z]   Table payment_request_milestones is empty, skipping data migration
+[2026-02-28T14:47:13.701Z] Migrating table: payment_status_definitions
+[2026-02-28T14:47:13.711Z]   Found 8 rows to migrate
+[2026-02-28T14:47:13.781Z]   Progress: 8/8 rows processed
+[2026-02-28T14:47:13.782Z]   ✓ Migrated 8 rows from payment_status_definitions (0 errors)
+[2026-02-28T14:47:13.782Z] Migrating table: planningdocuments
+[2026-02-28T14:47:13.786Z]   Found 4 rows to migrate
+[2026-02-28T14:47:13.831Z]   Progress: 4/4 rows processed
+[2026-02-28T14:47:13.831Z]   ✓ Migrated 4 rows from planningdocuments (0 errors)
+[2026-02-28T14:47:13.831Z] Migrating table: privileges
+[2026-02-28T14:47:13.834Z]   Found 282 rows to migrate
+[2026-02-28T14:47:16.206Z]   Progress: 282/282 rows processed
+[2026-02-28T14:47:16.206Z]   ✓ Migrated 282 rows from privileges (0 errors)
+[2026-02-28T14:47:16.206Z] Migrating table: programs
+[2026-02-28T14:47:16.210Z]   Found 48 rows to migrate
+[2026-02-28T14:47:16.218Z]   ⚠ Table programs does not exist in PostgreSQL, skipping
+[2026-02-28T14:47:16.218Z] Migrating table: project_announcements
+[2026-02-28T14:47:16.221Z]   Table project_announcements is empty, skipping data migration
+[2026-02-28T14:47:16.222Z] Migrating table: project_assignments
+[2026-02-28T14:47:16.231Z]   Table project_assignments is empty, skipping data migration
+[2026-02-28T14:47:16.231Z] Migrating table: project_climate_risk
+[2026-02-28T14:47:16.234Z]   Found 2 rows to migrate
+[2026-02-28T14:47:16.236Z]   ⚠ Table project_climate_risk does not exist in PostgreSQL, skipping
+[2026-02-28T14:47:16.243Z] Migrating table: project_concept_notes
+[2026-02-28T14:47:16.247Z]   Found 4 rows to migrate
+[2026-02-28T14:47:16.256Z]   ⚠ Table project_concept_notes does not exist in PostgreSQL, skipping
+[2026-02-28T14:47:16.256Z] Migrating table: project_contractor_assignments
+[2026-02-28T14:47:16.260Z]   Found 50 rows to migrate
+[2026-02-28T14:47:16.268Z]   ⚠ Table project_contractor_assignments does not exist in PostgreSQL, skipping
+[2026-02-28T14:47:16.268Z] Migrating table: project_counties
+[2026-02-28T14:47:16.272Z]   Found 48 rows to migrate
+[2026-02-28T14:47:16.291Z]   ✗ Error inserting row into project_counties: column "projectid" of relation "project_counties" does not exist
+[2026-02-28T14:47:16.345Z]   ✗ Error inserting row into project_counties: column "projectid" of relation "project_counties" does not exist
+[2026-02-28T14:47:16.391Z]   ✗ Error inserting row into project_counties: column "projectid" of relation "project_counties" does not exist
+[2026-02-28T14:47:16.427Z]   ✗ Error inserting row into project_counties: column "projectid" of relation "project_counties" does not exist
+[2026-02-28T14:47:16.464Z]   ✗ Error inserting row into project_counties: column "projectid" of relation "project_counties" does not exist
+[2026-02-28T14:47:16.493Z]   ✗ Error inserting row into project_counties: column "projectid" of relation "project_counties" does not exist
+[2026-02-28T14:47:16.538Z]   ✗ Error inserting row into project_counties: column "projectid" of relation "project_counties" does not exist
+[2026-02-28T14:47:16.567Z]   ✗ Error inserting row into project_counties: column "projectid" of relation "project_counties" does not exist
+[2026-02-28T14:47:16.600Z]   ✗ Error inserting row into project_counties: column "projectid" of relation "project_counties" does not exist
+[2026-02-28T14:47:16.637Z]   ✗ Error inserting row into project_counties: column "projectid" of relation "project_counties" does not exist
+[2026-02-28T14:47:16.676Z]   ✗ Error inserting row into project_counties: column "projectid" of relation "project_counties" does not exist
+[2026-02-28T14:47:16.710Z]   ✗ Error inserting row into project_counties: column "projectid" of relation "project_counties" does not exist
+[2026-02-28T14:47:16.748Z]   ✗ Error inserting row into project_counties: column "projectid" of relation "project_counties" does not exist
+[2026-02-28T14:47:16.782Z]   ✗ Error inserting row into project_counties: column "projectid" of relation "project_counties" does not exist
+[2026-02-28T14:47:16.810Z]   ✗ Error inserting row into project_counties: column "projectid" of relation "project_counties" does not exist
+[2026-02-28T14:47:16.845Z]   ✗ Error inserting row into project_counties: column "projectid" of relation "project_counties" does not exist
+[2026-02-28T14:47:16.872Z]   ✗ Error inserting row into project_counties: column "projectid" of relation "project_counties" does not exist
+[2026-02-28T14:47:16.905Z]   ✗ Error inserting row into project_counties: column "projectid" of relation "project_counties" does not exist
+[2026-02-28T14:47:16.942Z]   ✗ Error inserting row into project_counties: column "projectid" of relation "project_counties" does not exist
+[2026-02-28T14:47:16.970Z]   ✗ Error inserting row into project_counties: column "projectid" of relation "project_counties" does not exist
+[2026-02-28T14:47:17.006Z]   ✗ Error inserting row into project_counties: column "projectid" of relation "project_counties" does not exist
+[2026-02-28T14:47:17.043Z]   ✗ Error inserting row into project_counties: column "projectid" of relation "project_counties" does not exist
+[2026-02-28T14:47:17.079Z]   ✗ Error inserting row into project_counties: column "projectid" of relation "project_counties" does not exist
+[2026-02-28T14:47:17.114Z]   ✗ Error inserting row into project_counties: column "projectid" of relation "project_counties" does not exist
+[2026-02-28T14:47:17.149Z]   ✗ Error inserting row into project_counties: column "projectid" of relation "project_counties" does not exist
+[2026-02-28T14:47:17.190Z]   ✗ Error inserting row into project_counties: column "projectid" of relation "project_counties" does not exist
+[2026-02-28T14:47:17.225Z]   ✗ Error inserting row into project_counties: column "projectid" of relation "project_counties" does not exist
+[2026-02-28T14:47:17.259Z]   ✗ Error inserting row into project_counties: column "projectid" of relation "project_counties" does not exist
+[2026-02-28T14:47:17.284Z]   ✗ Error inserting row into project_counties: column "projectid" of relation "project_counties" does not exist
+[2026-02-28T14:47:17.313Z]   ✗ Error inserting row into project_counties: column "projectid" of relation "project_counties" does not exist
+[2026-02-28T14:47:17.345Z]   ✗ Error inserting row into project_counties: column "projectid" of relation "project_counties" does not exist
+[2026-02-28T14:47:17.372Z]   ✗ Error inserting row into project_counties: column "projectid" of relation "project_counties" does not exist
+[2026-02-28T14:47:17.397Z]   ✗ Error inserting row into project_counties: column "projectid" of relation "project_counties" does not exist
+[2026-02-28T14:47:17.430Z]   ✗ Error inserting row into project_counties: column "projectid" of relation "project_counties" does not exist
+[2026-02-28T14:47:17.454Z]   ✗ Error inserting row into project_counties: column "projectid" of relation "project_counties" does not exist
+[2026-02-28T14:47:17.482Z]   ✗ Error inserting row into project_counties: column "projectid" of relation "project_counties" does not exist
+[2026-02-28T14:47:17.508Z]   ✗ Error inserting row into project_counties: column "projectid" of relation "project_counties" does not exist
+[2026-02-28T14:47:17.542Z]   ✗ Error inserting row into project_counties: column "projectid" of relation "project_counties" does not exist
+[2026-02-28T14:47:17.568Z]   ✗ Error inserting row into project_counties: column "projectid" of relation "project_counties" does not exist
+[2026-02-28T14:47:17.592Z]   ✗ Error inserting row into project_counties: column "projectid" of relation "project_counties" does not exist
+[2026-02-28T14:47:17.616Z]   ✗ Error inserting row into project_counties: column "projectid" of relation "project_counties" does not exist
+[2026-02-28T14:47:17.642Z]   ✗ Error inserting row into project_counties: column "projectid" of relation "project_counties" does not exist
+[2026-02-28T14:47:17.676Z]   ✗ Error inserting row into project_counties: column "projectid" of relation "project_counties" does not exist
+[2026-02-28T14:47:17.701Z]   ✗ Error inserting row into project_counties: column "projectid" of relation "project_counties" does not exist
+[2026-02-28T14:47:17.728Z]   ✗ Error inserting row into project_counties: column "projectid" of relation "project_counties" does not exist
+[2026-02-28T14:47:17.754Z]   ✗ Error inserting row into project_counties: column "projectid" of relation "project_counties" does not exist
+[2026-02-28T14:47:17.789Z]   ✗ Error inserting row into project_counties: column "projectid" of relation "project_counties" does not exist
+[2026-02-28T14:47:17.814Z]   ✗ Error inserting row into project_counties: column "projectid" of relation "project_counties" does not exist
+[2026-02-28T14:47:17.814Z]   Progress: 48/48 rows processed
+[2026-02-28T14:47:17.814Z]   ✓ Migrated 0 rows from project_counties (48 errors)
+[2026-02-28T14:47:17.814Z] Migrating table: project_documents
+[2026-02-28T14:47:17.827Z]   Found 15 rows to migrate
+[2026-02-28T14:47:17.863Z]   ⚠ Table project_documents does not exist in PostgreSQL, skipping
+[2026-02-28T14:47:17.863Z] Migrating table: project_esohsg_screening
+[2026-02-28T14:47:17.883Z]   Found 1 rows to migrate
+[2026-02-28T14:47:17.886Z]   ⚠ Table project_esohsg_screening does not exist in PostgreSQL, skipping
+[2026-02-28T14:47:17.886Z] Migrating table: project_financials
+[2026-02-28T14:47:17.899Z]   Found 4 rows to migrate
+[2026-02-28T14:47:17.910Z]   ⚠ Table project_financials does not exist in PostgreSQL, skipping
+[2026-02-28T14:47:17.910Z] Migrating table: project_fy_breakdown
+[2026-02-28T14:47:17.922Z]   Found 5 rows to migrate
+[2026-02-28T14:47:17.925Z]   ⚠ Table project_fy_breakdown does not exist in PostgreSQL, skipping
+[2026-02-28T14:47:17.932Z] Migrating table: project_hazard_assessment
+[2026-02-28T14:47:17.946Z]   Found 2 rows to migrate
+[2026-02-28T14:47:17.949Z]   ⚠ Table project_hazard_assessment does not exist in PostgreSQL, skipping
+[2026-02-28T14:47:17.949Z] Migrating table: project_implementation_plan
+[2026-02-28T14:47:17.959Z]   Found 3 rows to migrate
+[2026-02-28T14:47:17.962Z]   ⚠ Table project_implementation_plan does not exist in PostgreSQL, skipping
+[2026-02-28T14:47:17.962Z] Migrating table: project_m_and_e
+[2026-02-28T14:47:17.974Z]   Found 3 rows to migrate
+[2026-02-28T14:47:17.983Z]   ⚠ Table project_m_and_e does not exist in PostgreSQL, skipping
+[2026-02-28T14:47:17.983Z] Migrating table: project_maps
+[2026-02-28T14:47:17.994Z]   Found 32 rows to migrate
+[2026-02-28T14:47:18.251Z]   Progress: 32/32 rows processed
+[2026-02-28T14:47:18.251Z]   ✓ Migrated 32 rows from project_maps (0 errors)
+[2026-02-28T14:47:18.251Z] Migrating table: project_milestone_implementations
+[2026-02-28T14:47:18.256Z]   Found 11 rows to migrate
+[2026-02-28T14:47:18.266Z]   ⚠ Table project_milestone_implementations does not exist in PostgreSQL, skipping
+[2026-02-28T14:47:18.266Z] Migrating table: project_milestones
+[2026-02-28T14:47:18.278Z]   Found 66 rows to migrate
+[2026-02-28T14:47:18.287Z]   ⚠ Table project_milestones does not exist in PostgreSQL, skipping
+[2026-02-28T14:47:18.287Z] Migrating table: project_monitoring_records
+[2026-02-28T14:47:18.292Z]   Found 8 rows to migrate
+[2026-02-28T14:47:18.301Z]   ⚠ Table project_monitoring_records does not exist in PostgreSQL, skipping
+[2026-02-28T14:47:18.302Z] Migrating table: project_needs_assessment
+[2026-02-28T14:47:18.312Z]   Found 4 rows to migrate
+[2026-02-28T14:47:18.314Z]   ⚠ Table project_needs_assessment does not exist in PostgreSQL, skipping
+[2026-02-28T14:47:18.315Z] Migrating table: project_payment_requests
+[2026-02-28T14:47:18.325Z]   Found 2 rows to migrate
+[2026-02-28T14:47:18.328Z]   ⚠ Table project_payment_requests does not exist in PostgreSQL, skipping
+[2026-02-28T14:47:18.328Z] Migrating table: project_photos
+[2026-02-28T14:47:18.338Z]   Found 8 rows to migrate
+[2026-02-28T14:47:18.341Z]   ⚠ Table project_photos does not exist in PostgreSQL, skipping
+[2026-02-28T14:47:18.341Z] Migrating table: project_readiness
+[2026-02-28T14:47:18.353Z]   Found 3 rows to migrate
+[2026-02-28T14:47:18.362Z]   ⚠ Table project_readiness does not exist in PostgreSQL, skipping
+[2026-02-28T14:47:18.362Z] Migrating table: project_risks
+[2026-02-28T14:47:18.374Z]   Found 2 rows to migrate
+[2026-02-28T14:47:18.376Z]   ⚠ Table project_risks does not exist in PostgreSQL, skipping
+[2026-02-28T14:47:18.377Z] Migrating table: project_roles
+[2026-02-28T14:47:18.389Z]   Found 27 rows to migrate
+[2026-02-28T14:47:18.606Z]   Progress: 27/27 rows processed
+[2026-02-28T14:47:18.606Z]   ✓ Migrated 27 rows from project_roles (0 errors)
+[2026-02-28T14:47:18.606Z] Migrating table: project_staff_assignments
+[2026-02-28T14:47:18.610Z]   Table project_staff_assignments is empty, skipping data migration
+[2026-02-28T14:47:18.610Z] Migrating table: project_stages
+[2026-02-28T14:47:18.621Z]   Found 4 rows to migrate
+[2026-02-28T14:47:18.658Z]   Progress: 4/4 rows processed
+[2026-02-28T14:47:18.658Z]   ✓ Migrated 4 rows from project_stages (0 errors)
+[2026-02-28T14:47:18.658Z] Migrating table: project_stakeholders
+[2026-02-28T14:47:18.670Z]   Found 3 rows to migrate
+[2026-02-28T14:47:18.672Z]   ⚠ Table project_stakeholders does not exist in PostgreSQL, skipping
+[2026-02-28T14:47:18.673Z] Migrating table: project_subcounties
+[2026-02-28T14:47:18.691Z]   Found 35 rows to migrate
+[2026-02-28T14:47:18.694Z]   ⚠ Table project_subcounties does not exist in PostgreSQL, skipping
+[2026-02-28T14:47:18.694Z] Migrating table: project_sustainability
+[2026-02-28T14:47:18.706Z]   Found 3 rows to migrate
+[2026-02-28T14:47:18.709Z]   ⚠ Table project_sustainability does not exist in PostgreSQL, skipping
+[2026-02-28T14:47:18.717Z] Migrating table: project_wards
+[2026-02-28T14:47:18.730Z]   Found 20 rows to migrate
+[2026-02-28T14:47:18.733Z]   ⚠ Table project_wards does not exist in PostgreSQL, skipping
+[2026-02-28T14:47:18.733Z] Migrating table: project_workflow_steps
+[2026-02-28T14:47:18.744Z]   Found 3 rows to migrate
+[2026-02-28T14:47:18.754Z]   ⚠ Table project_workflow_steps does not exist in PostgreSQL, skipping
+[2026-02-28T14:47:18.754Z] Migrating table: project_workflows
+[2026-02-28T14:47:18.758Z]   Found 1 rows to migrate
+[2026-02-28T14:47:18.766Z]   ⚠ Table project_workflows does not exist in PostgreSQL, skipping
+[2026-02-28T14:47:18.767Z] Migrating table: projectfeedback
+[2026-02-28T14:47:18.778Z]   Found 10 rows to migrate
+[2026-02-28T14:47:18.867Z]   Progress: 10/10 rows processed
+[2026-02-28T14:47:18.867Z]   ✓ Migrated 10 rows from projectfeedback (0 errors)
+[2026-02-28T14:47:18.867Z] Migrating table: projects
+[2026-02-28T14:47:18.879Z]   Found 72 rows to migrate
+[2026-02-28T14:47:18.912Z]   ✗ Error inserting row into projects: column "id" of relation "projects" does not exist
+[2026-02-28T14:47:18.948Z]   ✗ Error inserting row into projects: column "id" of relation "projects" does not exist
+[2026-02-28T14:47:18.988Z]   ✗ Error inserting row into projects: column "id" of relation "projects" does not exist
+[2026-02-28T14:47:19.035Z]   ✗ Error inserting row into projects: column "id" of relation "projects" does not exist
+[2026-02-28T14:47:19.064Z]   ✗ Error inserting row into projects: column "id" of relation "projects" does not exist
+[2026-02-28T14:47:19.112Z]   ✗ Error inserting row into projects: column "id" of relation "projects" does not exist
+[2026-02-28T14:47:19.158Z]   ✗ Error inserting row into projects: column "id" of relation "projects" does not exist
+[2026-02-28T14:47:19.185Z]   ✗ Error inserting row into projects: column "id" of relation "projects" does not exist
+[2026-02-28T14:47:19.219Z]   ✗ Error inserting row into projects: column "id" of relation "projects" does not exist
+[2026-02-28T14:47:19.255Z]   ✗ Error inserting row into projects: column "id" of relation "projects" does not exist
+[2026-02-28T14:47:19.281Z]   ✗ Error inserting row into projects: column "id" of relation "projects" does not exist
+[2026-02-28T14:47:19.305Z]   ✗ Error inserting row into projects: column "id" of relation "projects" does not exist
+[2026-02-28T14:47:19.329Z]   ✗ Error inserting row into projects: column "id" of relation "projects" does not exist
+[2026-02-28T14:47:19.353Z]   ✗ Error inserting row into projects: column "id" of relation "projects" does not exist
+[2026-02-28T14:47:19.370Z]   ✗ Error inserting row into projects: column "id" of relation "projects" does not exist
+[2026-02-28T14:47:19.402Z]   ✗ Error inserting row into projects: column "id" of relation "projects" does not exist
+[2026-02-28T14:47:19.427Z]   ✗ Error inserting row into projects: column "id" of relation "projects" does not exist
+[2026-02-28T14:47:19.451Z]   ✗ Error inserting row into projects: column "id" of relation "projects" does not exist
+[2026-02-28T14:47:19.477Z]   ✗ Error inserting row into projects: column "id" of relation "projects" does not exist
+[2026-02-28T14:47:19.504Z]   ✗ Error inserting row into projects: column "id" of relation "projects" does not exist
+[2026-02-28T14:47:19.539Z]   ✗ Error inserting row into projects: column "id" of relation "projects" does not exist
+[2026-02-28T14:47:19.565Z]   ✗ Error inserting row into projects: column "id" of relation "projects" does not exist
+[2026-02-28T14:47:19.591Z]   ✗ Error inserting row into projects: column "id" of relation "projects" does not exist
+[2026-02-28T14:47:19.621Z]   ✗ Error inserting row into projects: column "id" of relation "projects" does not exist
+[2026-02-28T14:47:19.648Z]   ✗ Error inserting row into projects: column "id" of relation "projects" does not exist
+[2026-02-28T14:47:19.675Z]   ✗ Error inserting row into projects: column "id" of relation "projects" does not exist
+[2026-02-28T14:47:19.700Z]   ✗ Error inserting row into projects: column "id" of relation "projects" does not exist
+[2026-02-28T14:47:19.732Z]   ✗ Error inserting row into projects: column "id" of relation "projects" does not exist
+[2026-02-28T14:47:19.760Z]   ✗ Error inserting row into projects: column "id" of relation "projects" does not exist
+[2026-02-28T14:47:19.786Z]   ✗ Error inserting row into projects: column "id" of relation "projects" does not exist
+[2026-02-28T14:47:19.817Z]   ✗ Error inserting row into projects: column "id" of relation "projects" does not exist
+[2026-02-28T14:47:19.835Z]   ✗ Error inserting row into projects: column "id" of relation "projects" does not exist
+[2026-02-28T14:47:19.867Z]   ✗ Error inserting row into projects: column "id" of relation "projects" does not exist
+[2026-02-28T14:47:19.894Z]   ✗ Error inserting row into projects: column "id" of relation "projects" does not exist
+[2026-02-28T14:47:19.918Z]   ✗ Error inserting row into projects: column "id" of relation "projects" does not exist
+[2026-02-28T14:47:19.943Z]   ✗ Error inserting row into projects: column "id" of relation "projects" does not exist
+[2026-02-28T14:47:19.966Z]   ✗ Error inserting row into projects: column "id" of relation "projects" does not exist
+[2026-02-28T14:47:19.992Z]   ✗ Error inserting row into projects: column "id" of relation "projects" does not exist
+[2026-02-28T14:47:20.016Z]   ✗ Error inserting row into projects: column "id" of relation "projects" does not exist
+[2026-02-28T14:47:20.044Z]   ✗ Error inserting row into projects: column "id" of relation "projects" does not exist
+[2026-02-28T14:47:20.077Z]   ✗ Error inserting row into projects: column "id" of relation "projects" does not exist
+[2026-02-28T14:47:20.100Z]   ✗ Error inserting row into projects: column "id" of relation "projects" does not exist
+[2026-02-28T14:47:20.125Z]   ✗ Error inserting row into projects: column "id" of relation "projects" does not exist
+[2026-02-28T14:47:20.151Z]   ✗ Error inserting row into projects: column "id" of relation "projects" does not exist
+[2026-02-28T14:47:20.176Z]   ✗ Error inserting row into projects: column "id" of relation "projects" does not exist
+[2026-02-28T14:47:20.200Z]   ✗ Error inserting row into projects: column "id" of relation "projects" does not exist
+[2026-02-28T14:47:20.240Z]   ✗ Error inserting row into projects: column "id" of relation "projects" does not exist
+[2026-02-28T14:47:20.275Z]   ✗ Error inserting row into projects: column "id" of relation "projects" does not exist
+[2026-02-28T14:47:20.312Z]   ✗ Error inserting row into projects: column "id" of relation "projects" does not exist
+[2026-02-28T14:47:20.373Z]   ✗ Error inserting row into projects: column "id" of relation "projects" does not exist
+[2026-02-28T14:47:20.419Z]   ✗ Error inserting row into projects: column "id" of relation "projects" does not exist
+[2026-02-28T14:47:20.457Z]   ✗ Error inserting row into projects: column "id" of relation "projects" does not exist
+[2026-02-28T14:47:20.494Z]   ✗ Error inserting row into projects: column "id" of relation "projects" does not exist
+[2026-02-28T14:47:20.542Z]   ✗ Error inserting row into projects: column "id" of relation "projects" does not exist
+[2026-02-28T14:47:20.593Z]   ✗ Error inserting row into projects: column "id" of relation "projects" does not exist
+[2026-02-28T14:47:20.651Z]   ✗ Error inserting row into projects: column "id" of relation "projects" does not exist
+[2026-02-28T14:47:20.688Z]   ✗ Error inserting row into projects: column "id" of relation "projects" does not exist
+[2026-02-28T14:47:20.761Z]   ✗ Error inserting row into projects: column "id" of relation "projects" does not exist
+[2026-02-28T14:47:20.825Z]   ✗ Error inserting row into projects: column "id" of relation "projects" does not exist
+[2026-02-28T14:47:20.884Z]   ✗ Error inserting row into projects: column "id" of relation "projects" does not exist
+[2026-02-28T14:47:20.937Z]   ✗ Error inserting row into projects: column "id" of relation "projects" does not exist
+[2026-02-28T14:47:20.993Z]   ✗ Error inserting row into projects: column "id" of relation "projects" does not exist
+[2026-02-28T14:47:21.056Z]   ✗ Error inserting row into projects: column "id" of relation "projects" does not exist
+[2026-02-28T14:47:21.095Z]   ✗ Error inserting row into projects: column "id" of relation "projects" does not exist
+[2026-02-28T14:47:21.156Z]   ✗ Error inserting row into projects: column "id" of relation "projects" does not exist
+[2026-02-28T14:47:21.206Z]   ✗ Error inserting row into projects: column "id" of relation "projects" does not exist
+[2026-02-28T14:47:21.263Z]   ✗ Error inserting row into projects: column "id" of relation "projects" does not exist
+[2026-02-28T14:47:21.290Z]   ✗ Error inserting row into projects: column "id" of relation "projects" does not exist
+[2026-02-28T14:47:21.326Z]   ✗ Error inserting row into projects: column "id" of relation "projects" does not exist
+[2026-02-28T14:47:21.373Z]   ✗ Error inserting row into projects: column "id" of relation "projects" does not exist
+[2026-02-28T14:47:21.390Z]   ✗ Error inserting row into projects: column "id" of relation "projects" does not exist
+[2026-02-28T14:47:21.422Z]   ✗ Error inserting row into projects: column "id" of relation "projects" does not exist
+[2026-02-28T14:47:21.422Z]   Progress: 72/72 rows processed
+[2026-02-28T14:47:21.422Z]   ✓ Migrated 0 rows from projects (72 errors)
+[2026-02-28T14:47:21.422Z] Migrating table: public_feedback
+[2026-02-28T14:47:21.426Z]   Table public_feedback is empty, skipping data migration
+[2026-02-28T14:47:21.426Z] Migrating table: public_holidays
+[2026-02-28T14:47:21.437Z]   Found 11 rows to migrate
+[2026-02-28T14:47:21.560Z]   Progress: 11/11 rows processed
+[2026-02-28T14:47:21.560Z]   ✓ Migrated 11 rows from public_holidays (0 errors)
+[2026-02-28T14:47:21.560Z] Migrating table: role_dashboard_config
+[2026-02-28T14:47:21.571Z]   Table role_dashboard_config is empty, skipping data migration
+[2026-02-28T14:47:21.571Z] Migrating table: role_dashboard_permissions
+[2026-02-28T14:47:21.574Z]   Table role_dashboard_permissions is empty, skipping data migration
+[2026-02-28T14:47:21.574Z] Migrating table: role_privileges
+[2026-02-28T14:47:21.584Z]   Found 323 rows to migrate
+[2026-02-28T14:47:21.586Z]   ⚠ Table role_privileges does not exist in PostgreSQL, skipping
+[2026-02-28T14:47:21.586Z] Migrating table: roles
+[2026-02-28T14:47:21.596Z]   Found 8 rows to migrate
+[2026-02-28T14:47:21.607Z]   ✗ Error inserting row into roles: column "roleid" of relation "roles" does not exist
+[2026-02-28T14:47:21.632Z]   ✗ Error inserting row into roles: column "roleid" of relation "roles" does not exist
+[2026-02-28T14:47:21.655Z]   ✗ Error inserting row into roles: column "roleid" of relation "roles" does not exist
+[2026-02-28T14:47:21.681Z]   ✗ Error inserting row into roles: column "roleid" of relation "roles" does not exist
+[2026-02-28T14:47:21.704Z]   ✗ Error inserting row into roles: column "roleid" of relation "roles" does not exist
+[2026-02-28T14:47:21.729Z]   ✗ Error inserting row into roles: column "roleid" of relation "roles" does not exist
+[2026-02-28T14:47:21.752Z]   ✗ Error inserting row into roles: column "roleid" of relation "roles" does not exist
+[2026-02-28T14:47:21.770Z]   ✗ Error inserting row into roles: column "roleid" of relation "roles" does not exist
+[2026-02-28T14:47:21.777Z]   Progress: 8/8 rows processed
+[2026-02-28T14:47:21.778Z]   ✓ Migrated 0 rows from roles (8 errors)
+[2026-02-28T14:47:21.778Z] Migrating table: sections
+[2026-02-28T14:47:21.781Z]   Found 43 rows to migrate
+[2026-02-28T14:47:21.819Z]   ⚠ Table sections does not exist in PostgreSQL, skipping
+[2026-02-28T14:47:21.819Z] Migrating table: staff
+[2026-02-28T14:47:21.829Z]   Found 44 rows to migrate
+[2026-02-28T14:47:21.838Z]   ⚠ Table staff does not exist in PostgreSQL, skipping
+[2026-02-28T14:47:21.838Z] Migrating table: strategicplans
+[2026-02-28T14:47:21.842Z]   Found 34 rows to migrate
+[2026-02-28T14:47:22.612Z]   Progress: 34/34 rows processed
+[2026-02-28T14:47:22.612Z]   ✓ Migrated 34 rows from strategicplans (0 errors)
+[2026-02-28T14:47:22.613Z] Migrating table: studyparticipants
+[2026-02-28T14:47:22.635Z]   Found 895 rows to migrate
+[2026-02-28T14:47:33.070Z]   Progress: 895/895 rows processed
+[2026-02-28T14:47:33.070Z]   ✓ Migrated 895 rows from studyparticipants (0 errors)
+[2026-02-28T14:47:33.070Z] Migrating table: subcounties
+[2026-02-28T14:47:33.081Z]   Found 5 rows to migrate
+[2026-02-28T14:47:33.083Z]   ⚠ Table subcounties does not exist in PostgreSQL, skipping
+[2026-02-28T14:47:33.083Z] Migrating table: subprograms
+[2026-02-28T14:47:33.095Z]   Found 73 rows to migrate
+[2026-02-28T14:47:33.105Z]   ⚠ Table subprograms does not exist in PostgreSQL, skipping
+[2026-02-28T14:47:33.105Z] Migrating table: user_dashboard_preferences
+[2026-02-28T14:47:33.116Z]   Table user_dashboard_preferences is empty, skipping data migration
+[2026-02-28T14:47:33.116Z] Migrating table: user_data_filters
+[2026-02-28T14:47:33.127Z]   Table user_data_filters is empty, skipping data migration
+[2026-02-28T14:47:33.127Z] Migrating table: user_department_assignments
+[2026-02-28T14:47:33.131Z]   Table user_department_assignments is empty, skipping data migration
+[2026-02-28T14:47:33.132Z] Migrating table: user_project_assignments
+[2026-02-28T14:47:33.144Z]   Table user_project_assignments is empty, skipping data migration
+[2026-02-28T14:47:33.145Z] Migrating table: user_ward_assignments
+[2026-02-28T14:47:33.156Z]   Table user_ward_assignments is empty, skipping data migration
+[2026-02-28T14:47:33.156Z] Migrating table: users
+[2026-02-28T14:47:33.176Z]   Found 30 rows to migrate
+[2026-02-28T14:47:33.372Z]   Progress: 30/30 rows processed
+[2026-02-28T14:47:33.372Z]   ✓ Migrated 30 rows from users (0 errors)
+[2026-02-28T14:47:33.372Z] Migrating table: wards
+[2026-02-28T14:47:33.375Z]   Found 4 rows to migrate
+[2026-02-28T14:47:33.377Z]   ⚠ Table wards does not exist in PostgreSQL, skipping
+[2026-02-28T14:47:33.377Z] 
+=== Migration Summary ===
+[2026-02-28T14:47:33.377Z] Total tables processed: 117
+[2026-02-28T14:47:33.377Z] Total rows migrated: 1388
+[2026-02-28T14:47:33.377Z] Total errors: 128
+[2026-02-28T14:47:33.377Z] Skipped tables: 59
+[2026-02-28T14:47:33.377Z] 
+⚠ Some errors occurred during migration. Please review the log.
+[2026-02-28T15:54:34.846Z] Starting data migration from MySQL to PostgreSQL...
+[2026-02-28T15:54:34.857Z] MySQL: localhost:3308/gov_imbesdb
+[2026-02-28T15:54:34.857Z] PostgreSQL: localhost:5433/government_projects
+[2026-02-28T15:54:34.858Z] Connecting to MySQL...
+[2026-02-28T15:54:35.258Z] ✓ Connected to MySQL
+[2026-02-28T15:54:35.258Z] Connecting to PostgreSQL...
+[2026-02-28T15:54:35.334Z] ✓ Connected to PostgreSQL
+[2026-02-28T15:54:35.334Z] Getting table list...
+[2026-02-28T15:54:35.360Z] Found 117 tables to migrate
+[2026-02-28T15:54:35.360Z] Migrating table: activities
+[2026-02-28T15:54:35.384Z]   Found 81 rows to migrate
+[2026-02-28T15:54:35.457Z]   ⚠ Table activities does not exist in PostgreSQL, skipping
+[2026-02-28T15:54:35.457Z] Migrating table: annual_workplans
+[2026-02-28T15:54:35.518Z]   Found 31 rows to migrate
+[2026-02-28T15:54:35.529Z]   ⚠ Table annual_workplans does not exist in PostgreSQL, skipping
+[2026-02-28T15:54:35.530Z] Migrating table: approved_public_feedback
+[2026-02-28T15:54:35.551Z]   Table approved_public_feedback is empty, skipping data migration
+[2026-02-28T15:54:35.552Z] Migrating table: assigned_assets
+[2026-02-28T15:54:35.567Z]   Found 2 rows to migrate
+[2026-02-28T15:54:35.577Z]   ⚠ Table assigned_assets does not exist in PostgreSQL, skipping
+[2026-02-28T15:54:35.578Z] Migrating table: attachments
+[2026-02-28T15:54:35.593Z]   Table attachments is empty, skipping data migration
+[2026-02-28T15:54:35.593Z] Migrating table: attachmenttypes
+[2026-02-28T15:54:35.612Z]   Found 15 rows to migrate
+[2026-02-28T15:54:35.845Z]   Progress: 15/15 rows processed
+[2026-02-28T15:54:35.846Z]   ✓ Migrated 15 rows from attachmenttypes (0 errors)
+[2026-02-28T15:54:35.846Z] Migrating table: attendance
+[2026-02-28T15:54:35.859Z]   Found 7 rows to migrate
+[2026-02-28T15:54:35.862Z]   ⚠ Table attendance does not exist in PostgreSQL, skipping
+[2026-02-28T15:54:35.862Z] Migrating table: budget_changes
+[2026-02-28T15:54:35.875Z]   Table budget_changes is empty, skipping data migration
+[2026-02-28T15:54:35.875Z] Migrating table: budget_combinations
+[2026-02-28T15:54:35.894Z]   Table budget_combinations is empty, skipping data migration
+[2026-02-28T15:54:35.894Z] Migrating table: budget_items
+[2026-02-28T15:54:35.908Z]   Table budget_items is empty, skipping data migration
+[2026-02-28T15:54:35.908Z] Migrating table: budgets
+[2026-02-28T15:54:35.921Z]   Table budgets is empty, skipping data migration
+[2026-02-28T15:54:35.921Z] Migrating table: categories
+[2026-02-28T15:54:35.943Z]   Found 9 rows to migrate
+[2026-02-28T15:54:36.054Z]   Progress: 9/9 rows processed
+[2026-02-28T15:54:36.055Z]   ✓ Migrated 9 rows from categories (0 errors)
+[2026-02-28T15:54:36.055Z] Migrating table: category_milestones
+[2026-02-28T15:54:36.068Z]   Found 36 rows to migrate
+[2026-02-28T15:54:36.078Z]   ⚠ Table category_milestones does not exist in PostgreSQL, skipping
+[2026-02-28T15:54:36.078Z] Migrating table: chat_message_reactions
+[2026-02-28T15:54:36.091Z]   Table chat_message_reactions is empty, skipping data migration
+[2026-02-28T15:54:36.092Z] Migrating table: chat_messages
+[2026-02-28T15:54:36.108Z]   Table chat_messages is empty, skipping data migration
+[2026-02-28T15:54:36.114Z] Migrating table: chat_room_participants
+[2026-02-28T15:54:36.128Z]   Table chat_room_participants is empty, skipping data migration
+[2026-02-28T15:54:36.128Z] Migrating table: chat_rooms
+[2026-02-28T15:54:36.142Z]   Table chat_rooms is empty, skipping data migration
+[2026-02-28T15:54:36.142Z] Migrating table: citizen_proposals
+[2026-02-28T15:54:36.157Z]   Table citizen_proposals is empty, skipping data migration
+[2026-02-28T15:54:36.163Z] Migrating table: component_data_access_rules
+[2026-02-28T15:54:36.175Z]   Table component_data_access_rules is empty, skipping data migration
+[2026-02-28T15:54:36.176Z] Migrating table: contractor_users
+[2026-02-28T15:54:36.180Z]   Found 12 rows to migrate
+[2026-02-28T15:54:36.205Z]   ✗ Error inserting row into contractor_users: column "contractoruserid" of relation "contractor_users" does not exist
+[2026-02-28T15:54:36.252Z]   ✗ Error inserting row into contractor_users: column "contractoruserid" of relation "contractor_users" does not exist
+[2026-02-28T15:54:36.290Z]   ✗ Error inserting row into contractor_users: column "contractoruserid" of relation "contractor_users" does not exist
+[2026-02-28T15:54:36.325Z]   ✗ Error inserting row into contractor_users: column "contractoruserid" of relation "contractor_users" does not exist
+[2026-02-28T15:54:36.362Z]   ✗ Error inserting row into contractor_users: column "contractoruserid" of relation "contractor_users" does not exist
+[2026-02-28T15:54:36.409Z]   ✗ Error inserting row into contractor_users: column "contractoruserid" of relation "contractor_users" does not exist
+[2026-02-28T15:54:36.449Z]   ✗ Error inserting row into contractor_users: column "contractoruserid" of relation "contractor_users" does not exist
+[2026-02-28T15:54:36.494Z]   ✗ Error inserting row into contractor_users: column "contractoruserid" of relation "contractor_users" does not exist
+[2026-02-28T15:54:36.533Z]   ✗ Error inserting row into contractor_users: column "contractoruserid" of relation "contractor_users" does not exist
+[2026-02-28T15:54:36.572Z]   ✗ Error inserting row into contractor_users: column "contractoruserid" of relation "contractor_users" does not exist
+[2026-02-28T15:54:36.609Z]   ✗ Error inserting row into contractor_users: column "contractoruserid" of relation "contractor_users" does not exist
+[2026-02-28T15:54:36.645Z]   ✗ Error inserting row into contractor_users: column "contractoruserid" of relation "contractor_users" does not exist
+[2026-02-28T15:54:36.646Z]   Progress: 12/12 rows processed
+[2026-02-28T15:54:36.646Z]   ✓ Migrated 0 rows from contractor_users (12 errors)
+[2026-02-28T15:54:36.646Z] Migrating table: contractors
+[2026-02-28T15:54:36.659Z]   Found 21 rows to migrate
+[2026-02-28T15:54:36.988Z]   Progress: 21/21 rows processed
+[2026-02-28T15:54:36.989Z]   ✓ Migrated 21 rows from contractors (0 errors)
+[2026-02-28T15:54:36.989Z] Migrating table: counties
+[2026-02-28T15:54:37.000Z]   Found 6 rows to migrate
+[2026-02-28T15:54:37.009Z]   ⚠ Table counties does not exist in PostgreSQL, skipping
+[2026-02-28T15:54:37.010Z] Migrating table: county_proposed_project_milestones
+[2026-02-28T15:54:37.022Z]   Table county_proposed_project_milestones is empty, skipping data migration
+[2026-02-28T15:54:37.022Z] Migrating table: county_proposed_projects
+[2026-02-28T15:54:37.034Z]   Table county_proposed_projects is empty, skipping data migration
+[2026-02-28T15:54:37.034Z] Migrating table: dashboard_components
+[2026-02-28T15:54:37.047Z]   Table dashboard_components is empty, skipping data migration
+[2026-02-28T15:54:37.047Z] Migrating table: dashboard_permissions
+[2026-02-28T15:54:37.059Z]   Table dashboard_permissions is empty, skipping data migration
+[2026-02-28T15:54:37.059Z] Migrating table: dashboard_tabs
+[2026-02-28T15:54:37.070Z]   Table dashboard_tabs is empty, skipping data migration
+[2026-02-28T15:54:37.070Z] Migrating table: departments
+[2026-02-28T15:54:37.074Z]   Found 15 rows to migrate
+[2026-02-28T15:54:37.087Z]   ✗ Error inserting row into departments: column "departmentid" of relation "departments" does not exist
+[2026-02-28T15:54:37.133Z]   ✗ Error inserting row into departments: column "departmentid" of relation "departments" does not exist
+[2026-02-28T15:54:37.184Z]   ✗ Error inserting row into departments: column "departmentid" of relation "departments" does not exist
+[2026-02-28T15:54:37.231Z]   ✗ Error inserting row into departments: column "departmentid" of relation "departments" does not exist
+[2026-02-28T15:54:37.268Z]   ✗ Error inserting row into departments: column "departmentid" of relation "departments" does not exist
+[2026-02-28T15:54:37.304Z]   ✗ Error inserting row into departments: column "departmentid" of relation "departments" does not exist
+[2026-02-28T15:54:37.341Z]   ✗ Error inserting row into departments: column "departmentid" of relation "departments" does not exist
+[2026-02-28T15:54:37.379Z]   ✗ Error inserting row into departments: column "departmentid" of relation "departments" does not exist
+[2026-02-28T15:54:37.416Z]   ✗ Error inserting row into departments: column "departmentid" of relation "departments" does not exist
+[2026-02-28T15:54:37.462Z]   ✗ Error inserting row into departments: column "departmentid" of relation "departments" does not exist
+[2026-02-28T15:54:37.502Z]   ✗ Error inserting row into departments: column "departmentid" of relation "departments" does not exist
+[2026-02-28T15:54:37.537Z]   ✗ Error inserting row into departments: column "departmentid" of relation "departments" does not exist
+[2026-02-28T15:54:37.575Z]   ✗ Error inserting row into departments: column "departmentid" of relation "departments" does not exist
+[2026-02-28T15:54:37.612Z]   ✗ Error inserting row into departments: column "departmentid" of relation "departments" does not exist
+[2026-02-28T15:54:37.646Z]   ✗ Error inserting row into departments: column "departmentid" of relation "departments" does not exist
+[2026-02-28T15:54:37.646Z]   Progress: 15/15 rows processed
+[2026-02-28T15:54:37.647Z]   ✓ Migrated 0 rows from departments (15 errors)
+[2026-02-28T15:54:37.647Z] Migrating table: employee_bank_details
+[2026-02-28T15:54:37.659Z]   Found 6 rows to migrate
+[2026-02-28T15:54:37.711Z]   ⚠ Table employee_bank_details does not exist in PostgreSQL, skipping
+[2026-02-28T15:54:37.718Z] Migrating table: employee_benefits
+[2026-02-28T15:54:37.723Z]   Table employee_benefits is empty, skipping data migration
+[2026-02-28T15:54:37.724Z] Migrating table: employee_compensation
+[2026-02-28T15:54:37.743Z]   Found 9 rows to migrate
+[2026-02-28T15:54:37.747Z]   ⚠ Table employee_compensation does not exist in PostgreSQL, skipping
+[2026-02-28T15:54:37.748Z] Migrating table: employee_contracts
+[2026-02-28T15:54:37.761Z]   Found 14 rows to migrate
+[2026-02-28T15:54:37.770Z]   ⚠ Table employee_contracts does not exist in PostgreSQL, skipping
+[2026-02-28T15:54:37.770Z] Migrating table: employee_dependants
+[2026-02-28T15:54:37.781Z]   Found 13 rows to migrate
+[2026-02-28T15:54:37.784Z]   ⚠ Table employee_dependants does not exist in PostgreSQL, skipping
+[2026-02-28T15:54:37.784Z] Migrating table: employee_disciplinary
+[2026-02-28T15:54:37.797Z]   Found 3 rows to migrate
+[2026-02-28T15:54:37.806Z]   ⚠ Table employee_disciplinary does not exist in PostgreSQL, skipping
+[2026-02-28T15:54:37.806Z] Migrating table: employee_leave_entitlements
+[2026-02-28T15:54:37.817Z]   Found 6 rows to migrate
+[2026-02-28T15:54:37.820Z]   ⚠ Table employee_leave_entitlements does not exist in PostgreSQL, skipping
+[2026-02-28T15:54:37.820Z] Migrating table: employee_loans
+[2026-02-28T15:54:37.832Z]   Found 2 rows to migrate
+[2026-02-28T15:54:37.841Z]   ⚠ Table employee_loans does not exist in PostgreSQL, skipping
+[2026-02-28T15:54:37.841Z] Migrating table: employee_memberships
+[2026-02-28T15:54:37.854Z]   Table employee_memberships is empty, skipping data migration
+[2026-02-28T15:54:37.855Z] Migrating table: employee_performance
+[2026-02-28T15:54:37.869Z]   Found 9 rows to migrate
+[2026-02-28T15:54:37.879Z]   ⚠ Table employee_performance does not exist in PostgreSQL, skipping
+[2026-02-28T15:54:37.879Z] Migrating table: employee_project_assignments
+[2026-02-28T15:54:37.895Z]   Found 2 rows to migrate
+[2026-02-28T15:54:37.903Z]   ⚠ Table employee_project_assignments does not exist in PostgreSQL, skipping
+[2026-02-28T15:54:37.904Z] Migrating table: employee_promotions
+[2026-02-28T15:54:37.916Z]   Found 5 rows to migrate
+[2026-02-28T15:54:37.919Z]   ⚠ Table employee_promotions does not exist in PostgreSQL, skipping
+[2026-02-28T15:54:37.919Z] Migrating table: employee_retirements
+[2026-02-28T15:54:37.931Z]   Table employee_retirements is empty, skipping data migration
+[2026-02-28T15:54:37.931Z] Migrating table: employee_terminations
+[2026-02-28T15:54:37.942Z]   Table employee_terminations is empty, skipping data migration
+[2026-02-28T15:54:37.942Z] Migrating table: employee_training
+[2026-02-28T15:54:37.953Z]   Found 7 rows to migrate
+[2026-02-28T15:54:37.956Z]   ⚠ Table employee_training does not exist in PostgreSQL, skipping
+[2026-02-28T15:54:37.956Z] Migrating table: feedback_moderation
+[2026-02-28T15:54:37.967Z]   Table feedback_moderation is empty, skipping data migration
+[2026-02-28T15:54:37.968Z] Migrating table: feedback_moderation_settings
+[2026-02-28T15:54:37.979Z]   Table feedback_moderation_settings is empty, skipping data migration
+[2026-02-28T15:54:37.979Z] Migrating table: financialyears
+[2026-02-28T15:54:37.990Z]   Found 4 rows to migrate
+[2026-02-28T15:54:37.993Z]   ⚠ Table financialyears does not exist in PostgreSQL, skipping
+[2026-02-28T15:54:38.000Z] Migrating table: inspection_teams
+[2026-02-28T15:54:38.004Z]   Table inspection_teams is empty, skipping data migration
+[2026-02-28T15:54:38.005Z] Migrating table: job_groups
+[2026-02-28T15:54:38.016Z]   Found 3 rows to migrate
+[2026-02-28T15:54:38.061Z]   Progress: 3/3 rows processed
+[2026-02-28T15:54:38.062Z]   ✓ Migrated 3 rows from job_groups (0 errors)
+[2026-02-28T15:54:38.062Z] Migrating table: leave_applications
+[2026-02-28T15:54:38.074Z]   Found 31 rows to migrate
+[2026-02-28T15:54:38.079Z]   ⚠ Table leave_applications does not exist in PostgreSQL, skipping
+[2026-02-28T15:54:38.079Z] Migrating table: leave_types
+[2026-02-28T15:54:38.091Z]   Found 3 rows to migrate
+[2026-02-28T15:54:38.123Z]   Progress: 3/3 rows processed
+[2026-02-28T15:54:38.123Z]   ✓ Migrated 3 rows from leave_types (0 errors)
+[2026-02-28T15:54:38.123Z] Migrating table: milestone_activities
+[2026-02-28T15:54:38.128Z]   Found 42 rows to migrate
+[2026-02-28T15:54:38.137Z]   ⚠ Table milestone_activities does not exist in PostgreSQL, skipping
+[2026-02-28T15:54:38.137Z] Migrating table: milestone_attachments
+[2026-02-28T15:54:38.149Z]   Found 6 rows to migrate
+[2026-02-28T15:54:38.152Z]   ⚠ Table milestone_attachments does not exist in PostgreSQL, skipping
+[2026-02-28T15:54:38.152Z] Migrating table: moderation_queue
+[2026-02-28T15:54:38.172Z]   Table moderation_queue is empty, skipping data migration
+[2026-02-28T15:54:38.173Z] Migrating table: monthly_payroll
+[2026-02-28T15:54:38.186Z]   Found 3 rows to migrate
+[2026-02-28T15:54:38.197Z]   ⚠ Table monthly_payroll does not exist in PostgreSQL, skipping
+[2026-02-28T15:54:38.197Z] Migrating table: participants
+[2026-02-28T15:54:38.212Z]   Table participants is empty, skipping data migration
+[2026-02-28T15:54:38.212Z] Migrating table: payment_approval_history
+[2026-02-28T15:54:38.224Z]   Found 10 rows to migrate
+[2026-02-28T15:54:38.233Z]   ⚠ Table payment_approval_history does not exist in PostgreSQL, skipping
+[2026-02-28T15:54:38.234Z] Migrating table: payment_approval_levels
+[2026-02-28T15:54:38.246Z]   Found 5 rows to migrate
+[2026-02-28T15:54:38.250Z]   ⚠ Table payment_approval_levels does not exist in PostgreSQL, skipping
+[2026-02-28T15:54:38.250Z] Migrating table: payment_details
+[2026-02-28T15:54:38.262Z]   Found 1 rows to migrate
+[2026-02-28T15:54:38.271Z]   ⚠ Table payment_details does not exist in PostgreSQL, skipping
+[2026-02-28T15:54:38.272Z] Migrating table: payment_request_approvals
+[2026-02-28T15:54:38.284Z]   Table payment_request_approvals is empty, skipping data migration
+[2026-02-28T15:54:38.285Z] Migrating table: payment_request_documents
+[2026-02-28T15:54:38.298Z]   Found 13 rows to migrate
+[2026-02-28T15:54:38.308Z]   ⚠ Table payment_request_documents does not exist in PostgreSQL, skipping
+[2026-02-28T15:54:38.308Z] Migrating table: payment_request_milestones
+[2026-02-28T15:54:38.319Z]   Table payment_request_milestones is empty, skipping data migration
+[2026-02-28T15:54:38.319Z] Migrating table: payment_status_definitions
+[2026-02-28T15:54:38.331Z]   Found 8 rows to migrate
+[2026-02-28T15:54:38.393Z]   Progress: 8/8 rows processed
+[2026-02-28T15:54:38.393Z]   ✓ Migrated 8 rows from payment_status_definitions (0 errors)
+[2026-02-28T15:54:38.393Z] Migrating table: planningdocuments
+[2026-02-28T15:54:38.404Z]   Found 4 rows to migrate
+[2026-02-28T15:54:38.445Z]   Progress: 4/4 rows processed
+[2026-02-28T15:54:38.446Z]   ✓ Migrated 4 rows from planningdocuments (0 errors)
+[2026-02-28T15:54:38.446Z] Migrating table: privileges
+[2026-02-28T15:54:38.465Z]   Found 282 rows to migrate
+[2026-02-28T15:54:41.272Z]   Progress: 282/282 rows processed
+[2026-02-28T15:54:41.272Z]   ✓ Migrated 282 rows from privileges (0 errors)
+[2026-02-28T15:54:41.272Z] Migrating table: programs
+[2026-02-28T15:54:41.283Z]   Found 48 rows to migrate
+[2026-02-28T15:54:41.285Z]   ⚠ Table programs does not exist in PostgreSQL, skipping
+[2026-02-28T15:54:41.286Z] Migrating table: project_announcements
+[2026-02-28T15:54:41.296Z]   Table project_announcements is empty, skipping data migration
+[2026-02-28T15:54:41.296Z] Migrating table: project_assignments
+[2026-02-28T15:54:41.307Z]   Table project_assignments is empty, skipping data migration
+[2026-02-28T15:54:41.307Z] Migrating table: project_climate_risk
+[2026-02-28T15:54:41.311Z]   Found 2 rows to migrate
+[2026-02-28T15:54:41.320Z]   ⚠ Table project_climate_risk does not exist in PostgreSQL, skipping
+[2026-02-28T15:54:41.320Z] Migrating table: project_concept_notes
+[2026-02-28T15:54:41.330Z]   Found 4 rows to migrate
+[2026-02-28T15:54:41.333Z]   ⚠ Table project_concept_notes does not exist in PostgreSQL, skipping
+[2026-02-28T15:54:41.333Z] Migrating table: project_contractor_assignments
+[2026-02-28T15:54:41.343Z]   Found 50 rows to migrate
+[2026-02-28T15:54:41.346Z]   ⚠ Table project_contractor_assignments does not exist in PostgreSQL, skipping
+[2026-02-28T15:54:41.346Z] Migrating table: project_counties
+[2026-02-28T15:54:41.359Z]   Found 48 rows to migrate
+[2026-02-28T15:54:41.371Z]   ✗ Error inserting row into project_counties: column "projectid" of relation "project_counties" does not exist
+[2026-02-28T15:54:41.408Z]   ✗ Error inserting row into project_counties: column "projectid" of relation "project_counties" does not exist
+[2026-02-28T15:54:41.443Z]   ✗ Error inserting row into project_counties: column "projectid" of relation "project_counties" does not exist
+[2026-02-28T15:54:41.468Z]   ✗ Error inserting row into project_counties: column "projectid" of relation "project_counties" does not exist
+[2026-02-28T15:54:41.501Z]   ✗ Error inserting row into project_counties: column "projectid" of relation "project_counties" does not exist
+[2026-02-28T15:54:41.529Z]   ✗ Error inserting row into project_counties: column "projectid" of relation "project_counties" does not exist
+[2026-02-28T15:54:41.556Z]   ✗ Error inserting row into project_counties: column "projectid" of relation "project_counties" does not exist
+[2026-02-28T15:54:41.580Z]   ✗ Error inserting row into project_counties: column "projectid" of relation "project_counties" does not exist
+[2026-02-28T15:54:41.604Z]   ✗ Error inserting row into project_counties: column "projectid" of relation "project_counties" does not exist
+[2026-02-28T15:54:41.649Z]   ✗ Error inserting row into project_counties: column "projectid" of relation "project_counties" does not exist
+[2026-02-28T15:54:41.691Z]   ✗ Error inserting row into project_counties: column "projectid" of relation "project_counties" does not exist
+[2026-02-28T15:54:41.724Z]   ✗ Error inserting row into project_counties: column "projectid" of relation "project_counties" does not exist
+[2026-02-28T15:54:41.752Z]   ✗ Error inserting row into project_counties: column "projectid" of relation "project_counties" does not exist
+[2026-02-28T15:54:41.797Z]   ✗ Error inserting row into project_counties: column "projectid" of relation "project_counties" does not exist
+[2026-02-28T15:54:41.832Z]   ✗ Error inserting row into project_counties: column "projectid" of relation "project_counties" does not exist
+[2026-02-28T15:54:41.869Z]   ✗ Error inserting row into project_counties: column "projectid" of relation "project_counties" does not exist
+[2026-02-28T15:54:41.919Z]   ✗ Error inserting row into project_counties: column "projectid" of relation "project_counties" does not exist
+[2026-02-28T15:54:41.972Z]   ✗ Error inserting row into project_counties: column "projectid" of relation "project_counties" does not exist
+[2026-02-28T15:54:42.020Z]   ✗ Error inserting row into project_counties: column "projectid" of relation "project_counties" does not exist
+[2026-02-28T15:54:42.067Z]   ✗ Error inserting row into project_counties: column "projectid" of relation "project_counties" does not exist
+[2026-02-28T15:54:42.104Z]   ✗ Error inserting row into project_counties: column "projectid" of relation "project_counties" does not exist
+[2026-02-28T15:54:42.131Z]   ✗ Error inserting row into project_counties: column "projectid" of relation "project_counties" does not exist
+[2026-02-28T15:54:42.176Z]   ✗ Error inserting row into project_counties: column "projectid" of relation "project_counties" does not exist
+[2026-02-28T15:54:42.214Z]   ✗ Error inserting row into project_counties: column "projectid" of relation "project_counties" does not exist
+[2026-02-28T15:54:42.242Z]   ✗ Error inserting row into project_counties: column "projectid" of relation "project_counties" does not exist
+[2026-02-28T15:54:42.279Z]   ✗ Error inserting row into project_counties: column "projectid" of relation "project_counties" does not exist
+[2026-02-28T15:54:42.325Z]   ✗ Error inserting row into project_counties: column "projectid" of relation "project_counties" does not exist
+[2026-02-28T15:54:42.363Z]   ✗ Error inserting row into project_counties: column "projectid" of relation "project_counties" does not exist
+[2026-02-28T15:54:42.398Z]   ✗ Error inserting row into project_counties: column "projectid" of relation "project_counties" does not exist
+[2026-02-28T15:54:42.425Z]   ✗ Error inserting row into project_counties: column "projectid" of relation "project_counties" does not exist
+[2026-02-28T15:54:42.469Z]   ✗ Error inserting row into project_counties: column "projectid" of relation "project_counties" does not exist
+[2026-02-28T15:54:42.518Z]   ✗ Error inserting row into project_counties: column "projectid" of relation "project_counties" does not exist
+[2026-02-28T15:54:42.570Z]   ✗ Error inserting row into project_counties: column "projectid" of relation "project_counties" does not exist
+[2026-02-28T15:54:42.630Z]   ✗ Error inserting row into project_counties: column "projectid" of relation "project_counties" does not exist
+[2026-02-28T15:54:42.689Z]   ✗ Error inserting row into project_counties: column "projectid" of relation "project_counties" does not exist
+[2026-02-28T15:54:42.719Z]   ✗ Error inserting row into project_counties: column "projectid" of relation "project_counties" does not exist
+[2026-02-28T15:54:42.752Z]   ✗ Error inserting row into project_counties: column "projectid" of relation "project_counties" does not exist
+[2026-02-28T15:54:42.800Z]   ✗ Error inserting row into project_counties: column "projectid" of relation "project_counties" does not exist
+[2026-02-28T15:54:42.839Z]   ✗ Error inserting row into project_counties: column "projectid" of relation "project_counties" does not exist
+[2026-02-28T15:54:42.873Z]   ✗ Error inserting row into project_counties: column "projectid" of relation "project_counties" does not exist
+[2026-02-28T15:54:42.901Z]   ✗ Error inserting row into project_counties: column "projectid" of relation "project_counties" does not exist
+[2026-02-28T15:54:42.927Z]   ✗ Error inserting row into project_counties: column "projectid" of relation "project_counties" does not exist
+[2026-02-28T15:54:42.959Z]   ✗ Error inserting row into project_counties: column "projectid" of relation "project_counties" does not exist
+[2026-02-28T15:54:42.986Z]   ✗ Error inserting row into project_counties: column "projectid" of relation "project_counties" does not exist
+[2026-02-28T15:54:43.013Z]   ✗ Error inserting row into project_counties: column "projectid" of relation "project_counties" does not exist
+[2026-02-28T15:54:43.038Z]   ✗ Error inserting row into project_counties: column "projectid" of relation "project_counties" does not exist
+[2026-02-28T15:54:43.074Z]   ✗ Error inserting row into project_counties: column "projectid" of relation "project_counties" does not exist
+[2026-02-28T15:54:43.106Z]   ✗ Error inserting row into project_counties: column "projectid" of relation "project_counties" does not exist
+[2026-02-28T15:54:43.106Z]   Progress: 48/48 rows processed
+[2026-02-28T15:54:43.106Z]   ✓ Migrated 0 rows from project_counties (48 errors)
+[2026-02-28T15:54:43.106Z] Migrating table: project_documents
+[2026-02-28T15:54:43.110Z]   Found 15 rows to migrate
+[2026-02-28T15:54:43.155Z]   ⚠ Table project_documents does not exist in PostgreSQL, skipping
+[2026-02-28T15:54:43.155Z] Migrating table: project_esohsg_screening
+[2026-02-28T15:54:43.159Z]   Found 1 rows to migrate
+[2026-02-28T15:54:43.167Z]   ⚠ Table project_esohsg_screening does not exist in PostgreSQL, skipping
+[2026-02-28T15:54:43.168Z] Migrating table: project_financials
+[2026-02-28T15:54:43.172Z]   Found 4 rows to migrate
+[2026-02-28T15:54:43.181Z]   ⚠ Table project_financials does not exist in PostgreSQL, skipping
+[2026-02-28T15:54:43.181Z] Migrating table: project_fy_breakdown
+[2026-02-28T15:54:43.185Z]   Found 5 rows to migrate
+[2026-02-28T15:54:43.194Z]   ⚠ Table project_fy_breakdown does not exist in PostgreSQL, skipping
+[2026-02-28T15:54:43.194Z] Migrating table: project_hazard_assessment
+[2026-02-28T15:54:43.205Z]   Found 2 rows to migrate
+[2026-02-28T15:54:43.208Z]   ⚠ Table project_hazard_assessment does not exist in PostgreSQL, skipping
+[2026-02-28T15:54:43.208Z] Migrating table: project_implementation_plan
+[2026-02-28T15:54:43.219Z]   Found 3 rows to migrate
+[2026-02-28T15:54:43.228Z]   ⚠ Table project_implementation_plan does not exist in PostgreSQL, skipping
+[2026-02-28T15:54:43.228Z] Migrating table: project_m_and_e
+[2026-02-28T15:54:43.233Z]   Found 3 rows to migrate
+[2026-02-28T15:54:43.242Z]   ⚠ Table project_m_and_e does not exist in PostgreSQL, skipping
+[2026-02-28T15:54:43.242Z] Migrating table: project_maps
+[2026-02-28T15:54:43.246Z]   Found 32 rows to migrate
+[2026-02-28T15:54:43.498Z]   Progress: 32/32 rows processed
+[2026-02-28T15:54:43.498Z]   ✓ Migrated 32 rows from project_maps (0 errors)
+[2026-02-28T15:54:43.498Z] Migrating table: project_milestone_implementations
+[2026-02-28T15:54:43.503Z]   Found 11 rows to migrate
+[2026-02-28T15:54:43.512Z]   ⚠ Table project_milestone_implementations does not exist in PostgreSQL, skipping
+[2026-02-28T15:54:43.512Z] Migrating table: project_milestones
+[2026-02-28T15:54:43.522Z]   Found 66 rows to migrate
+[2026-02-28T15:54:43.524Z]   ⚠ Table project_milestones does not exist in PostgreSQL, skipping
+[2026-02-28T15:54:43.524Z] Migrating table: project_monitoring_records
+[2026-02-28T15:54:43.535Z]   Found 8 rows to migrate
+[2026-02-28T15:54:43.538Z]   ⚠ Table project_monitoring_records does not exist in PostgreSQL, skipping
+[2026-02-28T15:54:43.538Z] Migrating table: project_needs_assessment
+[2026-02-28T15:54:43.550Z]   Found 4 rows to migrate
+[2026-02-28T15:54:43.559Z]   ⚠ Table project_needs_assessment does not exist in PostgreSQL, skipping
+[2026-02-28T15:54:43.559Z] Migrating table: project_payment_requests
+[2026-02-28T15:54:43.571Z]   Found 2 rows to migrate
+[2026-02-28T15:54:43.574Z]   ⚠ Table project_payment_requests does not exist in PostgreSQL, skipping
+[2026-02-28T15:54:43.574Z] Migrating table: project_photos
+[2026-02-28T15:54:43.596Z]   Found 8 rows to migrate
+[2026-02-28T15:54:43.599Z]   ⚠ Table project_photos does not exist in PostgreSQL, skipping
+[2026-02-28T15:54:43.599Z] Migrating table: project_readiness
+[2026-02-28T15:54:43.611Z]   Found 3 rows to migrate
+[2026-02-28T15:54:43.620Z]   ⚠ Table project_readiness does not exist in PostgreSQL, skipping
+[2026-02-28T15:54:43.620Z] Migrating table: project_risks
+[2026-02-28T15:54:43.625Z]   Found 2 rows to migrate
+[2026-02-28T15:54:43.635Z]   ⚠ Table project_risks does not exist in PostgreSQL, skipping
+[2026-02-28T15:54:43.636Z] Migrating table: project_roles
+[2026-02-28T15:54:43.649Z]   Found 27 rows to migrate
+[2026-02-28T15:54:43.865Z]   Progress: 27/27 rows processed
+[2026-02-28T15:54:43.865Z]   ✓ Migrated 27 rows from project_roles (0 errors)
+[2026-02-28T15:54:43.865Z] Migrating table: project_staff_assignments
+[2026-02-28T15:54:43.871Z]   Table project_staff_assignments is empty, skipping data migration
+[2026-02-28T15:54:43.877Z] Migrating table: project_stages
+[2026-02-28T15:54:43.882Z]   Found 4 rows to migrate
+[2026-02-28T15:54:43.931Z]   Progress: 4/4 rows processed
+[2026-02-28T15:54:43.932Z]   ✓ Migrated 4 rows from project_stages (0 errors)
+[2026-02-28T15:54:43.932Z] Migrating table: project_stakeholders
+[2026-02-28T15:54:43.952Z]   Found 3 rows to migrate
+[2026-02-28T15:54:43.956Z]   ⚠ Table project_stakeholders does not exist in PostgreSQL, skipping
+[2026-02-28T15:54:43.956Z] Migrating table: project_subcounties
+[2026-02-28T15:54:43.967Z]   Found 35 rows to migrate
+[2026-02-28T15:54:43.978Z]   ⚠ Table project_subcounties does not exist in PostgreSQL, skipping
+[2026-02-28T15:54:43.978Z] Migrating table: project_sustainability
+[2026-02-28T15:54:43.989Z]   Found 3 rows to migrate
+[2026-02-28T15:54:43.999Z]   ⚠ Table project_sustainability does not exist in PostgreSQL, skipping
+[2026-02-28T15:54:44.000Z] Migrating table: project_wards
+[2026-02-28T15:54:44.012Z]   Found 20 rows to migrate
+[2026-02-28T15:54:44.017Z]   ⚠ Table project_wards does not exist in PostgreSQL, skipping
+[2026-02-28T15:54:44.017Z] Migrating table: project_workflow_steps
+[2026-02-28T15:54:44.029Z]   Found 3 rows to migrate
+[2026-02-28T15:54:44.038Z]   ⚠ Table project_workflow_steps does not exist in PostgreSQL, skipping
+[2026-02-28T15:54:44.039Z] Migrating table: project_workflows
+[2026-02-28T15:54:44.050Z]   Found 1 rows to migrate
+[2026-02-28T15:54:44.052Z]   ⚠ Table project_workflows does not exist in PostgreSQL, skipping
+[2026-02-28T15:54:44.052Z] Migrating table: projectfeedback
+[2026-02-28T15:54:44.064Z]   Found 10 rows to migrate
+[2026-02-28T15:54:44.171Z]   Progress: 10/10 rows processed
+[2026-02-28T15:54:44.171Z]   ✓ Migrated 10 rows from projectfeedback (0 errors)
+[2026-02-28T15:54:44.171Z] Migrating table: projects
+[2026-02-28T15:54:44.185Z]   Found 72 rows to migrate
+[2026-02-28T15:54:44.220Z]   ✗ Error inserting row into projects: column "id" of relation "projects" does not exist
+[2026-02-28T15:54:44.261Z]   ✗ Error inserting row into projects: column "id" of relation "projects" does not exist
+[2026-02-28T15:54:44.299Z]   ✗ Error inserting row into projects: column "id" of relation "projects" does not exist
+[2026-02-28T15:54:44.343Z]   ✗ Error inserting row into projects: column "id" of relation "projects" does not exist
+[2026-02-28T15:54:44.381Z]   ✗ Error inserting row into projects: column "id" of relation "projects" does not exist
+[2026-02-28T15:54:44.417Z]   ✗ Error inserting row into projects: column "id" of relation "projects" does not exist
+[2026-02-28T15:54:44.446Z]   ✗ Error inserting row into projects: column "id" of relation "projects" does not exist
+[2026-02-28T15:54:44.505Z]   ✗ Error inserting row into projects: column "id" of relation "projects" does not exist
+[2026-02-28T15:54:44.552Z]   ✗ Error inserting row into projects: column "id" of relation "projects" does not exist
+[2026-02-28T15:54:44.601Z]   ✗ Error inserting row into projects: column "id" of relation "projects" does not exist
+[2026-02-28T15:54:44.641Z]   ✗ Error inserting row into projects: column "id" of relation "projects" does not exist
+[2026-02-28T15:54:44.676Z]   ✗ Error inserting row into projects: column "id" of relation "projects" does not exist
+[2026-02-28T15:54:44.711Z]   ✗ Error inserting row into projects: column "id" of relation "projects" does not exist
+[2026-02-28T15:54:44.749Z]   ✗ Error inserting row into projects: column "id" of relation "projects" does not exist
+[2026-02-28T15:54:44.785Z]   ✗ Error inserting row into projects: column "id" of relation "projects" does not exist
+[2026-02-28T15:54:44.824Z]   ✗ Error inserting row into projects: column "id" of relation "projects" does not exist
+[2026-02-28T15:54:44.861Z]   ✗ Error inserting row into projects: column "id" of relation "projects" does not exist
+[2026-02-28T15:54:44.897Z]   ✗ Error inserting row into projects: column "id" of relation "projects" does not exist
+[2026-02-28T15:54:44.934Z]   ✗ Error inserting row into projects: column "id" of relation "projects" does not exist
+[2026-02-28T15:54:44.969Z]   ✗ Error inserting row into projects: column "id" of relation "projects" does not exist
+[2026-02-28T15:54:45.008Z]   ✗ Error inserting row into projects: column "id" of relation "projects" does not exist
+[2026-02-28T15:54:45.057Z]   ✗ Error inserting row into projects: column "id" of relation "projects" does not exist
+[2026-02-28T15:54:45.127Z]   ✗ Error inserting row into projects: column "id" of relation "projects" does not exist
+[2026-02-28T15:54:45.178Z]   ✗ Error inserting row into projects: column "id" of relation "projects" does not exist
+[2026-02-28T15:54:45.224Z]   ✗ Error inserting row into projects: column "id" of relation "projects" does not exist
+[2026-02-28T15:54:45.261Z]   ✗ Error inserting row into projects: column "id" of relation "projects" does not exist
+[2026-02-28T15:54:45.290Z]   ✗ Error inserting row into projects: column "id" of relation "projects" does not exist
+[2026-02-28T15:54:45.334Z]   ✗ Error inserting row into projects: column "id" of relation "projects" does not exist
+[2026-02-28T15:54:45.374Z]   ✗ Error inserting row into projects: column "id" of relation "projects" does not exist
+[2026-02-28T15:54:45.411Z]   ✗ Error inserting row into projects: column "id" of relation "projects" does not exist
+[2026-02-28T15:54:45.449Z]   ✗ Error inserting row into projects: column "id" of relation "projects" does not exist
+[2026-02-28T15:54:45.495Z]   ✗ Error inserting row into projects: column "id" of relation "projects" does not exist
+[2026-02-28T15:54:45.531Z]   ✗ Error inserting row into projects: column "id" of relation "projects" does not exist
+[2026-02-28T15:54:45.559Z]   ✗ Error inserting row into projects: column "id" of relation "projects" does not exist
+[2026-02-28T15:54:45.596Z]   ✗ Error inserting row into projects: column "id" of relation "projects" does not exist
+[2026-02-28T15:54:45.640Z]   ✗ Error inserting row into projects: column "id" of relation "projects" does not exist
+[2026-02-28T15:54:45.670Z]   ✗ Error inserting row into projects: column "id" of relation "projects" does not exist
+[2026-02-28T15:54:45.705Z]   ✗ Error inserting row into projects: column "id" of relation "projects" does not exist
+[2026-02-28T15:54:45.742Z]   ✗ Error inserting row into projects: column "id" of relation "projects" does not exist
+[2026-02-28T15:54:45.777Z]   ✗ Error inserting row into projects: column "id" of relation "projects" does not exist
+[2026-02-28T15:54:45.803Z]   ✗ Error inserting row into projects: column "id" of relation "projects" does not exist
+[2026-02-28T15:54:45.829Z]   ✗ Error inserting row into projects: column "id" of relation "projects" does not exist
+[2026-02-28T15:54:45.861Z]   ✗ Error inserting row into projects: column "id" of relation "projects" does not exist
+[2026-02-28T15:54:45.890Z]   ✗ Error inserting row into projects: column "id" of relation "projects" does not exist
+[2026-02-28T15:54:45.915Z]   ✗ Error inserting row into projects: column "id" of relation "projects" does not exist
+[2026-02-28T15:54:45.948Z]   ✗ Error inserting row into projects: column "id" of relation "projects" does not exist
+[2026-02-28T15:54:45.984Z]   ✗ Error inserting row into projects: column "id" of relation "projects" does not exist
+[2026-02-28T15:54:46.011Z]   ✗ Error inserting row into projects: column "id" of relation "projects" does not exist
+[2026-02-28T15:54:46.037Z]   ✗ Error inserting row into projects: column "id" of relation "projects" does not exist
+[2026-02-28T15:54:46.068Z]   ✗ Error inserting row into projects: column "id" of relation "projects" does not exist
+[2026-02-28T15:54:46.095Z]   ✗ Error inserting row into projects: column "id" of relation "projects" does not exist
+[2026-02-28T15:54:46.119Z]   ✗ Error inserting row into projects: column "id" of relation "projects" does not exist
+[2026-02-28T15:54:46.143Z]   ✗ Error inserting row into projects: column "id" of relation "projects" does not exist
+[2026-02-28T15:54:46.172Z]   ✗ Error inserting row into projects: column "id" of relation "projects" does not exist
+[2026-02-28T15:54:46.205Z]   ✗ Error inserting row into projects: column "id" of relation "projects" does not exist
+[2026-02-28T15:54:46.244Z]   ✗ Error inserting row into projects: column "id" of relation "projects" does not exist
+[2026-02-28T15:54:46.270Z]   ✗ Error inserting row into projects: column "id" of relation "projects" does not exist
+[2026-02-28T15:54:46.295Z]   ✗ Error inserting row into projects: column "id" of relation "projects" does not exist
+[2026-02-28T15:54:46.326Z]   ✗ Error inserting row into projects: column "id" of relation "projects" does not exist
+[2026-02-28T15:54:46.354Z]   ✗ Error inserting row into projects: column "id" of relation "projects" does not exist
+[2026-02-28T15:54:46.390Z]   ✗ Error inserting row into projects: column "id" of relation "projects" does not exist
+[2026-02-28T15:54:46.424Z]   ✗ Error inserting row into projects: column "id" of relation "projects" does not exist
+[2026-02-28T15:54:46.448Z]   ✗ Error inserting row into projects: column "id" of relation "projects" does not exist
+[2026-02-28T15:54:46.485Z]   ✗ Error inserting row into projects: column "id" of relation "projects" does not exist
+[2026-02-28T15:54:46.513Z]   ✗ Error inserting row into projects: column "id" of relation "projects" does not exist
+[2026-02-28T15:54:46.540Z]   ✗ Error inserting row into projects: column "id" of relation "projects" does not exist
+[2026-02-28T15:54:46.575Z]   ✗ Error inserting row into projects: column "id" of relation "projects" does not exist
+[2026-02-28T15:54:46.610Z]   ✗ Error inserting row into projects: column "id" of relation "projects" does not exist
+[2026-02-28T15:54:46.645Z]   ✗ Error inserting row into projects: column "id" of relation "projects" does not exist
+[2026-02-28T15:54:46.671Z]   ✗ Error inserting row into projects: column "id" of relation "projects" does not exist
+[2026-02-28T15:54:46.697Z]   ✗ Error inserting row into projects: column "id" of relation "projects" does not exist
+[2026-02-28T15:54:46.730Z]   ✗ Error inserting row into projects: column "id" of relation "projects" does not exist
+[2026-02-28T15:54:46.730Z]   Progress: 72/72 rows processed
+[2026-02-28T15:54:46.730Z]   ✓ Migrated 0 rows from projects (72 errors)
+[2026-02-28T15:54:46.730Z] Migrating table: public_feedback
+[2026-02-28T15:54:46.744Z]   Table public_feedback is empty, skipping data migration
+[2026-02-28T15:54:46.744Z] Migrating table: public_holidays
+[2026-02-28T15:54:46.754Z]   Found 11 rows to migrate
+[2026-02-28T15:54:46.870Z]   Progress: 11/11 rows processed
+[2026-02-28T15:54:46.870Z]   ✓ Migrated 11 rows from public_holidays (0 errors)
+[2026-02-28T15:54:46.870Z] Migrating table: role_dashboard_config
+[2026-02-28T15:54:46.891Z]   Table role_dashboard_config is empty, skipping data migration
+[2026-02-28T15:54:46.891Z] Migrating table: role_dashboard_permissions
+[2026-02-28T15:54:46.904Z]   Table role_dashboard_permissions is empty, skipping data migration
+[2026-02-28T15:54:46.904Z] Migrating table: role_privileges
+[2026-02-28T15:54:46.915Z]   Found 323 rows to migrate
+[2026-02-28T15:54:46.919Z]   ⚠ Table role_privileges does not exist in PostgreSQL, skipping
+[2026-02-28T15:54:46.919Z] Migrating table: roles
+[2026-02-28T15:54:46.940Z]   Found 8 rows to migrate
+[2026-02-28T15:54:46.955Z]   ✗ Error inserting row into roles: column "roleid" of relation "roles" does not exist
+[2026-02-28T15:54:47.002Z]   ✗ Error inserting row into roles: column "roleid" of relation "roles" does not exist
+[2026-02-28T15:54:47.037Z]   ✗ Error inserting row into roles: column "roleid" of relation "roles" does not exist
+[2026-02-28T15:54:47.073Z]   ✗ Error inserting row into roles: column "roleid" of relation "roles" does not exist
+[2026-02-28T15:54:47.102Z]   ✗ Error inserting row into roles: column "roleid" of relation "roles" does not exist
+[2026-02-28T15:54:47.137Z]   ✗ Error inserting row into roles: column "roleid" of relation "roles" does not exist
+[2026-02-28T15:54:47.174Z]   ✗ Error inserting row into roles: column "roleid" of relation "roles" does not exist
+[2026-02-28T15:54:47.213Z]   ✗ Error inserting row into roles: column "roleid" of relation "roles" does not exist
+[2026-02-28T15:54:47.213Z]   Progress: 8/8 rows processed
+[2026-02-28T15:54:47.213Z]   ✓ Migrated 0 rows from roles (8 errors)
+[2026-02-28T15:54:47.219Z] Migrating table: sections
+[2026-02-28T15:54:47.225Z]   Found 43 rows to migrate
+[2026-02-28T15:54:47.284Z]   ⚠ Table sections does not exist in PostgreSQL, skipping
+[2026-02-28T15:54:47.284Z] Migrating table: staff
+[2026-02-28T15:54:47.295Z]   Found 44 rows to migrate
+[2026-02-28T15:54:47.298Z]   ⚠ Table staff does not exist in PostgreSQL, skipping
+[2026-02-28T15:54:47.298Z] Migrating table: strategicplans
+[2026-02-28T15:54:47.311Z]   Found 34 rows to migrate
+[2026-02-28T15:54:47.575Z]   Progress: 34/34 rows processed
+[2026-02-28T15:54:47.576Z]   ✓ Migrated 34 rows from strategicplans (0 errors)
+[2026-02-28T15:54:47.576Z] Migrating table: studyparticipants
+[2026-02-28T15:54:47.588Z]   Found 895 rows to migrate
+[2026-02-28T15:54:56.211Z]   Progress: 895/895 rows processed
+[2026-02-28T15:54:56.211Z]   ✓ Migrated 895 rows from studyparticipants (0 errors)
+[2026-02-28T15:54:56.211Z] Migrating table: subcounties
+[2026-02-28T15:54:56.220Z]   Found 5 rows to migrate
+[2026-02-28T15:54:56.222Z]   ⚠ Table subcounties does not exist in PostgreSQL, skipping
+[2026-02-28T15:54:56.222Z] Migrating table: subprograms
+[2026-02-28T15:54:56.231Z]   Found 73 rows to migrate
+[2026-02-28T15:54:56.234Z]   ⚠ Table subprograms does not exist in PostgreSQL, skipping
+[2026-02-28T15:54:56.234Z] Migrating table: user_dashboard_preferences
+[2026-02-28T15:54:56.244Z]   Table user_dashboard_preferences is empty, skipping data migration
+[2026-02-28T15:54:56.244Z] Migrating table: user_data_filters
+[2026-02-28T15:54:56.247Z]   Table user_data_filters is empty, skipping data migration
+[2026-02-28T15:54:56.247Z] Migrating table: user_department_assignments
+[2026-02-28T15:54:56.256Z]   Table user_department_assignments is empty, skipping data migration
+[2026-02-28T15:54:56.256Z] Migrating table: user_project_assignments
+[2026-02-28T15:54:56.259Z]   Table user_project_assignments is empty, skipping data migration
+[2026-02-28T15:54:56.260Z] Migrating table: user_ward_assignments
+[2026-02-28T15:54:56.269Z]   Table user_ward_assignments is empty, skipping data migration
+[2026-02-28T15:54:56.269Z] Migrating table: users
+[2026-02-28T15:54:56.272Z]   Found 30 rows to migrate
+[2026-02-28T15:54:56.476Z]   Progress: 30/30 rows processed
+[2026-02-28T15:54:56.476Z]   ✓ Migrated 30 rows from users (0 errors)
+[2026-02-28T15:54:56.477Z] Migrating table: wards
+[2026-02-28T15:54:56.481Z]   Found 4 rows to migrate
+[2026-02-28T15:54:56.489Z]   ⚠ Table wards does not exist in PostgreSQL, skipping
+[2026-02-28T15:54:56.489Z] 
+=== Migration Summary ===
+[2026-02-28T15:54:56.489Z] Total tables processed: 117
+[2026-02-28T15:54:56.489Z] Total rows migrated: 1388
+[2026-02-28T15:54:56.490Z] Total errors: 155
+[2026-02-28T15:54:56.490Z] Skipped tables: 57
+[2026-02-28T15:54:56.490Z] 
+⚠ Some errors occurred during migration. Please review the log.
+[2026-02-28T16:03:06.937Z] Starting data migration from MySQL to PostgreSQL...
+[2026-02-28T16:03:06.948Z] MySQL: localhost:3308/gov_imbesdb
+[2026-02-28T16:03:06.949Z] PostgreSQL: localhost:5433/government_projects
+[2026-02-28T16:03:06.949Z] Connecting to MySQL...
+[2026-02-28T16:03:07.023Z] ✓ Connected to MySQL
+[2026-02-28T16:03:07.023Z] Connecting to PostgreSQL...
+[2026-02-28T16:03:07.107Z] ✓ Connected to PostgreSQL
+[2026-02-28T16:03:07.107Z] Getting table list...
+[2026-02-28T16:03:07.123Z] Found 117 tables to migrate
+[2026-02-28T16:03:07.130Z] Migrating table: activities
+[2026-02-28T16:03:07.145Z]   Found 81 rows to migrate
+[2026-02-28T16:03:07.217Z]   ✗ Error inserting row into activities: column "activityid" of relation "activities" does not exist
+[2026-02-28T16:03:07.254Z]   ✗ Error inserting row into activities: column "activityid" of relation "activities" does not exist
+[2026-02-28T16:03:07.302Z]   ✗ Error inserting row into activities: column "activityid" of relation "activities" does not exist
+[2026-02-28T16:03:07.363Z]   ✗ Error inserting row into activities: column "activityid" of relation "activities" does not exist
+[2026-02-28T16:03:07.429Z]   ✗ Error inserting row into activities: column "activityid" of relation "activities" does not exist
+[2026-02-28T16:03:07.512Z]   ✗ Error inserting row into activities: column "activityid" of relation "activities" does not exist
+[2026-02-28T16:03:07.608Z]   ✗ Error inserting row into activities: column "activityid" of relation "activities" does not exist
+[2026-02-28T16:03:07.694Z]   ✗ Error inserting row into activities: column "activityid" of relation "activities" does not exist
+[2026-02-28T16:03:07.757Z]   ✗ Error inserting row into activities: column "activityid" of relation "activities" does not exist
+[2026-02-28T16:03:07.818Z]   ✗ Error inserting row into activities: column "activityid" of relation "activities" does not exist
+[2026-02-28T16:03:07.870Z]   ✗ Error inserting row into activities: column "activityid" of relation "activities" does not exist
+[2026-02-28T16:03:07.930Z]   ✗ Error inserting row into activities: column "activityid" of relation "activities" does not exist
+[2026-02-28T16:03:08.000Z]   ✗ Error inserting row into activities: column "activityid" of relation "activities" does not exist
+[2026-02-28T16:03:08.078Z]   ✗ Error inserting row into activities: column "activityid" of relation "activities" does not exist
+[2026-02-28T16:03:08.149Z]   ✗ Error inserting row into activities: column "activityid" of relation "activities" does not exist
+[2026-02-28T16:03:08.212Z]   ✗ Error inserting row into activities: column "activityid" of relation "activities" does not exist
+[2026-02-28T16:03:08.282Z]   ✗ Error inserting row into activities: column "activityid" of relation "activities" does not exist
+[2026-02-28T16:03:08.323Z]   ✗ Error inserting row into activities: column "activityid" of relation "activities" does not exist
+[2026-02-28T16:03:08.369Z]   ✗ Error inserting row into activities: column "activityid" of relation "activities" does not exist
+[2026-02-28T16:03:08.406Z]   ✗ Error inserting row into activities: column "activityid" of relation "activities" does not exist
+[2026-02-28T16:03:08.456Z]   ✗ Error inserting row into activities: column "activityid" of relation "activities" does not exist
+[2026-02-28T16:03:08.493Z]   ✗ Error inserting row into activities: column "activityid" of relation "activities" does not exist
+[2026-02-28T16:03:08.539Z]   ✗ Error inserting row into activities: column "activityid" of relation "activities" does not exist
+[2026-02-28T16:03:08.589Z]   ✗ Error inserting row into activities: column "activityid" of relation "activities" does not exist
+[2026-02-28T16:03:08.624Z]   ✗ Error inserting row into activities: column "activityid" of relation "activities" does not exist
+[2026-02-28T16:03:08.662Z]   ✗ Error inserting row into activities: column "activityid" of relation "activities" does not exist
+[2026-02-28T16:03:08.709Z]   ✗ Error inserting row into activities: column "activityid" of relation "activities" does not exist
+[2026-02-28T16:03:08.749Z]   ✗ Error inserting row into activities: column "activityid" of relation "activities" does not exist
+[2026-02-28T16:03:08.785Z]   ✗ Error inserting row into activities: column "activityid" of relation "activities" does not exist
+[2026-02-28T16:03:08.821Z]   ✗ Error inserting row into activities: column "activityid" of relation "activities" does not exist
+[2026-02-28T16:03:08.862Z]   ✗ Error inserting row into activities: column "activityid" of relation "activities" does not exist
+[2026-02-28T16:03:08.897Z]   ✗ Error inserting row into activities: column "activityid" of relation "activities" does not exist
+[2026-02-28T16:03:08.935Z]   ✗ Error inserting row into activities: column "activityid" of relation "activities" does not exist
+[2026-02-28T16:03:08.971Z]   ✗ Error inserting row into activities: column "activityid" of relation "activities" does not exist
+[2026-02-28T16:03:09.019Z]   ✗ Error inserting row into activities: column "activityid" of relation "activities" does not exist
+[2026-02-28T16:03:09.057Z]   ✗ Error inserting row into activities: column "activityid" of relation "activities" does not exist
+[2026-02-28T16:03:09.092Z]   ✗ Error inserting row into activities: column "activityid" of relation "activities" does not exist
+[2026-02-28T16:03:09.129Z]   ✗ Error inserting row into activities: column "activityid" of relation "activities" does not exist
+[2026-02-28T16:03:09.166Z]   ✗ Error inserting row into activities: column "activityid" of relation "activities" does not exist
+[2026-02-28T16:03:09.215Z]   ✗ Error inserting row into activities: column "activityid" of relation "activities" does not exist
+[2026-02-28T16:03:09.252Z]   ✗ Error inserting row into activities: column "activityid" of relation "activities" does not exist
+[2026-02-28T16:03:09.302Z]   ✗ Error inserting row into activities: column "activityid" of relation "activities" does not exist
+[2026-02-28T16:03:09.346Z]   ✗ Error inserting row into activities: column "activityid" of relation "activities" does not exist
+[2026-02-28T16:03:09.397Z]   ✗ Error inserting row into activities: column "activityid" of relation "activities" does not exist
+[2026-02-28T16:03:09.437Z]   ✗ Error inserting row into activities: column "activityid" of relation "activities" does not exist
+[2026-02-28T16:03:09.473Z]   ✗ Error inserting row into activities: column "activityid" of relation "activities" does not exist
+[2026-02-28T16:03:09.520Z]   ✗ Error inserting row into activities: column "activityid" of relation "activities" does not exist
+[2026-02-28T16:03:09.557Z]   ✗ Error inserting row into activities: column "activityid" of relation "activities" does not exist
+[2026-02-28T16:03:09.596Z]   ✗ Error inserting row into activities: column "activityid" of relation "activities" does not exist
+[2026-02-28T16:03:09.628Z]   ✗ Error inserting row into activities: column "activityid" of relation "activities" does not exist
+[2026-02-28T16:03:09.667Z]   ✗ Error inserting row into activities: column "activityid" of relation "activities" does not exist
+[2026-02-28T16:03:09.706Z]   ✗ Error inserting row into activities: column "activityid" of relation "activities" does not exist
+[2026-02-28T16:03:09.779Z]   ✗ Error inserting row into activities: column "activityid" of relation "activities" does not exist
+[2026-02-28T16:03:09.840Z]   ✗ Error inserting row into activities: column "activityid" of relation "activities" does not exist
+[2026-02-28T16:03:09.874Z]   ✗ Error inserting row into activities: column "activityid" of relation "activities" does not exist
+[2026-02-28T16:03:09.900Z]   ✗ Error inserting row into activities: column "activityid" of relation "activities" does not exist
+[2026-02-28T16:03:09.927Z]   ✗ Error inserting row into activities: column "activityid" of relation "activities" does not exist
+[2026-02-28T16:03:09.973Z]   ✗ Error inserting row into activities: column "activityid" of relation "activities" does not exist
+[2026-02-28T16:03:10.000Z]   ✗ Error inserting row into activities: column "activityid" of relation "activities" does not exist
+[2026-02-28T16:03:10.036Z]   ✗ Error inserting row into activities: column "activityid" of relation "activities" does not exist
+[2026-02-28T16:03:10.073Z]   ✗ Error inserting row into activities: column "activityid" of relation "activities" does not exist
+[2026-02-28T16:03:10.107Z]   ✗ Error inserting row into activities: column "activityid" of relation "activities" does not exist
+[2026-02-28T16:03:10.135Z]   ✗ Error inserting row into activities: column "activityid" of relation "activities" does not exist
+[2026-02-28T16:03:10.179Z]   ✗ Error inserting row into activities: column "activityid" of relation "activities" does not exist
+[2026-02-28T16:03:10.215Z]   ✗ Error inserting row into activities: column "activityid" of relation "activities" does not exist
+[2026-02-28T16:03:10.242Z]   ✗ Error inserting row into activities: column "activityid" of relation "activities" does not exist
+[2026-02-28T16:03:10.267Z]   ✗ Error inserting row into activities: column "activityid" of relation "activities" does not exist
+[2026-02-28T16:03:10.301Z]   ✗ Error inserting row into activities: column "activityid" of relation "activities" does not exist
+[2026-02-28T16:03:10.340Z]   ✗ Error inserting row into activities: column "activityid" of relation "activities" does not exist
+[2026-02-28T16:03:10.367Z]   ✗ Error inserting row into activities: column "activityid" of relation "activities" does not exist
+[2026-02-28T16:03:10.401Z]   ✗ Error inserting row into activities: column "activityid" of relation "activities" does not exist
+[2026-02-28T16:03:10.437Z]   ✗ Error inserting row into activities: column "activityid" of relation "activities" does not exist
+[2026-02-28T16:03:10.473Z]   ✗ Error inserting row into activities: column "activityid" of relation "activities" does not exist
+[2026-02-28T16:03:10.511Z]   ✗ Error inserting row into activities: column "activityid" of relation "activities" does not exist
+[2026-02-28T16:03:10.549Z]   ✗ Error inserting row into activities: column "activityid" of relation "activities" does not exist
+[2026-02-28T16:03:10.585Z]   ✗ Error inserting row into activities: column "activityid" of relation "activities" does not exist
+[2026-02-28T16:03:10.624Z]   ✗ Error inserting row into activities: column "activityid" of relation "activities" does not exist
+[2026-02-28T16:03:10.668Z]   ✗ Error inserting row into activities: column "activityid" of relation "activities" does not exist
+[2026-02-28T16:03:10.698Z]   ✗ Error inserting row into activities: column "activityid" of relation "activities" does not exist
+[2026-02-28T16:03:10.734Z]   ✗ Error inserting row into activities: column "activityid" of relation "activities" does not exist
+[2026-02-28T16:03:10.780Z]   ✗ Error inserting row into activities: column "activityid" of relation "activities" does not exist
+[2026-02-28T16:03:10.781Z]   Progress: 81/81 rows processed
+[2026-02-28T16:03:10.781Z]   ✓ Migrated 0 rows from activities (81 errors)
+[2026-02-28T16:03:10.781Z] Migrating table: annual_workplans
+[2026-02-28T16:03:10.794Z]   Found 31 rows to migrate
+[2026-02-28T16:03:10.879Z]   ✗ Error inserting row into annual_workplans: column "workplanid" of relation "annual_workplans" does not exist
+[2026-02-28T16:03:10.926Z]   ✗ Error inserting row into annual_workplans: column "workplanid" of relation "annual_workplans" does not exist
+[2026-02-28T16:03:10.963Z]   ✗ Error inserting row into annual_workplans: column "workplanid" of relation "annual_workplans" does not exist
+[2026-02-28T16:03:11.001Z]   ✗ Error inserting row into annual_workplans: column "workplanid" of relation "annual_workplans" does not exist
+[2026-02-28T16:03:11.040Z]   ✗ Error inserting row into annual_workplans: column "workplanid" of relation "annual_workplans" does not exist
+[2026-02-28T16:03:11.075Z]   ✗ Error inserting row into annual_workplans: column "workplanid" of relation "annual_workplans" does not exist
+[2026-02-28T16:03:11.109Z]   ✗ Error inserting row into annual_workplans: column "workplanid" of relation "annual_workplans" does not exist
+[2026-02-28T16:03:11.138Z]   ✗ Error inserting row into annual_workplans: column "workplanid" of relation "annual_workplans" does not exist
+[2026-02-28T16:03:11.183Z]   ✗ Error inserting row into annual_workplans: column "workplanid" of relation "annual_workplans" does not exist
+[2026-02-28T16:03:11.223Z]   ✗ Error inserting row into annual_workplans: column "workplanid" of relation "annual_workplans" does not exist
+[2026-02-28T16:03:11.260Z]   ✗ Error inserting row into annual_workplans: column "workplanid" of relation "annual_workplans" does not exist
+[2026-02-28T16:03:11.294Z]   ✗ Error inserting row into annual_workplans: column "workplanid" of relation "annual_workplans" does not exist
+[2026-02-28T16:03:11.321Z]   ✗ Error inserting row into annual_workplans: column "workplanid" of relation "annual_workplans" does not exist
+[2026-02-28T16:03:11.354Z]   ✗ Error inserting row into annual_workplans: column "workplanid" of relation "annual_workplans" does not exist
+[2026-02-28T16:03:11.380Z]   ✗ Error inserting row into annual_workplans: column "workplanid" of relation "annual_workplans" does not exist
+[2026-02-28T16:03:11.405Z]   ✗ Error inserting row into annual_workplans: column "workplanid" of relation "annual_workplans" does not exist
+[2026-02-28T16:03:11.433Z]   ✗ Error inserting row into annual_workplans: column "workplanid" of relation "annual_workplans" does not exist
+[2026-02-28T16:03:11.470Z]   ✗ Error inserting row into annual_workplans: column "workplanid" of relation "annual_workplans" does not exist
+[2026-02-28T16:03:11.505Z]   ✗ Error inserting row into annual_workplans: column "workplanid" of relation "annual_workplans" does not exist
+[2026-02-28T16:03:11.540Z]   ✗ Error inserting row into annual_workplans: column "workplanid" of relation "annual_workplans" does not exist
+[2026-02-28T16:03:11.590Z]   ✗ Error inserting row into annual_workplans: column "workplanid" of relation "annual_workplans" does not exist
+[2026-02-28T16:03:11.627Z]   ✗ Error inserting row into annual_workplans: column "workplanid" of relation "annual_workplans" does not exist
+[2026-02-28T16:03:11.652Z]   ✗ Error inserting row into annual_workplans: column "workplanid" of relation "annual_workplans" does not exist
+[2026-02-28T16:03:11.688Z]   ✗ Error inserting row into annual_workplans: column "workplanid" of relation "annual_workplans" does not exist
+[2026-02-28T16:03:11.722Z]   ✗ Error inserting row into annual_workplans: column "workplanid" of relation "annual_workplans" does not exist
+[2026-02-28T16:03:11.762Z]   ✗ Error inserting row into annual_workplans: column "workplanid" of relation "annual_workplans" does not exist
+[2026-02-28T16:03:11.809Z]   ✗ Error inserting row into annual_workplans: column "workplanid" of relation "annual_workplans" does not exist
+[2026-02-28T16:03:11.846Z]   ✗ Error inserting row into annual_workplans: column "workplanid" of relation "annual_workplans" does not exist
+[2026-02-28T16:03:11.882Z]   ✗ Error inserting row into annual_workplans: column "workplanid" of relation "annual_workplans" does not exist
+[2026-02-28T16:03:11.919Z]   ✗ Error inserting row into annual_workplans: column "workplanid" of relation "annual_workplans" does not exist
+[2026-02-28T16:03:11.946Z]   ✗ Error inserting row into annual_workplans: column "workplanid" of relation "annual_workplans" does not exist
+[2026-02-28T16:03:11.946Z]   Progress: 31/31 rows processed
+[2026-02-28T16:03:11.946Z]   ✓ Migrated 0 rows from annual_workplans (31 errors)
+[2026-02-28T16:03:11.946Z] Migrating table: approved_public_feedback
+[2026-02-28T16:03:11.956Z]   Table approved_public_feedback is empty, skipping data migration
+[2026-02-28T16:03:11.956Z] Migrating table: assigned_assets
+[2026-02-28T16:03:11.967Z]   Found 2 rows to migrate
+[2026-02-28T16:03:12.031Z]   ✗ Error inserting row into assigned_assets: column "staffid" of relation "assigned_assets" does not exist
+[2026-02-28T16:03:12.066Z]   ✗ Error inserting row into assigned_assets: column "staffid" of relation "assigned_assets" does not exist
+[2026-02-28T16:03:12.066Z]   Progress: 2/2 rows processed
+[2026-02-28T16:03:12.066Z]   ✓ Migrated 0 rows from assigned_assets (2 errors)
+[2026-02-28T16:03:12.067Z] Migrating table: attachments
+[2026-02-28T16:03:12.080Z]   Table attachments is empty, skipping data migration
+[2026-02-28T16:03:12.081Z] Migrating table: attachmenttypes
+[2026-02-28T16:03:12.091Z]   Found 15 rows to migrate
+[2026-02-28T16:03:12.150Z]   ✗ Error inserting row into attachmenttypes: column "typeid" of relation "attachmenttypes" does not exist
+[2026-02-28T16:03:12.188Z]   ✗ Error inserting row into attachmenttypes: column "typeid" of relation "attachmenttypes" does not exist
+[2026-02-28T16:03:12.214Z]   ✗ Error inserting row into attachmenttypes: column "typeid" of relation "attachmenttypes" does not exist
+[2026-02-28T16:03:12.240Z]   ✗ Error inserting row into attachmenttypes: column "typeid" of relation "attachmenttypes" does not exist
+[2026-02-28T16:03:12.265Z]   ✗ Error inserting row into attachmenttypes: column "typeid" of relation "attachmenttypes" does not exist
+[2026-02-28T16:03:12.299Z]   ✗ Error inserting row into attachmenttypes: column "typeid" of relation "attachmenttypes" does not exist
+[2026-02-28T16:03:12.336Z]   ✗ Error inserting row into attachmenttypes: column "typeid" of relation "attachmenttypes" does not exist
+[2026-02-28T16:03:12.363Z]   ✗ Error inserting row into attachmenttypes: column "typeid" of relation "attachmenttypes" does not exist
+[2026-02-28T16:03:12.388Z]   ✗ Error inserting row into attachmenttypes: column "typeid" of relation "attachmenttypes" does not exist
+[2026-02-28T16:03:12.411Z]   ✗ Error inserting row into attachmenttypes: column "typeid" of relation "attachmenttypes" does not exist
+[2026-02-28T16:03:12.443Z]   ✗ Error inserting row into attachmenttypes: column "typeid" of relation "attachmenttypes" does not exist
+[2026-02-28T16:03:12.471Z]   ✗ Error inserting row into attachmenttypes: column "typeid" of relation "attachmenttypes" does not exist
+[2026-02-28T16:03:12.499Z]   ✗ Error inserting row into attachmenttypes: column "typeid" of relation "attachmenttypes" does not exist
+[2026-02-28T16:03:12.521Z]   ✗ Error inserting row into attachmenttypes: column "typeid" of relation "attachmenttypes" does not exist
+[2026-02-28T16:03:12.545Z]   ✗ Error inserting row into attachmenttypes: column "typeid" of relation "attachmenttypes" does not exist
+[2026-02-28T16:03:12.545Z]   Progress: 15/15 rows processed
+[2026-02-28T16:03:12.545Z]   ✓ Migrated 0 rows from attachmenttypes (15 errors)
+[2026-02-28T16:03:12.545Z] Migrating table: attendance
+[2026-02-28T16:03:12.557Z]   Found 7 rows to migrate
+[2026-02-28T16:03:12.632Z]   ✗ Error inserting row into attendance: column "staffid" of relation "attendance" does not exist
+[2026-02-28T16:03:12.669Z]   ✗ Error inserting row into attendance: column "staffid" of relation "attendance" does not exist
+[2026-02-28T16:03:12.704Z]   ✗ Error inserting row into attendance: column "staffid" of relation "attendance" does not exist
+[2026-02-28T16:03:12.729Z]   ✗ Error inserting row into attendance: column "staffid" of relation "attendance" does not exist
+[2026-02-28T16:03:12.753Z]   ✗ Error inserting row into attendance: column "staffid" of relation "attendance" does not exist
+[2026-02-28T16:03:12.778Z]   ✗ Error inserting row into attendance: column "staffid" of relation "attendance" does not exist
+[2026-02-28T16:03:12.802Z]   ✗ Error inserting row into attendance: column "staffid" of relation "attendance" does not exist
+[2026-02-28T16:03:12.802Z]   Progress: 7/7 rows processed
+[2026-02-28T16:03:12.802Z]   ✓ Migrated 0 rows from attendance (7 errors)
+[2026-02-28T16:03:12.802Z] Migrating table: budget_changes
+[2026-02-28T16:03:12.814Z]   Table budget_changes is empty, skipping data migration
+[2026-02-28T16:03:12.814Z] Migrating table: budget_combinations
+[2026-02-28T16:03:12.826Z]   Table budget_combinations is empty, skipping data migration
+[2026-02-28T16:03:12.826Z] Migrating table: budget_items
+[2026-02-28T16:03:12.837Z]   Table budget_items is empty, skipping data migration
+[2026-02-28T16:03:12.837Z] Migrating table: budgets
+[2026-02-28T16:03:12.841Z]   Table budgets is empty, skipping data migration
+[2026-02-28T16:03:12.841Z] Migrating table: categories
+[2026-02-28T16:03:12.851Z]   Found 9 rows to migrate
+[2026-02-28T16:03:12.898Z]   ✗ Error inserting row into categories: column "categoryid" of relation "categories" does not exist
+[2026-02-28T16:03:12.924Z]   ✗ Error inserting row into categories: column "categoryid" of relation "categories" does not exist
+[2026-02-28T16:03:12.960Z]   ✗ Error inserting row into categories: column "categoryid" of relation "categories" does not exist
+[2026-02-28T16:03:12.984Z]   ✗ Error inserting row into categories: column "categoryid" of relation "categories" does not exist
+[2026-02-28T16:03:13.009Z]   ✗ Error inserting row into categories: column "categoryid" of relation "categories" does not exist
+[2026-02-28T16:03:13.034Z]   ✗ Error inserting row into categories: column "categoryid" of relation "categories" does not exist
+[2026-02-28T16:03:13.061Z]   ✗ Error inserting row into categories: column "categoryid" of relation "categories" does not exist
+[2026-02-28T16:03:13.093Z]   ✗ Error inserting row into categories: column "categoryid" of relation "categories" does not exist
+[2026-02-28T16:03:13.123Z]   ✗ Error inserting row into categories: column "categoryid" of relation "categories" does not exist
+[2026-02-28T16:03:13.123Z]   Progress: 9/9 rows processed
+[2026-02-28T16:03:13.123Z]   ✓ Migrated 0 rows from categories (9 errors)
+[2026-02-28T16:03:13.123Z] Migrating table: category_milestones
+[2026-02-28T16:03:13.134Z]   Found 36 rows to migrate
+[2026-02-28T16:03:13.203Z]   ✗ Error inserting row into category_milestones: column "milestoneid" of relation "category_milestones" does not exist
+[2026-02-28T16:03:13.301Z]   ✗ Error inserting row into category_milestones: column "milestoneid" of relation "category_milestones" does not exist
+[2026-02-28T16:03:13.355Z]   ✗ Error inserting row into category_milestones: column "milestoneid" of relation "category_milestones" does not exist
+[2026-02-28T16:03:13.392Z]   ✗ Error inserting row into category_milestones: column "milestoneid" of relation "category_milestones" does not exist
+[2026-02-28T16:03:13.461Z]   ✗ Error inserting row into category_milestones: column "milestoneid" of relation "category_milestones" does not exist
+[2026-02-28T16:03:13.488Z]   ✗ Error inserting row into category_milestones: column "milestoneid" of relation "category_milestones" does not exist
+[2026-02-28T16:03:13.512Z]   ✗ Error inserting row into category_milestones: column "milestoneid" of relation "category_milestones" does not exist
+[2026-02-28T16:03:13.537Z]   ✗ Error inserting row into category_milestones: column "milestoneid" of relation "category_milestones" does not exist
+[2026-02-28T16:03:13.561Z]   ✗ Error inserting row into category_milestones: column "milestoneid" of relation "category_milestones" does not exist
+[2026-02-28T16:03:13.595Z]   ✗ Error inserting row into category_milestones: column "milestoneid" of relation "category_milestones" does not exist
+[2026-02-28T16:03:13.622Z]   ✗ Error inserting row into category_milestones: column "milestoneid" of relation "category_milestones" does not exist
+[2026-02-28T16:03:13.647Z]   ✗ Error inserting row into category_milestones: column "milestoneid" of relation "category_milestones" does not exist
+[2026-02-28T16:03:13.672Z]   ✗ Error inserting row into category_milestones: column "milestoneid" of relation "category_milestones" does not exist
+[2026-02-28T16:03:13.698Z]   ✗ Error inserting row into category_milestones: column "milestoneid" of relation "category_milestones" does not exist
+[2026-02-28T16:03:13.731Z]   ✗ Error inserting row into category_milestones: column "milestoneid" of relation "category_milestones" does not exist
+[2026-02-28T16:03:13.758Z]   ✗ Error inserting row into category_milestones: column "milestoneid" of relation "category_milestones" does not exist
+[2026-02-28T16:03:13.782Z]   ✗ Error inserting row into category_milestones: column "milestoneid" of relation "category_milestones" does not exist
+[2026-02-28T16:03:13.815Z]   ✗ Error inserting row into category_milestones: column "milestoneid" of relation "category_milestones" does not exist
+[2026-02-28T16:03:13.841Z]   ✗ Error inserting row into category_milestones: column "milestoneid" of relation "category_milestones" does not exist
+[2026-02-28T16:03:13.879Z]   ✗ Error inserting row into category_milestones: column "milestoneid" of relation "category_milestones" does not exist
+[2026-02-28T16:03:13.905Z]   ✗ Error inserting row into category_milestones: column "milestoneid" of relation "category_milestones" does not exist
+[2026-02-28T16:03:13.940Z]   ✗ Error inserting row into category_milestones: column "milestoneid" of relation "category_milestones" does not exist
+[2026-02-28T16:03:13.976Z]   ✗ Error inserting row into category_milestones: column "milestoneid" of relation "category_milestones" does not exist
+[2026-02-28T16:03:14.013Z]   ✗ Error inserting row into category_milestones: column "milestoneid" of relation "category_milestones" does not exist
+[2026-02-28T16:03:14.038Z]   ✗ Error inserting row into category_milestones: column "milestoneid" of relation "category_milestones" does not exist
+[2026-02-28T16:03:14.062Z]   ✗ Error inserting row into category_milestones: column "milestoneid" of relation "category_milestones" does not exist
+[2026-02-28T16:03:14.088Z]   ✗ Error inserting row into category_milestones: column "milestoneid" of relation "category_milestones" does not exist
+[2026-02-28T16:03:14.115Z]   ✗ Error inserting row into category_milestones: column "milestoneid" of relation "category_milestones" does not exist
+[2026-02-28T16:03:14.148Z]   ✗ Error inserting row into category_milestones: column "milestoneid" of relation "category_milestones" does not exist
+[2026-02-28T16:03:14.188Z]   ✗ Error inserting row into category_milestones: column "milestoneid" of relation "category_milestones" does not exist
+[2026-02-28T16:03:14.225Z]   ✗ Error inserting row into category_milestones: column "milestoneid" of relation "category_milestones" does not exist
+[2026-02-28T16:03:14.258Z]   ✗ Error inserting row into category_milestones: column "milestoneid" of relation "category_milestones" does not exist
+[2026-02-28T16:03:14.284Z]   ✗ Error inserting row into category_milestones: column "milestoneid" of relation "category_milestones" does not exist
+[2026-02-28T16:03:14.317Z]   ✗ Error inserting row into category_milestones: column "milestoneid" of relation "category_milestones" does not exist
+[2026-02-28T16:03:14.347Z]   ✗ Error inserting row into category_milestones: column "milestoneid" of relation "category_milestones" does not exist
+[2026-02-28T16:03:14.390Z]   ✗ Error inserting row into category_milestones: column "milestoneid" of relation "category_milestones" does not exist
+[2026-02-28T16:03:14.390Z]   Progress: 36/36 rows processed
+[2026-02-28T16:03:14.391Z]   ✓ Migrated 0 rows from category_milestones (36 errors)
+[2026-02-28T16:03:14.391Z] Migrating table: chat_message_reactions
+[2026-02-28T16:03:14.395Z]   Table chat_message_reactions is empty, skipping data migration
+[2026-02-28T16:03:14.395Z] Migrating table: chat_messages
+[2026-02-28T16:03:14.406Z]   Table chat_messages is empty, skipping data migration
+[2026-02-28T16:03:14.406Z] Migrating table: chat_room_participants
+[2026-02-28T16:03:14.418Z]   Table chat_room_participants is empty, skipping data migration
+[2026-02-28T16:03:14.418Z] Migrating table: chat_rooms
+[2026-02-28T16:03:14.428Z]   Table chat_rooms is empty, skipping data migration
+[2026-02-28T16:03:14.428Z] Migrating table: citizen_proposals
+[2026-02-28T16:03:14.433Z]   Table citizen_proposals is empty, skipping data migration
+[2026-02-28T16:03:14.433Z] Migrating table: component_data_access_rules
+[2026-02-28T16:03:14.443Z]   Table component_data_access_rules is empty, skipping data migration
+[2026-02-28T16:03:14.444Z] Migrating table: contractor_users
+[2026-02-28T16:03:14.455Z]   Found 12 rows to migrate
+[2026-02-28T16:03:14.506Z]   ✗ Error inserting row into contractor_users: column "contractoruserid" of relation "contractor_users" does not exist
+[2026-02-28T16:03:14.531Z]   ✗ Error inserting row into contractor_users: column "contractoruserid" of relation "contractor_users" does not exist
+[2026-02-28T16:03:14.563Z]   ✗ Error inserting row into contractor_users: column "contractoruserid" of relation "contractor_users" does not exist
+[2026-02-28T16:03:14.601Z]   ✗ Error inserting row into contractor_users: column "contractoruserid" of relation "contractor_users" does not exist
+[2026-02-28T16:03:14.651Z]   ✗ Error inserting row into contractor_users: column "contractoruserid" of relation "contractor_users" does not exist
+[2026-02-28T16:03:14.678Z]   ✗ Error inserting row into contractor_users: column "contractoruserid" of relation "contractor_users" does not exist
+[2026-02-28T16:03:14.738Z]   ✗ Error inserting row into contractor_users: column "contractoruserid" of relation "contractor_users" does not exist
+[2026-02-28T16:03:14.772Z]   ✗ Error inserting row into contractor_users: column "contractoruserid" of relation "contractor_users" does not exist
+[2026-02-28T16:03:14.799Z]   ✗ Error inserting row into contractor_users: column "contractoruserid" of relation "contractor_users" does not exist
+[2026-02-28T16:03:14.831Z]   ✗ Error inserting row into contractor_users: column "contractoruserid" of relation "contractor_users" does not exist
+[2026-02-28T16:03:14.871Z]   ✗ Error inserting row into contractor_users: column "contractoruserid" of relation "contractor_users" does not exist
+[2026-02-28T16:03:14.918Z]   ✗ Error inserting row into contractor_users: column "contractoruserid" of relation "contractor_users" does not exist
+[2026-02-28T16:03:14.919Z]   Progress: 12/12 rows processed
+[2026-02-28T16:03:14.919Z]   ✓ Migrated 0 rows from contractor_users (12 errors)
+[2026-02-28T16:03:14.919Z] Migrating table: contractors
+[2026-02-28T16:03:14.932Z]   Found 21 rows to migrate
+[2026-02-28T16:03:14.983Z]   ✗ Error inserting row into contractors: column "contractorid" of relation "contractors" does not exist
+[2026-02-28T16:03:15.008Z]   ✗ Error inserting row into contractors: column "contractorid" of relation "contractors" does not exist
+[2026-02-28T16:03:15.040Z]   ✗ Error inserting row into contractors: column "contractorid" of relation "contractors" does not exist
+[2026-02-28T16:03:15.064Z]   ✗ Error inserting row into contractors: column "contractorid" of relation "contractors" does not exist
+[2026-02-28T16:03:15.092Z]   ✗ Error inserting row into contractors: column "contractorid" of relation "contractors" does not exist
+[2026-02-28T16:03:15.128Z]   ✗ Error inserting row into contractors: column "contractorid" of relation "contractors" does not exist
+[2026-02-28T16:03:15.155Z]   ✗ Error inserting row into contractors: column "contractorid" of relation "contractors" does not exist
+[2026-02-28T16:03:15.187Z]   ✗ Error inserting row into contractors: column "contractorid" of relation "contractors" does not exist
+[2026-02-28T16:03:15.216Z]   ✗ Error inserting row into contractors: column "contractorid" of relation "contractors" does not exist
+[2026-02-28T16:03:15.240Z]   ✗ Error inserting row into contractors: column "contractorid" of relation "contractors" does not exist
+[2026-02-28T16:03:15.265Z]   ✗ Error inserting row into contractors: column "contractorid" of relation "contractors" does not exist
+[2026-02-28T16:03:15.289Z]   ✗ Error inserting row into contractors: column "contractorid" of relation "contractors" does not exist
+[2026-02-28T16:03:15.314Z]   ✗ Error inserting row into contractors: column "contractorid" of relation "contractors" does not exist
+[2026-02-28T16:03:15.348Z]   ✗ Error inserting row into contractors: column "contractorid" of relation "contractors" does not exist
+[2026-02-28T16:03:15.372Z]   ✗ Error inserting row into contractors: column "contractorid" of relation "contractors" does not exist
+[2026-02-28T16:03:15.399Z]   ✗ Error inserting row into contractors: column "contractorid" of relation "contractors" does not exist
+[2026-02-28T16:03:15.422Z]   ✗ Error inserting row into contractors: column "contractorid" of relation "contractors" does not exist
+[2026-02-28T16:03:15.449Z]   ✗ Error inserting row into contractors: column "contractorid" of relation "contractors" does not exist
+[2026-02-28T16:03:15.481Z]   ✗ Error inserting row into contractors: column "contractorid" of relation "contractors" does not exist
+[2026-02-28T16:03:15.507Z]   ✗ Error inserting row into contractors: column "contractorid" of relation "contractors" does not exist
+[2026-02-28T16:03:15.532Z]   ✗ Error inserting row into contractors: column "contractorid" of relation "contractors" does not exist
+[2026-02-28T16:03:15.533Z]   Progress: 21/21 rows processed
+[2026-02-28T16:03:15.533Z]   ✓ Migrated 0 rows from contractors (21 errors)
+[2026-02-28T16:03:15.533Z] Migrating table: counties
+[2026-02-28T16:03:15.544Z]   Found 6 rows to migrate
+[2026-02-28T16:03:15.603Z]   ✗ Error inserting row into counties: column "countyid" of relation "counties" does not exist
+[2026-02-28T16:03:15.629Z]   ✗ Error inserting row into counties: column "countyid" of relation "counties" does not exist
+[2026-02-28T16:03:15.654Z]   ✗ Error inserting row into counties: column "countyid" of relation "counties" does not exist
+[2026-02-28T16:03:15.679Z]   ✗ Error inserting row into counties: column "countyid" of relation "counties" does not exist
+[2026-02-28T16:03:15.706Z]   ✗ Error inserting row into counties: column "countyid" of relation "counties" does not exist
+[2026-02-28T16:03:15.740Z]   ✗ Error inserting row into counties: column "countyid" of relation "counties" does not exist
+[2026-02-28T16:03:15.740Z]   Progress: 6/6 rows processed
+[2026-02-28T16:03:15.740Z]   ✓ Migrated 0 rows from counties (6 errors)
+[2026-02-28T16:03:15.740Z] Migrating table: county_proposed_project_milestones
+[2026-02-28T16:03:15.751Z]   Table county_proposed_project_milestones is empty, skipping data migration
+[2026-02-28T16:03:15.751Z] Migrating table: county_proposed_projects
+[2026-02-28T16:03:15.754Z]   Table county_proposed_projects is empty, skipping data migration
+[2026-02-28T16:03:15.754Z] Migrating table: dashboard_components
+[2026-02-28T16:03:15.764Z]   Table dashboard_components is empty, skipping data migration
+[2026-02-28T16:03:15.764Z] Migrating table: dashboard_permissions
+[2026-02-28T16:03:15.774Z]   Table dashboard_permissions is empty, skipping data migration
+[2026-02-28T16:03:15.774Z] Migrating table: dashboard_tabs
+[2026-02-28T16:03:15.780Z]   Table dashboard_tabs is empty, skipping data migration
+[2026-02-28T16:03:15.786Z] Migrating table: departments
+[2026-02-28T16:03:15.789Z]   Found 15 rows to migrate
+[2026-02-28T16:03:15.840Z]   ✗ Error inserting row into departments: column "departmentid" of relation "departments" does not exist
+[2026-02-28T16:03:15.874Z]   ✗ Error inserting row into departments: column "departmentid" of relation "departments" does not exist
+[2026-02-28T16:03:15.899Z]   ✗ Error inserting row into departments: column "departmentid" of relation "departments" does not exist
+[2026-02-28T16:03:15.934Z]   ✗ Error inserting row into departments: column "departmentid" of relation "departments" does not exist
+[2026-02-28T16:03:15.963Z]   ✗ Error inserting row into departments: column "departmentid" of relation "departments" does not exist
+[2026-02-28T16:03:15.987Z]   ✗ Error inserting row into departments: column "departmentid" of relation "departments" does not exist
+[2026-02-28T16:03:16.012Z]   ✗ Error inserting row into departments: column "departmentid" of relation "departments" does not exist
+[2026-02-28T16:03:16.043Z]   ✗ Error inserting row into departments: column "departmentid" of relation "departments" does not exist
+[2026-02-28T16:03:16.073Z]   ✗ Error inserting row into departments: column "departmentid" of relation "departments" does not exist
+[2026-02-28T16:03:16.098Z]   ✗ Error inserting row into departments: column "departmentid" of relation "departments" does not exist
+[2026-02-28T16:03:16.122Z]   ✗ Error inserting row into departments: column "departmentid" of relation "departments" does not exist
+[2026-02-28T16:03:16.155Z]   ✗ Error inserting row into departments: column "departmentid" of relation "departments" does not exist
+[2026-02-28T16:03:16.181Z]   ✗ Error inserting row into departments: column "departmentid" of relation "departments" does not exist
+[2026-02-28T16:03:16.207Z]   ✗ Error inserting row into departments: column "departmentid" of relation "departments" does not exist
+[2026-02-28T16:03:16.231Z]   ✗ Error inserting row into departments: column "departmentid" of relation "departments" does not exist
+[2026-02-28T16:03:16.231Z]   Progress: 15/15 rows processed
+[2026-02-28T16:03:16.231Z]   ✓ Migrated 0 rows from departments (15 errors)
+[2026-02-28T16:03:16.231Z] Migrating table: employee_bank_details
+[2026-02-28T16:03:16.243Z]   Found 6 rows to migrate
+[2026-02-28T16:03:16.303Z]   ✗ Error inserting row into employee_bank_details: column "staffid" of relation "employee_bank_details" does not exist
+[2026-02-28T16:03:16.331Z]   ✗ Error inserting row into employee_bank_details: column "staffid" of relation "employee_bank_details" does not exist
+[2026-02-28T16:03:16.380Z]   ✗ Error inserting row into employee_bank_details: column "staffid" of relation "employee_bank_details" does not exist
+[2026-02-28T16:03:16.460Z]   ✗ Error inserting row into employee_bank_details: column "staffid" of relation "employee_bank_details" does not exist
+[2026-02-28T16:03:16.511Z]   ✗ Error inserting row into employee_bank_details: column "staffid" of relation "employee_bank_details" does not exist
+[2026-02-28T16:03:16.561Z]   ✗ Error inserting row into employee_bank_details: column "staffid" of relation "employee_bank_details" does not exist
+[2026-02-28T16:03:16.562Z]   Progress: 6/6 rows processed
+[2026-02-28T16:03:16.562Z]   ✓ Migrated 0 rows from employee_bank_details (6 errors)
+[2026-02-28T16:03:16.562Z] Migrating table: employee_benefits
+[2026-02-28T16:03:16.585Z]   Table employee_benefits is empty, skipping data migration
+[2026-02-28T16:03:16.585Z] Migrating table: employee_compensation
+[2026-02-28T16:03:16.607Z]   Found 9 rows to migrate
+[2026-02-28T16:03:16.698Z]   ✗ Error inserting row into employee_compensation: column "staffid" of relation "employee_compensation" does not exist
+[2026-02-28T16:03:16.770Z]   ✗ Error inserting row into employee_compensation: column "staffid" of relation "employee_compensation" does not exist
+[2026-02-28T16:03:16.830Z]   ✗ Error inserting row into employee_compensation: column "staffid" of relation "employee_compensation" does not exist
+[2026-02-28T16:03:16.891Z]   ✗ Error inserting row into employee_compensation: column "staffid" of relation "employee_compensation" does not exist
+[2026-02-28T16:03:16.950Z]   ✗ Error inserting row into employee_compensation: column "staffid" of relation "employee_compensation" does not exist
+[2026-02-28T16:03:17.015Z]   ✗ Error inserting row into employee_compensation: column "staffid" of relation "employee_compensation" does not exist
+[2026-02-28T16:03:17.074Z]   ✗ Error inserting row into employee_compensation: column "staffid" of relation "employee_compensation" does not exist
+[2026-02-28T16:03:17.149Z]   ✗ Error inserting row into employee_compensation: column "staffid" of relation "employee_compensation" does not exist
+[2026-02-28T16:03:17.221Z]   ✗ Error inserting row into employee_compensation: column "staffid" of relation "employee_compensation" does not exist
+[2026-02-28T16:03:17.221Z]   Progress: 9/9 rows processed
+[2026-02-28T16:03:17.221Z]   ✓ Migrated 0 rows from employee_compensation (9 errors)
+[2026-02-28T16:03:17.221Z] Migrating table: employee_contracts
+[2026-02-28T16:03:17.236Z]   Found 14 rows to migrate
+[2026-02-28T16:03:17.501Z]   ✗ Error inserting row into employee_contracts: column "staffid" of relation "employee_contracts" does not exist
+[2026-02-28T16:03:17.550Z]   ✗ Error inserting row into employee_contracts: column "staffid" of relation "employee_contracts" does not exist
+[2026-02-28T16:03:17.578Z]   ✗ Error inserting row into employee_contracts: column "staffid" of relation "employee_contracts" does not exist
+[2026-02-28T16:03:17.615Z]   ✗ Error inserting row into employee_contracts: column "staffid" of relation "employee_contracts" does not exist
+[2026-02-28T16:03:17.652Z]   ✗ Error inserting row into employee_contracts: column "staffid" of relation "employee_contracts" does not exist
+[2026-02-28T16:03:17.702Z]   ✗ Error inserting row into employee_contracts: column "staffid" of relation "employee_contracts" does not exist
+[2026-02-28T16:03:17.736Z]   ✗ Error inserting row into employee_contracts: column "staffid" of relation "employee_contracts" does not exist
+[2026-02-28T16:03:17.771Z]   ✗ Error inserting row into employee_contracts: column "staffid" of relation "employee_contracts" does not exist
+[2026-02-28T16:03:17.809Z]   ✗ Error inserting row into employee_contracts: column "staffid" of relation "employee_contracts" does not exist
+[2026-02-28T16:03:17.844Z]   ✗ Error inserting row into employee_contracts: column "staffid" of relation "employee_contracts" does not exist
+[2026-02-28T16:03:17.883Z]   ✗ Error inserting row into employee_contracts: column "staffid" of relation "employee_contracts" does not exist
+[2026-02-28T16:03:17.921Z]   ✗ Error inserting row into employee_contracts: column "staffid" of relation "employee_contracts" does not exist
+[2026-02-28T16:03:17.966Z]   ✗ Error inserting row into employee_contracts: column "staffid" of relation "employee_contracts" does not exist
+[2026-02-28T16:03:17.996Z]   ✗ Error inserting row into employee_contracts: column "staffid" of relation "employee_contracts" does not exist
+[2026-02-28T16:03:17.996Z]   Progress: 14/14 rows processed
+[2026-02-28T16:03:18.003Z]   ✓ Migrated 0 rows from employee_contracts (14 errors)
+[2026-02-28T16:03:18.003Z] Migrating table: employee_dependants
+[2026-02-28T16:03:18.007Z]   Found 13 rows to migrate
+[2026-02-28T16:03:18.068Z]   ✗ Error inserting row into employee_dependants: column "staffid" of relation "employee_dependants" does not exist
+[2026-02-28T16:03:18.104Z]   ✗ Error inserting row into employee_dependants: column "staffid" of relation "employee_dependants" does not exist
+[2026-02-28T16:03:18.140Z]   ✗ Error inserting row into employee_dependants: column "staffid" of relation "employee_dependants" does not exist
+[2026-02-28T16:03:18.175Z]   ✗ Error inserting row into employee_dependants: column "staffid" of relation "employee_dependants" does not exist
+[2026-02-28T16:03:18.204Z]   ✗ Error inserting row into employee_dependants: column "staffid" of relation "employee_dependants" does not exist
+[2026-02-28T16:03:18.239Z]   ✗ Error inserting row into employee_dependants: column "staffid" of relation "employee_dependants" does not exist
+[2026-02-28T16:03:18.277Z]   ✗ Error inserting row into employee_dependants: column "staffid" of relation "employee_dependants" does not exist
+[2026-02-28T16:03:18.313Z]   ✗ Error inserting row into employee_dependants: column "staffid" of relation "employee_dependants" does not exist
+[2026-02-28T16:03:18.346Z]   ✗ Error inserting row into employee_dependants: column "staffid" of relation "employee_dependants" does not exist
+[2026-02-28T16:03:18.373Z]   ✗ Error inserting row into employee_dependants: column "staffid" of relation "employee_dependants" does not exist
+[2026-02-28T16:03:18.398Z]   ✗ Error inserting row into employee_dependants: column "staffid" of relation "employee_dependants" does not exist
+[2026-02-28T16:03:18.422Z]   ✗ Error inserting row into employee_dependants: column "staffid" of relation "employee_dependants" does not exist
+[2026-02-28T16:03:18.457Z]   ✗ Error inserting row into employee_dependants: column "staffid" of relation "employee_dependants" does not exist
+[2026-02-28T16:03:18.457Z]   Progress: 13/13 rows processed
+[2026-02-28T16:03:18.457Z]   ✓ Migrated 0 rows from employee_dependants (13 errors)
+[2026-02-28T16:03:18.457Z] Migrating table: employee_disciplinary
+[2026-02-28T16:03:18.468Z]   Found 3 rows to migrate
+[2026-02-28T16:03:18.522Z]   ✗ Error inserting row into employee_disciplinary: column "staffid" of relation "employee_disciplinary" does not exist
+[2026-02-28T16:03:18.555Z]   ✗ Error inserting row into employee_disciplinary: column "staffid" of relation "employee_disciplinary" does not exist
+[2026-02-28T16:03:18.582Z]   ✗ Error inserting row into employee_disciplinary: column "staffid" of relation "employee_disciplinary" does not exist
+[2026-02-28T16:03:18.582Z]   Progress: 3/3 rows processed
+[2026-02-28T16:03:18.583Z]   ✓ Migrated 0 rows from employee_disciplinary (3 errors)
+[2026-02-28T16:03:18.583Z] Migrating table: employee_leave_entitlements
+[2026-02-28T16:03:18.595Z]   Found 6 rows to migrate
+[2026-02-28T16:03:18.654Z]   ✗ Error inserting row into employee_leave_entitlements: column "staffid" of relation "employee_leave_entitlements" does not exist
+[2026-02-28T16:03:18.677Z]   ✗ Error inserting row into employee_leave_entitlements: column "staffid" of relation "employee_leave_entitlements" does not exist
+[2026-02-28T16:03:18.702Z]   ✗ Error inserting row into employee_leave_entitlements: column "staffid" of relation "employee_leave_entitlements" does not exist
+[2026-02-28T16:03:18.727Z]   ✗ Error inserting row into employee_leave_entitlements: column "staffid" of relation "employee_leave_entitlements" does not exist
+[2026-02-28T16:03:18.753Z]   ✗ Error inserting row into employee_leave_entitlements: column "staffid" of relation "employee_leave_entitlements" does not exist
+[2026-02-28T16:03:18.778Z]   ✗ Error inserting row into employee_leave_entitlements: column "staffid" of relation "employee_leave_entitlements" does not exist
+[2026-02-28T16:03:18.778Z]   Progress: 6/6 rows processed
+[2026-02-28T16:03:18.778Z]   ✓ Migrated 0 rows from employee_leave_entitlements (6 errors)
+[2026-02-28T16:03:18.778Z] Migrating table: employee_loans
+[2026-02-28T16:03:18.788Z]   Found 2 rows to migrate
+[2026-02-28T16:03:18.838Z]   ✗ Error inserting row into employee_loans: column "staffid" of relation "employee_loans" does not exist
+[2026-02-28T16:03:18.863Z]   ✗ Error inserting row into employee_loans: column "staffid" of relation "employee_loans" does not exist
+[2026-02-28T16:03:18.863Z]   Progress: 2/2 rows processed
+[2026-02-28T16:03:18.863Z]   ✓ Migrated 0 rows from employee_loans (2 errors)
+[2026-02-28T16:03:18.863Z] Migrating table: employee_memberships
+[2026-02-28T16:03:18.873Z]   Table employee_memberships is empty, skipping data migration
+[2026-02-28T16:03:18.874Z] Migrating table: employee_performance
+[2026-02-28T16:03:18.885Z]   Found 9 rows to migrate
+[2026-02-28T16:03:18.926Z]   ✗ Error inserting row into employee_performance: column "staffid" of relation "employee_performance" does not exist
+[2026-02-28T16:03:18.950Z]   ✗ Error inserting row into employee_performance: column "staffid" of relation "employee_performance" does not exist
+[2026-02-28T16:03:18.975Z]   ✗ Error inserting row into employee_performance: column "staffid" of relation "employee_performance" does not exist
+[2026-02-28T16:03:18.998Z]   ✗ Error inserting row into employee_performance: column "staffid" of relation "employee_performance" does not exist
+[2026-02-28T16:03:19.024Z]   ✗ Error inserting row into employee_performance: column "staffid" of relation "employee_performance" does not exist
+[2026-02-28T16:03:19.059Z]   ✗ Error inserting row into employee_performance: column "staffid" of relation "employee_performance" does not exist
+[2026-02-28T16:03:19.083Z]   ✗ Error inserting row into employee_performance: column "staffid" of relation "employee_performance" does not exist
+[2026-02-28T16:03:19.110Z]   ✗ Error inserting row into employee_performance: column "staffid" of relation "employee_performance" does not exist
+[2026-02-28T16:03:19.134Z]   ✗ Error inserting row into employee_performance: column "staffid" of relation "employee_performance" does not exist
+[2026-02-28T16:03:19.134Z]   Progress: 9/9 rows processed
+[2026-02-28T16:03:19.134Z]   ✓ Migrated 0 rows from employee_performance (9 errors)
+[2026-02-28T16:03:19.135Z] Migrating table: employee_project_assignments
+[2026-02-28T16:03:19.145Z]   Found 2 rows to migrate
+[2026-02-28T16:03:19.193Z]   ✗ Error inserting row into employee_project_assignments: column "staffid" of relation "employee_project_assignments" does not exist
+[2026-02-28T16:03:19.217Z]   ✗ Error inserting row into employee_project_assignments: column "staffid" of relation "employee_project_assignments" does not exist
+[2026-02-28T16:03:19.217Z]   Progress: 2/2 rows processed
+[2026-02-28T16:03:19.217Z]   ✓ Migrated 0 rows from employee_project_assignments (2 errors)
+[2026-02-28T16:03:19.217Z] Migrating table: employee_promotions
+[2026-02-28T16:03:19.220Z]   Found 5 rows to migrate
+[2026-02-28T16:03:19.276Z]   ✗ Error inserting row into employee_promotions: column "staffid" of relation "employee_promotions" does not exist
+[2026-02-28T16:03:19.304Z]   ✗ Error inserting row into employee_promotions: column "staffid" of relation "employee_promotions" does not exist
+[2026-02-28T16:03:19.340Z]   ✗ Error inserting row into employee_promotions: column "staffid" of relation "employee_promotions" does not exist
+[2026-02-28T16:03:19.365Z]   ✗ Error inserting row into employee_promotions: column "staffid" of relation "employee_promotions" does not exist
+[2026-02-28T16:03:19.391Z]   ✗ Error inserting row into employee_promotions: column "staffid" of relation "employee_promotions" does not exist
+[2026-02-28T16:03:19.391Z]   Progress: 5/5 rows processed
+[2026-02-28T16:03:19.391Z]   ✓ Migrated 0 rows from employee_promotions (5 errors)
+[2026-02-28T16:03:19.391Z] Migrating table: employee_retirements
+[2026-02-28T16:03:19.402Z]   Table employee_retirements is empty, skipping data migration
+[2026-02-28T16:03:19.403Z] Migrating table: employee_terminations
+[2026-02-28T16:03:19.415Z]   Table employee_terminations is empty, skipping data migration
+[2026-02-28T16:03:19.415Z] Migrating table: employee_training
+[2026-02-28T16:03:19.426Z]   Found 7 rows to migrate
+[2026-02-28T16:03:19.472Z]   ✗ Error inserting row into employee_training: column "staffid" of relation "employee_training" does not exist
+[2026-02-28T16:03:19.490Z]   ✗ Error inserting row into employee_training: column "staffid" of relation "employee_training" does not exist
+[2026-02-28T16:03:19.514Z]   ✗ Error inserting row into employee_training: column "staffid" of relation "employee_training" does not exist
+[2026-02-28T16:03:19.537Z]   ✗ Error inserting row into employee_training: column "staffid" of relation "employee_training" does not exist
+[2026-02-28T16:03:19.561Z]   ✗ Error inserting row into employee_training: column "staffid" of relation "employee_training" does not exist
+[2026-02-28T16:03:19.583Z]   ✗ Error inserting row into employee_training: column "staffid" of relation "employee_training" does not exist
+[2026-02-28T16:03:19.600Z]   ✗ Error inserting row into employee_training: column "staffid" of relation "employee_training" does not exist
+[2026-02-28T16:03:19.600Z]   Progress: 7/7 rows processed
+[2026-02-28T16:03:19.600Z]   ✓ Migrated 0 rows from employee_training (7 errors)
+[2026-02-28T16:03:19.606Z] Migrating table: feedback_moderation
+[2026-02-28T16:03:19.619Z]   Table feedback_moderation is empty, skipping data migration
+[2026-02-28T16:03:19.619Z] Migrating table: feedback_moderation_settings
+[2026-02-28T16:03:19.624Z]   Table feedback_moderation_settings is empty, skipping data migration
+[2026-02-28T16:03:19.624Z] Migrating table: financialyears
+[2026-02-28T16:03:19.635Z]   Found 4 rows to migrate
+[2026-02-28T16:03:19.683Z]   ✗ Error inserting row into financialyears: column "finyearid" of relation "financialyears" does not exist
+[2026-02-28T16:03:19.708Z]   ✗ Error inserting row into financialyears: column "finyearid" of relation "financialyears" does not exist
+[2026-02-28T16:03:19.732Z]   ✗ Error inserting row into financialyears: column "finyearid" of relation "financialyears" does not exist
+[2026-02-28T16:03:19.759Z]   ✗ Error inserting row into financialyears: column "finyearid" of relation "financialyears" does not exist
+[2026-02-28T16:03:19.759Z]   Progress: 4/4 rows processed
+[2026-02-28T16:03:19.759Z]   ✓ Migrated 0 rows from financialyears (4 errors)
+[2026-02-28T16:03:19.766Z] Migrating table: inspection_teams
+[2026-02-28T16:03:19.770Z]   Table inspection_teams is empty, skipping data migration
+[2026-02-28T16:03:19.770Z] Migrating table: job_groups
+[2026-02-28T16:03:19.781Z]   Found 3 rows to migrate
+[2026-02-28T16:03:19.830Z]   ✗ Error inserting row into job_groups: column "groupname" of relation "job_groups" does not exist
+[2026-02-28T16:03:19.864Z]   ✗ Error inserting row into job_groups: column "groupname" of relation "job_groups" does not exist
+[2026-02-28T16:03:19.888Z]   ✗ Error inserting row into job_groups: column "groupname" of relation "job_groups" does not exist
+[2026-02-28T16:03:19.888Z]   Progress: 3/3 rows processed
+[2026-02-28T16:03:19.888Z]   ✓ Migrated 0 rows from job_groups (3 errors)
+[2026-02-28T16:03:19.889Z] Migrating table: leave_applications
+[2026-02-28T16:03:19.893Z]   Found 31 rows to migrate
+[2026-02-28T16:03:19.953Z]   ✗ Error inserting row into leave_applications: column "staffid" of relation "leave_applications" does not exist
+[2026-02-28T16:03:19.990Z]   ✗ Error inserting row into leave_applications: column "staffid" of relation "leave_applications" does not exist
+[2026-02-28T16:03:20.014Z]   ✗ Error inserting row into leave_applications: column "staffid" of relation "leave_applications" does not exist
+[2026-02-28T16:03:20.049Z]   ✗ Error inserting row into leave_applications: column "staffid" of relation "leave_applications" does not exist
+[2026-02-28T16:03:20.086Z]   ✗ Error inserting row into leave_applications: column "staffid" of relation "leave_applications" does not exist
+[2026-02-28T16:03:20.113Z]   ✗ Error inserting row into leave_applications: column "staffid" of relation "leave_applications" does not exist
+[2026-02-28T16:03:20.138Z]   ✗ Error inserting row into leave_applications: column "staffid" of relation "leave_applications" does not exist
+[2026-02-28T16:03:20.163Z]   ✗ Error inserting row into leave_applications: column "staffid" of relation "leave_applications" does not exist
+[2026-02-28T16:03:20.200Z]   ✗ Error inserting row into leave_applications: column "staffid" of relation "leave_applications" does not exist
+[2026-02-28T16:03:20.244Z]   ✗ Error inserting row into leave_applications: column "staffid" of relation "leave_applications" does not exist
+[2026-02-28T16:03:20.268Z]   ✗ Error inserting row into leave_applications: column "staffid" of relation "leave_applications" does not exist
+[2026-02-28T16:03:20.292Z]   ✗ Error inserting row into leave_applications: column "staffid" of relation "leave_applications" does not exist
+[2026-02-28T16:03:20.318Z]   ✗ Error inserting row into leave_applications: column "staffid" of relation "leave_applications" does not exist
+[2026-02-28T16:03:20.357Z]   ✗ Error inserting row into leave_applications: column "staffid" of relation "leave_applications" does not exist
+[2026-02-28T16:03:20.391Z]   ✗ Error inserting row into leave_applications: column "staffid" of relation "leave_applications" does not exist
+[2026-02-28T16:03:20.418Z]   ✗ Error inserting row into leave_applications: column "staffid" of relation "leave_applications" does not exist
+[2026-02-28T16:03:20.454Z]   ✗ Error inserting row into leave_applications: column "staffid" of relation "leave_applications" does not exist
+[2026-02-28T16:03:20.481Z]   ✗ Error inserting row into leave_applications: column "staffid" of relation "leave_applications" does not exist
+[2026-02-28T16:03:20.506Z]   ✗ Error inserting row into leave_applications: column "staffid" of relation "leave_applications" does not exist
+[2026-02-28T16:03:20.530Z]   ✗ Error inserting row into leave_applications: column "staffid" of relation "leave_applications" does not exist
+[2026-02-28T16:03:20.577Z]   ✗ Error inserting row into leave_applications: column "staffid" of relation "leave_applications" does not exist
+[2026-02-28T16:03:20.604Z]   ✗ Error inserting row into leave_applications: column "staffid" of relation "leave_applications" does not exist
+[2026-02-28T16:03:20.627Z]   ✗ Error inserting row into leave_applications: column "staffid" of relation "leave_applications" does not exist
+[2026-02-28T16:03:20.653Z]   ✗ Error inserting row into leave_applications: column "staffid" of relation "leave_applications" does not exist
+[2026-02-28T16:03:20.677Z]   ✗ Error inserting row into leave_applications: column "staffid" of relation "leave_applications" does not exist
+[2026-02-28T16:03:20.710Z]   ✗ Error inserting row into leave_applications: column "staffid" of relation "leave_applications" does not exist
+[2026-02-28T16:03:20.735Z]   ✗ Error inserting row into leave_applications: column "staffid" of relation "leave_applications" does not exist
+[2026-02-28T16:03:20.761Z]   ✗ Error inserting row into leave_applications: column "staffid" of relation "leave_applications" does not exist
+[2026-02-28T16:03:20.785Z]   ✗ Error inserting row into leave_applications: column "staffid" of relation "leave_applications" does not exist
+[2026-02-28T16:03:20.811Z]   ✗ Error inserting row into leave_applications: column "staffid" of relation "leave_applications" does not exist
+[2026-02-28T16:03:20.844Z]   ✗ Error inserting row into leave_applications: column "staffid" of relation "leave_applications" does not exist
+[2026-02-28T16:03:20.845Z]   Progress: 31/31 rows processed
+[2026-02-28T16:03:20.845Z]   ✓ Migrated 0 rows from leave_applications (31 errors)
+[2026-02-28T16:03:20.845Z] Migrating table: leave_types
+[2026-02-28T16:03:20.857Z]   Found 3 rows to migrate
+[2026-02-28T16:03:20.905Z]   ✗ Error inserting row into leave_types: column "numberofdays" of relation "leave_types" does not exist
+[2026-02-28T16:03:20.934Z]   ✗ Error inserting row into leave_types: column "numberofdays" of relation "leave_types" does not exist
+[2026-02-28T16:03:20.970Z]   ✗ Error inserting row into leave_types: column "numberofdays" of relation "leave_types" does not exist
+[2026-02-28T16:03:20.970Z]   Progress: 3/3 rows processed
+[2026-02-28T16:03:20.970Z]   ✓ Migrated 0 rows from leave_types (3 errors)
+[2026-02-28T16:03:20.970Z] Migrating table: milestone_activities
+[2026-02-28T16:03:20.982Z]   Found 42 rows to migrate
+[2026-02-28T16:03:21.067Z]   ✗ Error inserting row into milestone_activities: column "milestoneid" of relation "milestone_activities" does not exist
+[2026-02-28T16:03:21.102Z]   ✗ Error inserting row into milestone_activities: column "milestoneid" of relation "milestone_activities" does not exist
+[2026-02-28T16:03:21.137Z]   ✗ Error inserting row into milestone_activities: column "milestoneid" of relation "milestone_activities" does not exist
+[2026-02-28T16:03:21.167Z]   ✗ Error inserting row into milestone_activities: column "milestoneid" of relation "milestone_activities" does not exist
+[2026-02-28T16:03:21.192Z]   ✗ Error inserting row into milestone_activities: column "milestoneid" of relation "milestone_activities" does not exist
+[2026-02-28T16:03:21.223Z]   ✗ Error inserting row into milestone_activities: column "milestoneid" of relation "milestone_activities" does not exist
+[2026-02-28T16:03:21.240Z]   ✗ Error inserting row into milestone_activities: column "milestoneid" of relation "milestone_activities" does not exist
+[2026-02-28T16:03:21.272Z]   ✗ Error inserting row into milestone_activities: column "milestoneid" of relation "milestone_activities" does not exist
+[2026-02-28T16:03:21.310Z]   ✗ Error inserting row into milestone_activities: column "milestoneid" of relation "milestone_activities" does not exist
+[2026-02-28T16:03:21.334Z]   ✗ Error inserting row into milestone_activities: column "milestoneid" of relation "milestone_activities" does not exist
+[2026-02-28T16:03:21.359Z]   ✗ Error inserting row into milestone_activities: column "milestoneid" of relation "milestone_activities" does not exist
+[2026-02-28T16:03:21.385Z]   ✗ Error inserting row into milestone_activities: column "milestoneid" of relation "milestone_activities" does not exist
+[2026-02-28T16:03:21.412Z]   ✗ Error inserting row into milestone_activities: column "milestoneid" of relation "milestone_activities" does not exist
+[2026-02-28T16:03:21.444Z]   ✗ Error inserting row into milestone_activities: column "milestoneid" of relation "milestone_activities" does not exist
+[2026-02-28T16:03:21.469Z]   ✗ Error inserting row into milestone_activities: column "milestoneid" of relation "milestone_activities" does not exist
+[2026-02-28T16:03:21.497Z]   ✗ Error inserting row into milestone_activities: column "milestoneid" of relation "milestone_activities" does not exist
+[2026-02-28T16:03:21.531Z]   ✗ Error inserting row into milestone_activities: column "milestoneid" of relation "milestone_activities" does not exist
+[2026-02-28T16:03:21.558Z]   ✗ Error inserting row into milestone_activities: column "milestoneid" of relation "milestone_activities" does not exist
+[2026-02-28T16:03:21.590Z]   ✗ Error inserting row into milestone_activities: column "milestoneid" of relation "milestone_activities" does not exist
+[2026-02-28T16:03:21.608Z]   ✗ Error inserting row into milestone_activities: column "milestoneid" of relation "milestone_activities" does not exist
+[2026-02-28T16:03:21.641Z]   ✗ Error inserting row into milestone_activities: column "milestoneid" of relation "milestone_activities" does not exist
+[2026-02-28T16:03:21.667Z]   ✗ Error inserting row into milestone_activities: column "milestoneid" of relation "milestone_activities" does not exist
+[2026-02-28T16:03:21.692Z]   ✗ Error inserting row into milestone_activities: column "milestoneid" of relation "milestone_activities" does not exist
+[2026-02-28T16:03:21.717Z]   ✗ Error inserting row into milestone_activities: column "milestoneid" of relation "milestone_activities" does not exist
+[2026-02-28T16:03:21.741Z]   ✗ Error inserting row into milestone_activities: column "milestoneid" of relation "milestone_activities" does not exist
+[2026-02-28T16:03:21.774Z]   ✗ Error inserting row into milestone_activities: column "milestoneid" of relation "milestone_activities" does not exist
+[2026-02-28T16:03:21.812Z]   ✗ Error inserting row into milestone_activities: column "milestoneid" of relation "milestone_activities" does not exist
+[2026-02-28T16:03:21.840Z]   ✗ Error inserting row into milestone_activities: column "milestoneid" of relation "milestone_activities" does not exist
+[2026-02-28T16:03:21.875Z]   ✗ Error inserting row into milestone_activities: column "milestoneid" of relation "milestone_activities" does not exist
+[2026-02-28T16:03:21.912Z]   ✗ Error inserting row into milestone_activities: column "milestoneid" of relation "milestone_activities" does not exist
+[2026-02-28T16:03:21.937Z]   ✗ Error inserting row into milestone_activities: column "milestoneid" of relation "milestone_activities" does not exist
+[2026-02-28T16:03:21.973Z]   ✗ Error inserting row into milestone_activities: column "milestoneid" of relation "milestone_activities" does not exist
+[2026-02-28T16:03:22.008Z]   ✗ Error inserting row into milestone_activities: column "milestoneid" of relation "milestone_activities" does not exist
+[2026-02-28T16:03:22.034Z]   ✗ Error inserting row into milestone_activities: column "milestoneid" of relation "milestone_activities" does not exist
+[2026-02-28T16:03:22.080Z]   ✗ Error inserting row into milestone_activities: column "milestoneid" of relation "milestone_activities" does not exist
+[2026-02-28T16:03:22.109Z]   ✗ Error inserting row into milestone_activities: column "milestoneid" of relation "milestone_activities" does not exist
+[2026-02-28T16:03:22.134Z]   ✗ Error inserting row into milestone_activities: column "milestoneid" of relation "milestone_activities" does not exist
+[2026-02-28T16:03:22.170Z]   ✗ Error inserting row into milestone_activities: column "milestoneid" of relation "milestone_activities" does not exist
+[2026-02-28T16:03:22.206Z]   ✗ Error inserting row into milestone_activities: column "milestoneid" of relation "milestone_activities" does not exist
+[2026-02-28T16:03:22.232Z]   ✗ Error inserting row into milestone_activities: column "milestoneid" of relation "milestone_activities" does not exist
+[2026-02-28T16:03:22.255Z]   ✗ Error inserting row into milestone_activities: column "milestoneid" of relation "milestone_activities" does not exist
+[2026-02-28T16:03:22.290Z]   ✗ Error inserting row into milestone_activities: column "milestoneid" of relation "milestone_activities" does not exist
+[2026-02-28T16:03:22.290Z]   Progress: 42/42 rows processed
+[2026-02-28T16:03:22.290Z]   ✓ Migrated 0 rows from milestone_activities (42 errors)
+[2026-02-28T16:03:22.290Z] Migrating table: milestone_attachments
+[2026-02-28T16:03:22.303Z]   Found 6 rows to migrate
+[2026-02-28T16:03:22.362Z]   ✗ Error inserting row into milestone_attachments: column "attachmentid" of relation "milestone_attachments" does not exist
+[2026-02-28T16:03:22.390Z]   ✗ Error inserting row into milestone_attachments: column "attachmentid" of relation "milestone_attachments" does not exist
+[2026-02-28T16:03:22.425Z]   ✗ Error inserting row into milestone_attachments: column "attachmentid" of relation "milestone_attachments" does not exist
+[2026-02-28T16:03:22.451Z]   ✗ Error inserting row into milestone_attachments: column "attachmentid" of relation "milestone_attachments" does not exist
+[2026-02-28T16:03:22.475Z]   ✗ Error inserting row into milestone_attachments: column "attachmentid" of relation "milestone_attachments" does not exist
+[2026-02-28T16:03:22.509Z]   ✗ Error inserting row into milestone_attachments: column "attachmentid" of relation "milestone_attachments" does not exist
+[2026-02-28T16:03:22.510Z]   Progress: 6/6 rows processed
+[2026-02-28T16:03:22.510Z]   ✓ Migrated 0 rows from milestone_attachments (6 errors)
+[2026-02-28T16:03:22.510Z] Migrating table: moderation_queue
+[2026-02-28T16:03:22.522Z]   Table moderation_queue is empty, skipping data migration
+[2026-02-28T16:03:22.522Z] Migrating table: monthly_payroll
+[2026-02-28T16:03:22.535Z]   Found 3 rows to migrate
+[2026-02-28T16:03:22.610Z]   ✗ Error inserting row into monthly_payroll: column "staffid" of relation "monthly_payroll" does not exist
+[2026-02-28T16:03:22.645Z]   ✗ Error inserting row into monthly_payroll: column "staffid" of relation "monthly_payroll" does not exist
+[2026-02-28T16:03:22.684Z]   ✗ Error inserting row into monthly_payroll: column "staffid" of relation "monthly_payroll" does not exist
+[2026-02-28T16:03:22.684Z]   Progress: 3/3 rows processed
+[2026-02-28T16:03:22.684Z]   ✓ Migrated 0 rows from monthly_payroll (3 errors)
+[2026-02-28T16:03:22.684Z] Migrating table: participants
+[2026-02-28T16:03:22.697Z]   Table participants is empty, skipping data migration
+[2026-02-28T16:03:22.697Z] Migrating table: payment_approval_history
+[2026-02-28T16:03:22.708Z]   Found 10 rows to migrate
+[2026-02-28T16:03:22.766Z]   ✗ Error inserting row into payment_approval_history: column "historyid" of relation "payment_approval_history" does not exist
+[2026-02-28T16:03:22.795Z]   ✗ Error inserting row into payment_approval_history: column "historyid" of relation "payment_approval_history" does not exist
+[2026-02-28T16:03:22.832Z]   ✗ Error inserting row into payment_approval_history: column "historyid" of relation "payment_approval_history" does not exist
+[2026-02-28T16:03:22.866Z]   ✗ Error inserting row into payment_approval_history: column "historyid" of relation "payment_approval_history" does not exist
+[2026-02-28T16:03:22.893Z]   ✗ Error inserting row into payment_approval_history: column "historyid" of relation "payment_approval_history" does not exist
+[2026-02-28T16:03:22.928Z]   ✗ Error inserting row into payment_approval_history: column "historyid" of relation "payment_approval_history" does not exist
+[2026-02-28T16:03:22.954Z]   ✗ Error inserting row into payment_approval_history: column "historyid" of relation "payment_approval_history" does not exist
+[2026-02-28T16:03:22.978Z]   ✗ Error inserting row into payment_approval_history: column "historyid" of relation "payment_approval_history" does not exist
+[2026-02-28T16:03:23.001Z]   ✗ Error inserting row into payment_approval_history: column "historyid" of relation "payment_approval_history" does not exist
+[2026-02-28T16:03:23.037Z]   ✗ Error inserting row into payment_approval_history: column "historyid" of relation "payment_approval_history" does not exist
+[2026-02-28T16:03:23.037Z]   Progress: 10/10 rows processed
+[2026-02-28T16:03:23.038Z]   ✓ Migrated 0 rows from payment_approval_history (10 errors)
+[2026-02-28T16:03:23.038Z] Migrating table: payment_approval_levels
+[2026-02-28T16:03:23.048Z]   Found 5 rows to migrate
+[2026-02-28T16:03:23.098Z]   ✗ Error inserting row into payment_approval_levels: column "levelid" of relation "payment_approval_levels" does not exist
+[2026-02-28T16:03:23.123Z]   ✗ Error inserting row into payment_approval_levels: column "levelid" of relation "payment_approval_levels" does not exist
+[2026-02-28T16:03:23.147Z]   ✗ Error inserting row into payment_approval_levels: column "levelid" of relation "payment_approval_levels" does not exist
+[2026-02-28T16:03:23.163Z]   ✗ Error inserting row into payment_approval_levels: column "levelid" of relation "payment_approval_levels" does not exist
+[2026-02-28T16:03:23.187Z]   ✗ Error inserting row into payment_approval_levels: column "levelid" of relation "payment_approval_levels" does not exist
+[2026-02-28T16:03:23.187Z]   Progress: 5/5 rows processed
+[2026-02-28T16:03:23.187Z]   ✓ Migrated 0 rows from payment_approval_levels (5 errors)
+[2026-02-28T16:03:23.187Z] Migrating table: payment_details
+[2026-02-28T16:03:23.197Z]   Found 1 rows to migrate
+[2026-02-28T16:03:23.245Z]   ✗ Error inserting row into payment_details: column "detailid" of relation "payment_details" does not exist
+[2026-02-28T16:03:23.245Z]   Progress: 1/1 rows processed
+[2026-02-28T16:03:23.245Z]   ✓ Migrated 0 rows from payment_details (1 errors)
+[2026-02-28T16:03:23.245Z] Migrating table: payment_request_approvals
+[2026-02-28T16:03:23.249Z]   Table payment_request_approvals is empty, skipping data migration
+[2026-02-28T16:03:23.249Z] Migrating table: payment_request_documents
+[2026-02-28T16:03:23.260Z]   Found 13 rows to migrate
+[2026-02-28T16:03:23.334Z]   ✗ Error inserting row into payment_request_documents: column "requestid" of relation "payment_request_documents" does not exist
+[2026-02-28T16:03:23.378Z]   ✗ Error inserting row into payment_request_documents: column "requestid" of relation "payment_request_documents" does not exist
+[2026-02-28T16:03:23.427Z]   ✗ Error inserting row into payment_request_documents: column "requestid" of relation "payment_request_documents" does not exist
+[2026-02-28T16:03:23.492Z]   ✗ Error inserting row into payment_request_documents: column "requestid" of relation "payment_request_documents" does not exist
+[2026-02-28T16:03:23.576Z]   ✗ Error inserting row into payment_request_documents: column "requestid" of relation "payment_request_documents" does not exist
+[2026-02-28T16:03:23.648Z]   ✗ Error inserting row into payment_request_documents: column "requestid" of relation "payment_request_documents" does not exist
+[2026-02-28T16:03:23.712Z]   ✗ Error inserting row into payment_request_documents: column "requestid" of relation "payment_request_documents" does not exist
+[2026-02-28T16:03:23.784Z]   ✗ Error inserting row into payment_request_documents: column "requestid" of relation "payment_request_documents" does not exist
+[2026-02-28T16:03:23.847Z]   ✗ Error inserting row into payment_request_documents: column "requestid" of relation "payment_request_documents" does not exist
+[2026-02-28T16:03:23.907Z]   ✗ Error inserting row into payment_request_documents: column "requestid" of relation "payment_request_documents" does not exist
+[2026-02-28T16:03:23.956Z]   ✗ Error inserting row into payment_request_documents: column "requestid" of relation "payment_request_documents" does not exist
+[2026-02-28T16:03:24.007Z]   ✗ Error inserting row into payment_request_documents: column "requestid" of relation "payment_request_documents" does not exist
+[2026-02-28T16:03:24.069Z]   ✗ Error inserting row into payment_request_documents: column "requestid" of relation "payment_request_documents" does not exist
+[2026-02-28T16:03:24.076Z]   Progress: 13/13 rows processed
+[2026-02-28T16:03:24.076Z]   ✓ Migrated 0 rows from payment_request_documents (13 errors)
+[2026-02-28T16:03:24.076Z] Migrating table: payment_request_milestones
+[2026-02-28T16:03:24.090Z]   Table payment_request_milestones is empty, skipping data migration
+[2026-02-28T16:03:24.090Z] Migrating table: payment_status_definitions
+[2026-02-28T16:03:24.104Z]   Found 8 rows to migrate
+[2026-02-28T16:03:24.190Z]   ✗ Error inserting row into payment_status_definitions: column "statusid" of relation "payment_status_definitions" does not exist
+[2026-02-28T16:03:24.249Z]   ✗ Error inserting row into payment_status_definitions: column "statusid" of relation "payment_status_definitions" does not exist
+[2026-02-28T16:03:24.296Z]   ✗ Error inserting row into payment_status_definitions: column "statusid" of relation "payment_status_definitions" does not exist
+[2026-02-28T16:03:24.347Z]   ✗ Error inserting row into payment_status_definitions: column "statusid" of relation "payment_status_definitions" does not exist
+[2026-02-28T16:03:24.399Z]   ✗ Error inserting row into payment_status_definitions: column "statusid" of relation "payment_status_definitions" does not exist
+[2026-02-28T16:03:24.461Z]   ✗ Error inserting row into payment_status_definitions: column "statusid" of relation "payment_status_definitions" does not exist
+[2026-02-28T16:03:24.508Z]   ✗ Error inserting row into payment_status_definitions: column "statusid" of relation "payment_status_definitions" does not exist
+[2026-02-28T16:03:24.545Z]   ✗ Error inserting row into payment_status_definitions: column "statusid" of relation "payment_status_definitions" does not exist
+[2026-02-28T16:03:24.546Z]   Progress: 8/8 rows processed
+[2026-02-28T16:03:24.546Z]   ✓ Migrated 0 rows from payment_status_definitions (8 errors)
+[2026-02-28T16:03:24.546Z] Migrating table: planningdocuments
+[2026-02-28T16:03:24.558Z]   Found 4 rows to migrate
+[2026-02-28T16:03:24.619Z]   ⚠ Table planningdocuments does not exist in PostgreSQL, skipping
+[2026-02-28T16:03:24.619Z] Migrating table: privileges
+[2026-02-28T16:03:24.631Z]   Found 282 rows to migrate
+[2026-02-28T16:03:24.640Z]   ⚠ Table privileges does not exist in PostgreSQL, skipping
+[2026-02-28T16:03:24.640Z] Migrating table: programs
+[2026-02-28T16:03:24.652Z]   Found 48 rows to migrate
+[2026-02-28T16:03:24.656Z]   ⚠ Table programs does not exist in PostgreSQL, skipping
+[2026-02-28T16:03:24.657Z] Migrating table: project_announcements
+[2026-02-28T16:03:24.678Z]   Table project_announcements is empty, skipping data migration
+[2026-02-28T16:03:24.679Z] Migrating table: project_assignments
+[2026-02-28T16:03:24.692Z]   Table project_assignments is empty, skipping data migration
+[2026-02-28T16:03:24.692Z] Migrating table: project_climate_risk
+[2026-02-28T16:03:24.712Z]   Found 2 rows to migrate
+[2026-02-28T16:03:24.717Z]   ⚠ Table project_climate_risk does not exist in PostgreSQL, skipping
+[2026-02-28T16:03:24.717Z] Migrating table: project_concept_notes
+[2026-02-28T16:03:24.729Z]   Found 4 rows to migrate
+[2026-02-28T16:03:24.739Z]   ⚠ Table project_concept_notes does not exist in PostgreSQL, skipping
+[2026-02-28T16:03:24.739Z] Migrating table: project_contractor_assignments
+[2026-02-28T16:03:24.750Z]   Found 50 rows to migrate
+[2026-02-28T16:03:24.753Z]   ⚠ Table project_contractor_assignments does not exist in PostgreSQL, skipping
+[2026-02-28T16:03:24.753Z] Migrating table: project_counties
+[2026-02-28T16:03:24.765Z]   Found 48 rows to migrate
+[2026-02-28T16:03:24.774Z]   ⚠ Table project_counties does not exist in PostgreSQL, skipping
+[2026-02-28T16:03:24.775Z] Migrating table: project_documents
+[2026-02-28T16:03:24.786Z]   Found 15 rows to migrate
+[2026-02-28T16:03:24.789Z]   ⚠ Table project_documents does not exist in PostgreSQL, skipping
+[2026-02-28T16:03:24.789Z] Migrating table: project_esohsg_screening
+[2026-02-28T16:03:24.811Z]   Found 1 rows to migrate
+[2026-02-28T16:03:24.823Z]   ⚠ Table project_esohsg_screening does not exist in PostgreSQL, skipping
+[2026-02-28T16:03:24.823Z] Migrating table: project_financials
+[2026-02-28T16:03:24.835Z]   Found 4 rows to migrate
+[2026-02-28T16:03:24.837Z]   ⚠ Table project_financials does not exist in PostgreSQL, skipping
+[2026-02-28T16:03:24.837Z] Migrating table: project_fy_breakdown
+[2026-02-28T16:03:24.848Z]   Found 5 rows to migrate
+[2026-02-28T16:03:24.860Z]   ⚠ Table project_fy_breakdown does not exist in PostgreSQL, skipping
+[2026-02-28T16:03:24.860Z] Migrating table: project_hazard_assessment
+[2026-02-28T16:03:24.865Z]   Found 2 rows to migrate
+[2026-02-28T16:03:24.874Z]   ⚠ Table project_hazard_assessment does not exist in PostgreSQL, skipping
+[2026-02-28T16:03:24.874Z] Migrating table: project_implementation_plan
+[2026-02-28T16:03:24.885Z]   Found 3 rows to migrate
+[2026-02-28T16:03:24.888Z]   ⚠ Table project_implementation_plan does not exist in PostgreSQL, skipping
+[2026-02-28T16:03:24.888Z] Migrating table: project_m_and_e
+[2026-02-28T16:03:24.899Z]   Found 3 rows to migrate
+[2026-02-28T16:03:24.908Z]   ⚠ Table project_m_and_e does not exist in PostgreSQL, skipping
+[2026-02-28T16:03:24.908Z] Migrating table: project_maps
+[2026-02-28T16:03:24.914Z]   Found 32 rows to migrate
+[2026-02-28T16:03:24.923Z]   ⚠ Table project_maps does not exist in PostgreSQL, skipping
+[2026-02-28T16:03:24.924Z] Migrating table: project_milestone_implementations
+[2026-02-28T16:03:24.945Z]   Found 11 rows to migrate
+[2026-02-28T16:03:24.950Z]   ⚠ Table project_milestone_implementations does not exist in PostgreSQL, skipping
+[2026-02-28T16:03:24.950Z] Migrating table: project_milestones
+[2026-02-28T16:03:24.972Z]   Found 66 rows to migrate
+[2026-02-28T16:03:24.983Z]   ⚠ Table project_milestones does not exist in PostgreSQL, skipping
+[2026-02-28T16:03:24.983Z] Migrating table: project_monitoring_records
+[2026-02-28T16:03:24.996Z]   Found 8 rows to migrate
+[2026-02-28T16:03:24.999Z]   ⚠ Table project_monitoring_records does not exist in PostgreSQL, skipping
+[2026-02-28T16:03:24.999Z] Migrating table: project_needs_assessment
+[2026-02-28T16:03:25.010Z]   Found 4 rows to migrate
+[2026-02-28T16:03:25.019Z]   ⚠ Table project_needs_assessment does not exist in PostgreSQL, skipping
+[2026-02-28T16:03:25.019Z] Migrating table: project_payment_requests
+[2026-02-28T16:03:25.023Z]   Found 2 rows to migrate
+[2026-02-28T16:03:25.032Z]   ⚠ Table project_payment_requests does not exist in PostgreSQL, skipping
+[2026-02-28T16:03:25.032Z] Migrating table: project_photos
+[2026-02-28T16:03:25.044Z]   Found 8 rows to migrate
+[2026-02-28T16:03:25.047Z]   ⚠ Table project_photos does not exist in PostgreSQL, skipping
+[2026-02-28T16:03:25.047Z] Migrating table: project_readiness
+[2026-02-28T16:03:25.061Z]   Found 3 rows to migrate
+[2026-02-28T16:03:25.072Z]   ⚠ Table project_readiness does not exist in PostgreSQL, skipping
+[2026-02-28T16:03:25.072Z] Migrating table: project_risks
+[2026-02-28T16:03:25.085Z]   Found 2 rows to migrate
+[2026-02-28T16:03:25.096Z]   ⚠ Table project_risks does not exist in PostgreSQL, skipping
+[2026-02-28T16:03:25.096Z] Migrating table: project_roles
+[2026-02-28T16:03:25.117Z]   Found 27 rows to migrate
+[2026-02-28T16:03:25.121Z]   ⚠ Table project_roles does not exist in PostgreSQL, skipping
+[2026-02-28T16:03:25.121Z] Migrating table: project_staff_assignments
+[2026-02-28T16:03:25.143Z]   Table project_staff_assignments is empty, skipping data migration
+[2026-02-28T16:03:25.143Z] Migrating table: project_stages
+[2026-02-28T16:03:25.154Z]   Found 4 rows to migrate
+[2026-02-28T16:03:25.156Z]   ⚠ Table project_stages does not exist in PostgreSQL, skipping
+[2026-02-28T16:03:25.157Z] Migrating table: project_stakeholders
+[2026-02-28T16:03:25.180Z]   Found 3 rows to migrate
+[2026-02-28T16:03:25.190Z]   ⚠ Table project_stakeholders does not exist in PostgreSQL, skipping
+[2026-02-28T16:03:25.190Z] Migrating table: project_subcounties
+[2026-02-28T16:03:25.215Z]   Found 35 rows to migrate
+[2026-02-28T16:03:25.219Z]   ⚠ Table project_subcounties does not exist in PostgreSQL, skipping
+[2026-02-28T16:03:25.219Z] Migrating table: project_sustainability
+[2026-02-28T16:03:25.231Z]   Found 3 rows to migrate
+[2026-02-28T16:03:25.241Z]   ⚠ Table project_sustainability does not exist in PostgreSQL, skipping
+[2026-02-28T16:03:25.241Z] Migrating table: project_wards
+[2026-02-28T16:03:25.254Z]   Found 20 rows to migrate
+[2026-02-28T16:03:25.278Z]   ⚠ Table project_wards does not exist in PostgreSQL, skipping
+[2026-02-28T16:03:25.279Z] Migrating table: project_workflow_steps
+[2026-02-28T16:03:25.300Z]   Found 3 rows to migrate
+[2026-02-28T16:03:25.305Z]   ⚠ Table project_workflow_steps does not exist in PostgreSQL, skipping
+[2026-02-28T16:03:25.305Z] Migrating table: project_workflows
+[2026-02-28T16:03:25.329Z]   Found 1 rows to migrate
+[2026-02-28T16:03:25.339Z]   ⚠ Table project_workflows does not exist in PostgreSQL, skipping
+[2026-02-28T16:03:25.339Z] Migrating table: projectfeedback
+[2026-02-28T16:03:25.364Z]   Found 10 rows to migrate
+[2026-02-28T16:03:25.375Z]   ⚠ Table projectfeedback does not exist in PostgreSQL, skipping
+[2026-02-28T16:03:25.376Z] Migrating table: projects
+[2026-02-28T16:03:25.389Z]   Found 72 rows to migrate
+[2026-02-28T16:03:25.400Z]   ⚠ Table projects does not exist in PostgreSQL, skipping
+[2026-02-28T16:03:25.400Z] Migrating table: public_feedback
+[2026-02-28T16:03:25.413Z]   Table public_feedback is empty, skipping data migration
+[2026-02-28T16:03:25.413Z] Migrating table: public_holidays
+[2026-02-28T16:03:25.424Z]   Found 11 rows to migrate
+[2026-02-28T16:03:25.427Z]   ⚠ Table public_holidays does not exist in PostgreSQL, skipping
+[2026-02-28T16:03:25.427Z] Migrating table: role_dashboard_config
+[2026-02-28T16:03:25.437Z]   Table role_dashboard_config is empty, skipping data migration
+[2026-02-28T16:03:25.438Z] Migrating table: role_dashboard_permissions
+[2026-02-28T16:03:25.449Z]   Table role_dashboard_permissions is empty, skipping data migration
+[2026-02-28T16:03:25.449Z] Migrating table: role_privileges
+[2026-02-28T16:03:25.452Z]   Found 323 rows to migrate
+[2026-02-28T16:03:25.460Z]   ⚠ Table role_privileges does not exist in PostgreSQL, skipping
+[2026-02-28T16:03:25.461Z] Migrating table: roles
+[2026-02-28T16:03:25.464Z]   Found 8 rows to migrate
+[2026-02-28T16:03:25.473Z]   ⚠ Table roles does not exist in PostgreSQL, skipping
+[2026-02-28T16:03:25.473Z] Migrating table: sections
+[2026-02-28T16:03:25.485Z]   Found 43 rows to migrate
+[2026-02-28T16:03:25.488Z]   ⚠ Table sections does not exist in PostgreSQL, skipping
+[2026-02-28T16:03:25.488Z] Migrating table: staff
+[2026-02-28T16:03:25.499Z]   Found 44 rows to migrate
+[2026-02-28T16:03:25.502Z]   ⚠ Table staff does not exist in PostgreSQL, skipping
+[2026-02-28T16:03:25.508Z] Migrating table: strategicplans
+[2026-02-28T16:03:25.514Z]   Found 34 rows to migrate
+[2026-02-28T16:03:25.523Z]   ⚠ Table strategicplans does not exist in PostgreSQL, skipping
+[2026-02-28T16:03:25.523Z] Migrating table: studyparticipants
+[2026-02-28T16:03:25.545Z]   Found 895 rows to migrate
+[2026-02-28T16:03:25.548Z]   ⚠ Table studyparticipants does not exist in PostgreSQL, skipping
+[2026-02-28T16:03:25.549Z] Migrating table: subcounties
+[2026-02-28T16:03:25.561Z]   Found 5 rows to migrate
+[2026-02-28T16:03:25.570Z]   ⚠ Table subcounties does not exist in PostgreSQL, skipping
+[2026-02-28T16:03:25.570Z] Migrating table: subprograms
+[2026-02-28T16:03:25.585Z]   Found 73 rows to migrate
+[2026-02-28T16:03:25.595Z]   ⚠ Table subprograms does not exist in PostgreSQL, skipping
+[2026-02-28T16:03:25.595Z] Migrating table: user_dashboard_preferences
+[2026-02-28T16:03:25.606Z]   Table user_dashboard_preferences is empty, skipping data migration
+[2026-02-28T16:03:25.606Z] Migrating table: user_data_filters
+[2026-02-28T16:03:25.611Z]   Table user_data_filters is empty, skipping data migration
+[2026-02-28T16:03:25.611Z] Migrating table: user_department_assignments
+[2026-02-28T16:03:25.621Z]   Table user_department_assignments is empty, skipping data migration
+[2026-02-28T16:03:25.622Z] Migrating table: user_project_assignments
+[2026-02-28T16:03:25.632Z]   Table user_project_assignments is empty, skipping data migration
+[2026-02-28T16:03:25.632Z] Migrating table: user_ward_assignments
+[2026-02-28T16:03:25.643Z]   Table user_ward_assignments is empty, skipping data migration
+[2026-02-28T16:03:25.643Z] Migrating table: users
+[2026-02-28T16:03:25.648Z]   Found 30 rows to migrate
+[2026-02-28T16:03:25.657Z]   ⚠ Table users does not exist in PostgreSQL, skipping
+[2026-02-28T16:03:25.658Z] Migrating table: wards
+[2026-02-28T16:03:25.668Z]   Found 4 rows to migrate
+[2026-02-28T16:03:25.670Z]   ⚠ Table wards does not exist in PostgreSQL, skipping
+[2026-02-28T16:03:25.670Z] 
+=== Migration Summary ===
+[2026-02-28T16:03:25.671Z] Total tables processed: 117
+[2026-02-28T16:03:25.671Z] Total rows migrated: 0
+[2026-02-28T16:03:25.671Z] Total errors: 440
+[2026-02-28T16:03:25.671Z] Skipped tables: 44
+[2026-02-28T16:03:25.671Z] 
+⚠ Some errors occurred during migration. Please review the log.

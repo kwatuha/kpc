@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KIMES — KEMRI Integrated Monitoring &amp; Evaluation System</title>
+    
+    <!-- Performance: Preconnect to external domains -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+    
+    <!-- Google Fonts: Inter (for overall app consistency) -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Fallback fonts for offline use -->
+    <style>
+      /* Fallback fonts that work offline */
+      @font-face {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+        src: local('Inter Regular'), local('Inter-Regular'), 
+             local('Arial'), local('Helvetica'), local('sans-serif');
+      }
+      @font-face {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 600;
+        font-display: swap;
+        src: local('Inter SemiBold'), local('Inter-SemiBold'), 
+             local('Arial Bold'), local('Helvetica Bold'), local('sans-serif');
+      }
+      @font-face {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 700;
+        font-display: swap;
+        src: local('Inter Bold'), local('Inter-Bold'), 
+             local('Arial Bold'), local('Helvetica Bold'), local('sans-serif');
+      }
+    </style>
+
+    
+    <!-- Frappe Gantt CSS (Load async) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/frappe-gantt@0.6.0/dist/frappe-gantt.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/frappe-gantt@0.6.0/dist/frappe-gantt.css"></noscript>
+    
+  </head>
+  <body>
+    <div id="root"></div>
+    <!-- Frappe Gantt JS (Load async, non-blocking) -->
+    <script src="https://cdn.jsdelivr.net/npm/frappe-gantt@0.6.0/dist/frappe-gantt.min.js" defer></script>
+    <!-- Main app bundle -->
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

@@ -1,0 +1,168 @@
+# POST http://165.22.227.234:5000/api/projects HTTP/1.1
+# content-type: application/json
+#  x-auth-token:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoyLCJ1c2VybmFtZSI6ImFrd2F0dWhhIiwiZW1haWwiOiJrd2F0dWhhQGdtYWlsLmNvbSIsInJvbGUiOiJiYXNpY191c2VyIn0sImlhdCI6MTc1MjYwNzc1MiwiZXhwIjoxNzUyNjExMzUyfQ.kb36eEfNPY2jSjfHbxr09bssjfDUUW99WexsdK8NdP8
+
+# {
+#     "project_name": "KEMRI Dengue Fever Study 2025",
+#     "project_description": "Investigating prevalence and vector control strategies for Dengue Fever in Coastal region.",
+#     "start_date": "2025-08-01",
+#     "end_date": "2026-07-31",
+#     "directorate": "Virology",
+#     "location_counties": "Mombasa, Kilifi",
+#     "cost_of_project": "750000.00",
+#     "objective": "Reduce Dengue incidence by 20% in study areas.",
+#     "expected_output": "Report on vector control effectiveness.",
+#     "principal_investigator": "Dr. Ben Mwangi",
+#     "status": "Not Started"
+    
+# }
+
+
+#  DELETE http://165.22.227.234:5000/api/projects/21
+#  GET http://165.22.227.234:5000/api/projects/21
+
+# POST http://165.22.227.234:5000/api/projects/1/tasks HTTP/1.1
+# content-type: application/json
+#  x-auth-token:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoyLCJ1c2VybmFtZSI6ImFrd2F0dWhhIiwiZW1haWwiOiJrd2F0dWhhQGdtYWlsLmNvbSIsInJvbGUiOiJiYXNpY191c2VyIn0sImlhdCI6MTc1MjYwNzc1MiwiZXhwIjoxNzUyNjExMzUyfQ.kb36eEfNPY2jSjfHbxr09bssjfDUUW99WexsdK8NdP8
+
+# {
+#     "task_name": "Data Collection Phase",
+#     "task_description": "Collect samples from all target counties.",
+#     "start_date": "2025-08-15",
+#     "end_date": "2025-09-30",
+#     "status": "Not Started",
+#     "progress_percentage": 0
+# }
+
+# get http://165.22.227.234:5000/api/projects/1/tasks
+# # content-type: application/json
+#  x-auth-token:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoyLCJ1c2VybmFtZSI6ImFrd2F0dWhhIiwiZW1haWwiOiJrd2F0dWhhQGdtYWlsLmNvbSIsInJvbGUiOiJiYXNpY191c2VyIn0sImlhdCI6MTc1MjYwNzc1MiwiZXhwIjoxNzUyNjExMzUyfQ.kb36eEfNPY2jSjfHbxr09bssjfDUUW99WexsdK8NdP8
+
+# PUT http://165.22.227.234:5000/api/tasks/1
+# content-type: application/json
+# x-auth-token:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoyLCJ1c2VybmFtZSI6ImFrd2F0dWhhIiwiZW1haWwiOiJrd2F0dWhhQGdtYWlsLmNvbSIsInJvbGUiOiJiYXNpY191c2VyIn0sImlhdCI6MTc1MjYwNzc1MiwiZXhwIjoxNzUyNjExMzUyfQ.kb36eEfNPY2jSjfHbxr09bssjfDUUW99WexsdK8NdP8
+
+# {
+#     "task_name": "Data Collection Phase (Updated)",
+#     "task_description": "Collect samples from all target counties, including new sites.",
+#     "start_date": "2025-08-15",
+#     "end_date": "2025-10-15",
+#     "status": "In Progress",
+#     "progress_percentage": 25
+# }
+# # http://165.22.227.234:5000/api/tasks/[YOUR_TASK_ID]/assignees
+# POST http://165.22.227.234:5000/api/tasks/1/assignees
+# Content-Type: application/json
+# X-Auth-Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoyLCJ1c2VybmFtZSI6ImFrd2F0dWhhIiwiZW1haWwiOiJrd2F0dWhhQGdtYWlsLmNvbSIsInJvbGUiOiJiYXNpY191c2VyIn0sImlhdCI6MTc1MjYwNzc1MiwiZXhwIjoxNzUyNjExMzUyfQ.kb36eEfNPY2jSjfHbxr09bssjfDUUW99WexsdK8NdP8
+                                         
+
+# {
+#     "staffIds": [1, 2]
+# }
+
+
+# POST http://165.22.227.234:5000/api/projects/1/tasks HTTP/1.1
+# content-type: application/json
+#  x-auth-token:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoyLCJ1c2VybmFtZSI6ImFrd2F0dWhhIiwiZW1haWwiOiJrd2F0dWhhQGdtYWlsLmNvbSIsInJvbGUiOiJiYXNpY191c2VyIn0sImlhdCI6MTc1MjYwNzc1MiwiZXhwIjoxNzUyNjExMzUyfQ.kb36eEfNPY2jSjfHbxr09bssjfDUUW99WexsdK8NdP8
+
+# {
+#     "task_name": "Environmental assessments",
+#     "task_description": " Perform environmental assessments.",
+#     "start_date": "2025-03-15",
+#     "end_date": "2025-04-30",
+#     "status": "Completed",
+#     "progress_percentage": 0
+# }
+
+
+# POST http://165.22.227.234:5000/api/projects/1/tasks HTTP/1.1
+# content-type: application/json
+#  x-auth-token:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoyLCJ1c2VybmFtZSI6ImFrd2F0dWhhIiwiZW1haWwiOiJrd2F0dWhhQGdtYWlsLmNvbSIsInJvbGUiOiJiYXNpY191c2VyIn0sImlhdCI6MTc1MjYwNzc1MiwiZXhwIjoxNzUyNjExMzUyfQ.kb36eEfNPY2jSjfHbxr09bssjfDUUW99WexsdK8NdP8
+
+# {
+#     "task_name": "Community health surveys",
+#     "task_description": "Implement community health surveys.",
+#     "start_date": "2025-05-15",
+#     "end_date": "2025-06-30",
+#     "status": "Completed",
+#     "progress_percentage": 0
+# }
+
+
+
+# POST http://165.22.227.234:5000/api/projects/1/tasks HTTP/1.1
+# content-type: application/json
+#  x-auth-token:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoyLCJ1c2VybmFtZSI6ImFrd2F0dWhhIiwiZW1haWwiOiJrd2F0dWhhQGdtYWlsLmNvbSIsInJvbGUiOiJiYXNpY191c2VyIn0sImlhdCI6MTc1MjYwNzc1MiwiZXhwIjoxNzUyNjExMzUyfQ.kb36eEfNPY2jSjfHbxr09bssjfDUUW99WexsdK8NdP8
+
+# {
+#     "task_name": "Water source sampling",
+#     "task_description": "Collect water source samples.",
+#     "start_date": "2025-05-15",
+#     "end_date": "2025-06-30",
+#     "status": "Completed",
+#     "progress_percentage": 0
+# }
+
+# POST http://165.22.227.234:5000/api/login HTTP/1.1
+# content-type: application/json
+
+# {
+    
+#      "username": "akwatuha",
+#     "password": "reset123"
+# }
+
+# POST http://165.22.227.234:5000/api/projects/1/tasks HTTP/1.1
+# content-type: application/json
+#  x-auth-token:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoyLCJ1c2VybmFtZSI6ImFrd2F0dWhhIiwiZW1haWwiOiJrd2F0dWhhQGdtYWlsLmNvbSIsInJvbGUiOiJiYXNpY191c2VyIn0sImlhdCI6MTc1MjYxMTQ4MywiZXhwIjoxNzUyNjE1MDgzfQ.pImjoehAqmGR0Y8VUBH3iCc7ZKkh6iwwcmsPEDwYkqU
+
+# {
+#     "task_name": "Assessment of Vector breeding sites",
+#     "task_description": "Assess vector breeding sites.",
+#     "start_date": "2025-06-15",
+#     "end_date": "2025-08-30",
+#     "status": "In Progress",
+#     "progress_percentage": 0
+# }
+
+
+
+
+# POST http://165.22.227.234:5000/api/tasks/4/dependencies HTTP/1.1
+# content-type: application/json
+#  x-auth-token:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoyLCJ1c2VybmFtZSI6ImFrd2F0dWhhIiwiZW1haWwiOiJrd2F0dWhhQGdtYWlsLmNvbSIsInJvbGUiOiJiYXNpY191c2VyIn0sImlhdCI6MTc1MjYxMTQ4MywiZXhwIjoxNzUyNjE1MDgzfQ.pImjoehAqmGR0Y8VUBH3iCc7ZKkh6iwwcmsPEDwYkqU
+
+# {
+#     "dependsOnTaskId": 3 
+# }
+
+
+
+# http://165.22.227.234:5000/api/tasks/2/dependencies
+#   x-auth-token:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoyLCJ1c2VybmFtZSI6ImFrd2F0dWhhIiwiZW1haWwiOiJrd2F0dWhhQGdtYWlsLmNvbSIsInJvbGUiOiJiYXNpY191c2VyIn0sImlhdCI6MTc1MjYxMTQ4MywiZXhwIjoxNzUyNjE1MDgzfQ.pImjoehAqmGR0Y8VUBH3iCc7ZKkh6iwwcmsPEDwYkqU
+
+
+
+# POST http://165.22.227.234:5000/api/projects/1/milestones HTTP/1.1
+# content-type: application/json
+#  x-auth-token:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoyLCJ1c2VybmFtZSI6ImFrd2F0dWhhIiwiZW1haWwiOiJrd2F0dWhhQGdtYWlsLmNvbSIsInJvbGUiOiJiYXNpY191c2VyIn0sImlhdCI6MTc1MjYxMTQ4MywiZXhwIjoxNzUyNjE1MDgzfQ.pImjoehAqmGR0Y8VUBH3iCc7ZKkh6iwwcmsPEDwYkqU
+
+# {
+#     "milestone_name": "Phase 1 Report Submission",
+#     "milestone_description": "Submission of initial research findings and data analysis.",
+#     "due_date": "2026-01-31",
+#     "completed": false
+    
+# }
+
+PUT http://165.22.227.234:5000/api/milestones/1 HTTP/1.1
+content-type: application/json
+ x-auth-token:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoyLCJ1c2VybmFtZSI6ImFrd2F0dWhhIiwiZW1haWwiOiJrd2F0dWhhQGdtYWlsLmNvbSIsInJvbGUiOiJiYXNpY191c2VyIn0sImlhdCI6MTc1MjYxMTQ4MywiZXhwIjoxNzUyNjE1MDgzfQ.pImjoehAqmGR0Y8VUBH3iCc7ZKkh6iwwcmsPEDwYkqU
+
+{
+    "milestone_name": "Phase 1 Report Approved",
+    "milestone_description": "Final approval received for Phase 1 report.",
+    "due_date": "2025-07-30",
+    "completed": true,
+    "completed_date": "2025-06-25" 
+}

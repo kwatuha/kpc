@@ -1,0 +1,11 @@
+-- Refresh Needs Identification templates (matches api getDefaultNeedsIdentificationFields).
+-- Updates ALL active rows for this stage (any subject_type) so the UI/template manager doesn't keep older generic templates.
+BEGIN;
+
+UPDATE procurement_stage_templates
+SET fields = '[{"key":"needProblemEvidence","label":"Need / problem statement documented (baseline, gap, or service demand)","type":"checkbox","required":true,"weight":18},{"key":"alignmentStrategicPlans","label":"Alignment with ADP / CIDP, sector programme & county development priorities","type":"checkbox","required":true,"weight":18},{"key":"scopeObjectivesOutputs","label":"Scope, objectives & expected outputs/deliverables defined (incl. exclusions)","type":"checkbox","required":true,"weight":18},{"key":"beneficiariesAccountability","label":"Beneficiaries / user unit & accountable department / ward identified","type":"checkbox","required":true,"weight":14},{"key":"siteLocationReadiness","label":"Location / site or logistics constraints known (land, access, utilities)","type":"checkbox","required":true,"weight":12},{"key":"indicativeCostFunding","label":"Indicative cost class, budget head & funding source contour (vote / donor / partner)","type":"checkbox","required":true,"weight":16},{"key":"timelineMilestones","label":"Implementation timeline & critical milestones / dependencies outlined","type":"checkbox","required":true,"weight":12},{"key":"procurementMethodPPDA","label":"Likely PPDA procurement method & threshold class pre-identified","type":"checkbox","required":true,"weight":14},{"key":"stakeholderEngagement","label":"Relevant stakeholders engaged; technical owner / sponsor recorded","type":"checkbox","required":true,"weight":12},{"key":"risksAlternatives","label":"Material risks, mitigations & alternatives (in-house, lease, PPP) considered","type":"checkbox","required":false,"weight":10},{"key":"esgGenderSafetyScreen","label":"Preliminary environmental, social, gender & safety impacts screened","type":"checkbox","required":false,"weight":10},{"key":"notes","label":"Needs identification notes & references","type":"textarea","required":false,"weight":0}]'::jsonb,
+    updated_at = NOW()
+WHERE COALESCE(voided, false) = false
+  AND LOWER(TRIM(stage)) = LOWER(TRIM('Needs Identification'));
+
+COMMIT;

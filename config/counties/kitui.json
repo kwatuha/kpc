@@ -1,0 +1,60 @@
+{
+  "county": {
+    "code": "KIT",
+    "name": "Kitui",
+    "displayName": "Kitui County Government"
+  },
+  "database": {
+    "name": "kitui_db",
+    "seedFile": "kitui_complete_setup.sql"
+  },
+  "docker": {
+    "ports": {
+      "nginx": 8081,
+      "frontend": 5176,
+      "publicDashboard": 5177,
+      "api": 3001,
+      "mysql": 3308
+    },
+    "containers": {
+      "nginx": "kitui_nginx_proxy",
+      "frontend": "kitui_react_frontend",
+      "publicDashboard": "kitui_public_dashboard",
+      "api": "kitui_node_api",
+      "mysql": "kitui_db"
+    },
+    "volumes": {
+      "mysql": "kitui_db_data"
+    }
+  },
+  "organization": {
+    "name": "Kitui County Government",
+    "contact": {
+      "email": "info@kitui.go.ke",
+      "phone": "+254-044-2290000",
+      "address": "Kitui County Headquarters, Kitui",
+      "website": "https://www.kitui.go.ke"
+    }
+  },
+  "labels": {
+    "department": "Department",
+    "section": "Section",
+    "directorate": "Directorate",
+    "project": "Project",
+    "subcounty": "Sub-County",
+    "ward": "Ward",
+    "program": "Program",
+    "subprogram": "Sub-Program"
+  },
+  "features": {
+    "departments": true,
+    "sections": true,
+    "directorates": true,
+    "projects": true,
+    "subcounties": true,
+    "wards": true,
+    "programs": true,
+    "subprograms": true
+  }
+}
+

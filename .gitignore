@@ -1,0 +1,193 @@
+# Local / environment-specific deployment notes (may reference real hosts)
+DEPLOYMENT_GUIDE.html
+diagnose_projects.sh
+
+# Local copy of live server nginx site (from scripts/sync-remote-nginx-gprs.sh pull)
+nginx/gprs.sites-available.working
+
+# Environment variables
+.env
+.env.local
+api/.env.remote
+.envGov
+.env.development
+.env.production
+.env.test
+.env.*.local
+*.env
+# Real deploy secrets on the server / local — keep scripts and .env.deploy.example in git
+deploy/.env.deploy
+deploy/.env.deploy.db
+scripts/deploy-procurement-workflow.sh
+scripts/export-procurement-and-rbac-pg.sh
+
+
+
+
+# Dependencies
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+yarn.lock
+
+# Build outputs
+dist/
+build/
+.next/
+out/
+*.log
+
+# Generated GIS bundles — regenerated from api.iebc/ via
+# `node scripts/build_kenya_gis_bundles.mjs`. Saves ~70 MB in the repo.
+frontend/public/gis/kenya/
+
+# IDE and editors
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+*.sublime-project
+*.sublime-workspace
+
+# OS files
+Thumbs.db
+.DS_Store
+.directory
+
+# Database
+*.sql
+*.db
+*.sqlite
+*.sqlite3
+db_data/
+uploads/
+*.dump
+
+# ...but DO track schema migrations and seed SQL that the app needs at install
+# time. Real DB dumps live in api/dump/, db_backups/, remote_119db/, etc.
+!api/migrations/
+!api/migrations/**/*.sql
+!api/scripts/
+!api/scripts/**/*.sql
+!scripts/sql/
+!scripts/sql/**/*.sql
+!scripts/migration/
+!scripts/migration/**/*.sql
+# (api/dump, db_backups, remote_119db, .remote-dumps remain ignored — they
+#  contain real data exports with PII.)
+
+# Docker
+docker-compose.override.yml
+.dockerignore
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+
+# Testing
+coverage/
+.nyc_output/
+*.test.js.snap
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+*.temp
+/tmp/
+
+# Security sensitive files
+*.pem
+*.key
+*.p12
+*.pfx
+*.crt
+*.cer
+*secret*
+*password*
+*token*
+*.credentials
+id_rsa*
+id_ed25519*
+*.pub
+!public-keys/
+
+# Deployment scripts with passwords
+install-docker-remote.sh
+deployment*.log
+setup-ssh-key.sh
+
+# SSH keys
+.ssh/
+*.ssh
+
+# Backup files
+*.bak
+*.backup
+*.old
+*.orig
+
+# Migration and dump files
+scripts/migration/*.sql
+*.dump
+*.sql.gz
+
+# Cache
+.cache/
+.parcel-cache/
+.npm/
+.eslintcache
+
+# Optional npm cache directory
+.npm
+
+# Optional REPL history
+.node_repl_history
+
+# Output of 'npm pack'
+*.tgz
+
+# Yarn Integrity file
+.yarn-integrity
+
+# dotenv environment variable files
+.env.development.local
+.env.test.local
+.env.production.local
+.env.local
+
+# Vite
+.vite/
+
+# TypeScript
+*.tsbuildinfo
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+ENV/
+
+# Local configuration
+config/local.json
+config/local.js
+
+# Remote database dumps and exports
+remote_119db/
+
+# Bulk import data (may contain PII / password hashes); keep scripts only
+api/dump/**/*.csv
+api/dump/**/.~lock.*
+api/dump/.~lock.*

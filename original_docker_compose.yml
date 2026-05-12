@@ -1,0 +1,68 @@
+version: '3.8'
+
+services:
+  nginx_proxy:
+    image: nginx:alpine
+    container_name: nginx_proxy
+    ports:
+      - "80:80"
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf
+    depends_on:
+      - frontend
+      - api
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: react_frontend
+    ports:
+      - "5173:5173" # Use 5173 for both host and container to align with Vite dev server
+    volumes:
+      - ./frontend:/app # Mount the local frontend directory to /app in the container
+      - /app/node_modules # This is important to prevent the local node_modules from overwriting the container's version
+    depends_on:
+      - api
+    command: npm run dev # This command assumes a dev script is configured to use a watcher (like Vite's dev server)
+    environment:
+      # Use browser-resolvable path via Nginx (avoids DNS issues in the browser)
+      VITE_API_URL: /api
+
+  api:
+    build:
+      context: ./api
+      dockerfile: Dockerfile
+    container_name: node_api
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./api:/app # Mount the local api directory to /app in the container
+      - /app/node_modules # Exclude the local node_modules
+    depends_on:
+      - mysql_db
+    environment:
+      DB_HOST: mysql_db # Use the service name to connect to the database
+      DB_USER: ${MYSQL_USER:-impesUser}
+      DB_PASSWORD: ${MYSQL_PASSWORD:-postgres}
+      DB_NAME: imbesdb
+    command: npm run dev # Assuming a script to start the server with a watcher (like nodemon)
+
+  mysql_db:
+    image: mysql:8.0
+    container_name: db
+    restart: always
+    command: --default-authentication-plugin=mysql_native_password
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD:-postgres}
+      MYSQL_DATABASE: imbesdb
+      MYSQL_USER: ${MYSQL_USER:-impesUser}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD:-postgres}
+    volumes:
+      - ./api/init.sql:/docker-entrypoint-initdb.d/init.sql
+      - db_data:/var/lib/mysql
+    ports:
+      - "3306:3306"
+
+volumes:
+  db_data:
