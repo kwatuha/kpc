@@ -28,9 +28,9 @@ import DownloadIcon from '@mui/icons-material/Download';
 import EditOutlinedIcon from '@mui/icons-material/EditOutlined';
 import DeleteOutlineIcon from '@mui/icons-material/DeleteOutline';
 import InsertDriveFileIcon from '@mui/icons-material/InsertDriveFile';
-import apiService from '../api';
 import reportsService from '../api/reportsService';
-import { exportMEReportExcel, exportMESummaryPdf } from '../utils/meReportExports';
+import kemriService from '../api/kemriService';
+import { exportKemriStudiesExcel, exportKemriStudiesPdfSummary } from '../utils/kemriReportExports';
 
 const ACCEPT_UPLOAD =
   'application/pdf,.pdf,.doc,.docx,.xls,.xlsx,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document,application/vnd.ms-excel,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet';
@@ -74,21 +74,12 @@ export default function ReportLibraryPage() {
   const [editDescription, setEditDescription] = useState('');
   const [replaceFile, setReplaceFile] = useState(null);
 
-  const getCountyRows = useCallback(async () => {
-    try {
-      const data = await reportsService.getDetailedProjectList();
-      return Array.isArray(data) ? data : [];
-    } catch (primaryErr) {
-      // Fallback: if detailed-report endpoint is unavailable, use the project registry list.
-      const fallback = await apiService.projects.getProjects({ limit: 5000 });
-      const rows = Array.isArray(fallback?.projects)
-        ? fallback.projects
-        : Array.isArray(fallback)
-          ? fallback
-          : [];
-      if (!rows.length) throw primaryErr;
-      return rows;
-    }
+  // Fetch the live KEMRI research studies register (kemri_research_projects).
+  // Replaces the legacy Machakos "county detailed projects" endpoint used by
+  // the original M&E export — KEMRI has no sub-counties / wards / directorates.
+  const getStudyRows = useCallback(async () => {
+    const data = await kemriService.listProjects({});
+    return Array.isArray(data) ? data : [];
   }, []);
 
   const loadUploadedReports = useCallback(async () => {
@@ -133,15 +124,23 @@ export default function ReportLibraryPage() {
 
   const handleDownloadExcel = () =>
     run(async () => {
-      const rows = await getCountyRows();
-      await exportMEReportExcel(rows);
-    }, 'Generating report...');
+      const rows = await getStudyRows();
+      if (!rows.length) {
+        window.alert('No KEMRI research studies are currently registered.');
+        return;
+      }
+      await exportKemriStudiesExcel(rows);
+    }, 'Building KEMRI research register...');
 
   const handleSummaryPdf = () =>
     run(async () => {
-      const rows = await getCountyRows();
-      exportMESummaryPdf(rows);
-    }, 'Generating report...');
+      const rows = await getStudyRows();
+      if (!rows.length) {
+        window.alert('No KEMRI research studies are currently registered.');
+        return;
+      }
+      exportKemriStudiesPdfSummary(rows);
+    }, 'Building KEMRI executive summary...');
 
   const openEdit = (row) => {
     setEditingId(row.id);
@@ -227,10 +226,11 @@ export default function ReportLibraryPage() {
     <Box sx={{ p: { xs: 2, md: 3 } }}>
       <Paper sx={{ p: { xs: 2, md: 3 } }}>
         <Typography variant="h5" sx={{ fontWeight: 700, mb: 0.5 }}>
-          Report Library
+          KEMRI Report Library
         </Typography>
         <Typography variant="body2" color="text.secondary" sx={{ mb: 2 }}>
-          Upload approved report files (PDF, Word, Excel) and make them available for download.
+          Generate the live KEMRI research-studies register (Excel) and executive summary (PDF), and
+          curate approved KEMRI report files (PDF / Word / Excel) for download.
         </Typography>
 
         {listError && <Alert severity="error" sx={{ mb: 2 }}>{listError}</Alert>}
@@ -244,10 +244,12 @@ export default function ReportLibraryPage() {
 
         <TabPanel value={tab} index={0}>
           <Typography variant="subtitle1" fontWeight={600} gutterBottom>
-            Monitoring &amp; evaluation (M&amp;E)
+            KEMRI Research Studies Register
           </Typography>
           <Typography variant="body2" color="text.secondary" sx={{ mb: 2 }}>
-            County-level export: project list workbook with summary/yearly/coverage sheets, and a printable summary PDF.
+            Built live from <code>kemri_research_projects</code>. The Excel workbook covers Studies,
+            Summary, Centres, Donors, Yearly and a SERU / NACOSTI compliance watchlist. The PDF is a
+            landscape executive summary suitable for board / DG briefings.
           </Typography>
           <Stack spacing={1.5} alignItems="flex-start" sx={{ mb: 3 }}>
             <Button
@@ -256,7 +258,7 @@ export default function ReportLibraryPage() {
               onClick={handleDownloadExcel}
               disabled={loading}
             >
-              Download project list & summaries (Excel)
+              Download research register (Excel)
             </Button>
             <Button
               variant="outlined"
@@ -264,7 +266,7 @@ export default function ReportLibraryPage() {
               onClick={handleSummaryPdf}
               disabled={loading}
             >
-              Download summary, yearly & coverage (PDF)
+              Download executive summary (PDF)
             </Button>
           </Stack>
           <Divider sx={{ mb: 2 }} />
