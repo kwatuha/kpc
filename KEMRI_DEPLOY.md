@@ -12,8 +12,14 @@ side-by-side without conflict:
 | Compose nginx (host)     |   `8084` |  **8184** |
 | Frontend container       |   `5178` |  **5278** |
 | Public-dashboard         |   `5179` |  **5279** |
-| API (Node, host network) |   `3002` |  **3102** |
+| API (Node, host network) |   `3002` |  **3102** local  /  **3110** server |
 | Postgres (shared native) | `127.0.0.1:5433` |  same — db `kemridb` |
+
+> **Why the API port differs server-side**: on this Pathways host, port 3102
+> is already held by an unrelated `kiplombe_frontend` container, so
+> `docker-compose.server.yml` and `nginx/nginx.server.conf` use **3110**.
+> Local dev (laptop) continues to use 3102 via `docker-compose.yml` and
+> `nginx/nginx.conf`.
 
 The KEMRI database is a **separate logical database** (`kemridb`) on the same
 native Postgres instance Machakos uses (PostgreSQL 16.9, listening on

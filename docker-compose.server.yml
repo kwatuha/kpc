@@ -5,7 +5,10 @@ services:
     restart: always
     network_mode: host
     volumes:
-      - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
+      # Server uses nginx.server.conf (proxies to API on port 3110 because
+      # 3102 is already taken on the Pathways host by an unrelated container).
+      # Local dev uses ./nginx/nginx.conf via docker-compose.yml.
+      - ./nginx/nginx.server.conf:/etc/nginx/nginx.conf:ro
 
   frontend:
     build:
@@ -42,7 +45,10 @@ services:
     command: npm start
     environment:
       NODE_ENV: production
-      PORT: 3102
+      # Server uses 3110; host port 3102 is already in use by an unrelated
+      # container on this Pathways/ICS box. Local dev stays on 3102 via
+      # docker-compose.yml.
+      PORT: 3110
     volumes:
       - ./api/.env:/app/.env:ro
       - ./api/uploads:/app/uploads

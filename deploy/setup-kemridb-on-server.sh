@@ -56,12 +56,17 @@ if ! psql_app -d postgres -tAc "SELECT 1" >/dev/null 2>&1; then
   exit 1
 fi
 
-# Sanity check on privileges (rolcreatedb is what we need).
+# Sanity check on privileges (rolcreatedb is what we need; psql -tAc returns
+# 'true'/'false', not 't'/'f').
 ROLE_FLAGS=$(psql_app -d postgres -tAc \
   "SELECT rolsuper||','||rolcreatedb FROM pg_roles WHERE rolname='${DB_USER}'" || true)
+ROLE_SUPER=0
 case "$ROLE_FLAGS" in
-  *,t) echo "==> ${DB_USER} has CREATEDB" ;;
-  *)   echo "WARN: ${DB_USER} may lack CREATEDB (got: $ROLE_FLAGS). Continuing — DB may already exist." ;;
+  true,*)   ROLE_SUPER=1 ;;
+esac
+case "$ROLE_FLAGS" in
+  *,true)   echo "==> ${DB_USER} has CREATEDB (superuser=${ROLE_SUPER})" ;;
+  *)        echo "WARN: ${DB_USER} may lack CREATEDB (got: $ROLE_FLAGS). Continuing — DB may already exist." ;;
 esac
 
 # 2. Database -----------------------------------------------------------------
@@ -73,21 +78,31 @@ else
 fi
 
 # 3. Extensions ---------------------------------------------------------------
-echo "==> Ensuring extensions on ${DB_NAME}"
+# pg_trgm + unaccent are "trusted" extensions in PG 13+ and don't require
+# superuser. pgvector is NOT trusted on this server — creating it requires
+# postgres superuser. The current KEMRI codebase doesn't use vector columns,
+# so it's skipped here. To enable later, a DBA can run (one-time):
+#     sudo -u postgres psql -p 5433 -d kemridb -c "CREATE EXTENSION vector;"
+# Then optionally hand ownership to the app role:
+#     sudo -u postgres psql -p 5433 -d kemridb -c \
+#       "UPDATE pg_extension SET extowner = (SELECT oid FROM pg_roles WHERE rolname='gov_local_user') WHERE extname='vector';"
+echo "==> Ensuring extensions on ${DB_NAME} (pg_trgm, unaccent)"
 psql_app -d "${DB_NAME}" <<SQL
 CREATE EXTENSION IF NOT EXISTS pg_trgm;
 CREATE EXTENSION IF NOT EXISTS unaccent;
--- pgvector is available on this server; install only if present.
-DO \$\$
-BEGIN
-  IF EXISTS (SELECT 1 FROM pg_available_extensions WHERE name = 'vector') THEN
-    CREATE EXTENSION IF NOT EXISTS vector;
-  ELSE
-    RAISE NOTICE 'pgvector not available; install postgresql-16-pgvector to enable RAG / embeddings.';
-  END IF;
-END
-\$\$;
 SQL
+
+# Opt-in pgvector creation (skipped by default; only works as superuser).
+if [[ "${KEMRI_ENABLE_PGVECTOR:-0}" == "1" || "${KEMRI_ENABLE_PGVECTOR:-}" == "yes" ]]; then
+  if [[ "$ROLE_SUPER" == "1" ]]; then
+    echo "==> Creating pgvector extension (KEMRI_ENABLE_PGVECTOR set)"
+    psql_app -d "${DB_NAME}" -c "CREATE EXTENSION IF NOT EXISTS vector;"
+  else
+    echo "WARN: KEMRI_ENABLE_PGVECTOR was set but ${DB_USER} is not superuser; skipping."
+    echo "      A DBA can enable it one-time with:"
+    echo "        sudo -u postgres psql -p ${DB_PORT} -d ${DB_NAME} -c \"CREATE EXTENSION vector;\""
+  fi
+fi
 
 # 4. Bootstrap api/.env -------------------------------------------------------
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
