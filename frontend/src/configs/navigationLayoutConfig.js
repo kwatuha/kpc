@@ -27,19 +27,32 @@ export function readStoredNavigationLayoutMode() {
   return null;
 }
 
-/** Sidebar group order when using {@link NAV_LAYOUT_MODES.TREE} (CIMES-style: dashboard → planning → projects → finance → monitoring → evaluation …). */
+/**
+ * Canonical KEMRI nav order (used by both ribbon tabs and tree sidebar):
+ *
+ *   Research → Dashboards → Reports → Data → Settings
+ *
+ * Research (KIMES study lifecycle) leads because it is the system's reason
+ * for existing — not a bolt-on module. Settings (admin/reference data) is
+ * deliberately last. The legacy county-government categories (management,
+ * reporting, finance, monitoring, procurement, hr, public) remain in the
+ * list so they keep their relative order if anyone un-hides them, but they
+ * all have `hidden: true` in menuConfig.json and never appear in the UI.
+ */
 export const TREE_MENU_CATEGORY_ORDER = [
+  'kimes',         // Research & M&E — first
   'dashboard',
+  'reports',
+  'data',
+  // legacy county-government modules (all hidden:true today)
   'management',
   'reporting',
   'finance',
   'monitoring',
-  'reports',
   'procurement',
-  'data',
   'hr',
   'public',
-  'admin',
+  'admin',         // Settings — last
 ];
 
 /** Same category order for ribbon tabs and tree sidebar (unknown ids sort last). */

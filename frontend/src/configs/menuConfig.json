@@ -1,11 +1,11 @@
 {
-  "_doc": "Menu order is intentional. Visible categories first (work → insights → outputs → bulk ops → settings), hidden legacy/county categories last. Labels were chosen to be self-explanatory; the parent category provides context (e.g. inside Dashboards we say 'Finance', not 'Finance Dashboard'). Any submenu marked hidden:true is filtered out by getFilteredMenuCategories.",
+  "_doc": "Canonical KEMRI nav order is enforced in src/configs/navigationLayoutConfig.js (TREE_MENU_CATEGORY_ORDER): Research → Dashboards → Reports → Data → Settings. Research leads because the KIMES study lifecycle IS the system; Settings is deliberately last. Labels are intentionally short — the parent category gives context (e.g. inside Dashboards we say 'Finance', not 'Finance Dashboard'). Any submenu/category with hidden:true is filtered out by getFilteredMenuCategories.",
 
   "menuCategories": [
     {
       "id": "kimes",
       "label": "Research",
-      "labelTree": "KIMES — Research & M&E",
+      "labelTree": "Research & M&E",
       "icon": "ScienceIcon",
       "submenus": [
         {
@@ -165,9 +165,9 @@
     },
     {
       "id": "admin",
-      "label": "Admin",
+      "label": "Settings",
       "labelTree": "Settings",
-      "icon": "GroupIcon",
+      "icon": "SettingsIcon",
       "adminOnly": true,
       "submenus": [
         {
