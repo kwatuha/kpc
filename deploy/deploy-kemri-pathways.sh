@@ -82,8 +82,12 @@ rsync -avz --no-group --no-owner --delete \
   --exclude 'db_backups' \
   --exclude 'remote_119db' \
   --exclude '.remote-dumps' \
-  --exclude 'frontend/public/gis/kenya' \
   "$ROOT/" "${REMOTE}:${DEPLOY_PATH}/"
+# NB: frontend/public/gis/kenya/ (~71 MB of pre-built county / constituency /
+# ward GeoJSON bundles, generated locally by scripts/build_kenya_gis_bundles.mjs
+# from api.iebc/) IS rsync'd. The Pathways server has no `node`, so we can't
+# regenerate the bundles there; rsyncing the prebuilt files is the cheapest
+# correct path. They're git-ignored so they don't bloat the repo.
 
 if [[ "$DEPLOY_SYNC_UPLOADS" == "1" ]]; then
   echo "==> Syncing media uploads to server (uploads/ and api/uploads/)"
